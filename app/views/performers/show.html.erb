@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Listing:</strong>
+  <%= @performer.listing %>
+</p>
+
+<p>
+  <strong>Concert:</strong>
+  <%= @performer.concert %>
+</p>
+
+<p>
+  <strong>Musician:</strong>
+  <%= @performer.musician %>
+</p>
+
+<p>
+  <strong>Instrument:</strong>
+  <%= @performer.instrument %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @performer.order %>
+</p>
+
+<p>
+  <strong>Piece:</strong>
+  <%= @performer.piece %>
+</p>
+
+<p>
+  <strong>Concert date:</strong>
+  <%= @performer.concert_date %>
+</p>
+
+<%= link_to 'Edit', edit_performer_path(@performer) %> |
+<%= link_to 'Back', performers_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @movement.name %>
+</p>
+
+<p>
+  <strong>Piece:</strong>
+  <%= @movement.piece %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @movement.order %>
+</p>
+
+<%= link_to 'Edit', edit_movement_path(@movement) %> |
+<%= link_to 'Back', movements_path %>

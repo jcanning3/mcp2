@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  concert: one
+  piece: one
+  order: 1
+
+two:
+  concert: two
+  piece: two
+  order: 1

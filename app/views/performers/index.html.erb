@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Performers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Listing</th>
+      <th>Concert</th>
+      <th>Musician</th>
+      <th>Instrument</th>
+      <th>Order</th>
+      <th>Piece</th>
+      <th>Concert date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @performers.each do |performer| %>
+      <tr>
+        <td><%= performer.listing %></td>
+        <td><%= performer.concert %></td>
+        <td><%= performer.musician %></td>
+        <td><%= performer.instrument %></td>
+        <td><%= performer.order %></td>
+        <td><%= performer.piece %></td>
+        <td><%= performer.concert_date %></td>
+        <td><%= link_to 'Show', performer %></td>
+        <td><%= link_to 'Edit', edit_performer_path(performer) %></td>
+        <td><%= link_to 'Destroy', performer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Performer', new_performer_path %>

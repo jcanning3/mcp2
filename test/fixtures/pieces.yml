@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  composer: one
+  arranger: 1
+  opus: MyString
+  year_composed: 1
+  full_title: MyString
+
+two:
+  name: MyString
+  composer: two
+  arranger: 1
+  opus: MyString
+  year_composed: 1
+  full_title: MyString

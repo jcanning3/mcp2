@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  listing: MyString
+  concert: one
+  musician: one
+  instrument: MyString
+  order: 1
+  piece: one
+  concert_date: 2018-07-10
+
+two:
+  listing: MyString
+  concert: two
+  musician: two
+  instrument: MyString
+  order: 1
+  piece: two
+  concert_date: 2018-07-10
