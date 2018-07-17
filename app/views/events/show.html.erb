@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+<h1>An Event</h1>
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
@@ -12,27 +14,22 @@
 
 <p>
   <strong>Start:</strong>
-  <%= @event.start %>
+  <%= @event.start.strftime("%a %b %e %I:%M%p") %>
 </p>
 
 <p>
   <strong>End:</strong>
-  <%= @event.end %>
+  <%= @event.try(:end).try(:strftime, '%a %b %e %I:%M%p') %>
 </p>
 
 <p>
   <strong>Type:</strong>
-  <%= @event.type %>
-</p>
-
-<p>
-  <strong>Team:</strong>
-  <%= @event.team %>
+  <%= @event.type.name %>
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @event.location %>
+  <%= @event.location.name %>
 </p>
 
 <p>
@@ -45,5 +42,19 @@
   <%= @event.color %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<h4>Notes</h4>
+<table class='table table-hover'>
+  <tbody>
+    <% @bits = @event.sheets %>
+    <% @bits.each do |s| %>
+      <tr>
+        <td><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
+        <td><%= s.note %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_event_path(@event), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', events_path, class: 'btn btn-warning btn-sm' %>

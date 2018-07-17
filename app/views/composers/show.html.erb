@@ -1,23 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @composer.name %>
-</p>
-
-<p>
-  <strong>Nickname:</strong>
-  <%= @composer.nickname %>
-</p>
-
-<p>
-  <strong>Lifetime:</strong>
-  <%= @composer.lifetime %>
-</p>
-
-<p>
-  <strong>Fullname:</strong>
-  <%= @composer.fullname %>
+  <h3> <%= @composer.fullname %> </h4>
 </p>
 
 <p>
@@ -25,5 +9,18 @@
   <%= @composer.notes %>
 </p>
 
-<%= link_to 'Edit', edit_composer_path(@composer) %> |
-<%= link_to 'Back', composers_path %>
+<h4>Pieces</h4>
+<table class='table table-hover'>
+  <tbody>
+    <% @bits = Piece.where(composer_id: @composer.id) %>
+    <% @bits.each do |piece| %>
+      <tr>
+        <td><%= piece.full_title %></td>
+	<td><%= link_to 'Show', piece, class: 'btn btn-warning btn-sm' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_composer_path(@composer), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', composers_path, class: 'btn btn-warning btn-sm' %>

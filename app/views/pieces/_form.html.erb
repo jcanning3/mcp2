@@ -6,13 +6,29 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.association :composer %>
-    <%= f.input :arranger %>
     <%= f.input :opus %>
     <%= f.input :year_composed %>
     <%= f.input :full_title %>
   </div>
 
+
+  <div>
+    <p><strong>Movements:</strong></p>
+
+    <div id="movements">
+      <%= f.fields_for :movements do |movement| %>
+        <%= render 'movement_fields', f: movement %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'add movement', f, :movements, class: 'btn btn-success btn-sm' %>
+      </div>
+    </div>
+  </div>
+
+      <br>
+
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>

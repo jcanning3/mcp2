@@ -1,0 +1,31 @@
+type_id		^	start			^	end			^	title				^	location_id	^	team_id		^	notes
+REHEARSAL	^	August 16, 2018, 3:00pm	^	August 16, 2018, 4:00pm	^	Bartok 1			^	VPR New Studio	^	Bartok		^	(Soovin, Shifrin, Gloria)
+REHEARSAL	^	August 16, 2018, 3:00pm	^	August 16, 2018, 4:00pm	^	Schubert 1			^	VPR Old Studio	^	Schubert	^	(Hyunah, Radovan, Jeewon)
+REHEARSAL	^	August 16, 2018, 4:15pm	^	August 16, 2018, 6:15pm	^	Strauss 1			^	Orchestra	^	Strauss		^	(Soovin, Shifrin, Radovan, Frank, Kurt)
+REHEARSAL	^	August 16, 2018, 4:15pm	^	August 16, 2018, 6:15pm	^	Schumann 1			^	VPR New Studio	^	Schumann	^	(Hyunah, Gloria)
+REHEARSAL	^	August 16, 2018, 6:30pm	^	August 16, 2018, 8:30pm	^	Beethoven 1			^	Orchestra	^	Beethoven	^	(Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed)
+REHEARSAL	^	August 16, 2018, 6:30pm ^	Piano Delivery		^					^	Stage 
+EVENT		^	August 17, 2018, 8:00am	^	August 17, 2018, 10:00am^	Piano Delivery/Allan Tuning	^	Stage
+EVENT		^	August 17, 2018, 9:00am	^	August 17, 2018, 12:30pm^	Alan Bise Set Up		^	Stage
+REHEARSAL	^	August 17, 2018, 10:00am^	August 17, 2018, 10:50am^	Shifrin Recital 1		^	Stage		^	Shifrin		^	(Shifrin, Gloria)
+REHEARSAL	^	August 17, 2018, 11:00am^	August 17, 2018, 12:00pm^	Bartok 2			^	Stage		^	Bartok		^	(Soovin, Shifrin, Gloria)
+MEAL		^	August 17, 2018, 11:30am^				^	Lunch				^	Unknown		^
+REHEARSAL	^	August 17, 2018, 12:30pm^	August 17, 2018, 2:30pm	^	Schumann 2			^	Orchestra	^	Schumann	^	(Hyunah, Gloria)
+REHEARSAL	^	August 17, 2018, 12:30pm^	August 17, 2018, 2:30pm	^	Strauss 2			^	Stage		^	Strauss		^	(Soovin, Shifrin, Radovan, Frank, Kurt)
+REHEARSAL	^	August 17, 2018, 2:45pm	^	August 17, 2018, 5:15pm	^	Beethoven 2			^	Stage		^	Beethoven	^	(Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed)
+REHEARSAL	^	August 17, 2018, 5:30pm	^	August 17, 2018, 6:30pm	^	Schubert 2			^	Orchestra	^	Schubert	^	(Hyunah, Radovan, Jeewon)
+REHEARSAL	^	August 17, 2018, 5:30pm	^	August 17, 2018, 6:30pm	^	Michael Parloff Sound Check	^	Stage		^	
+MEAL		^	August 17, 2018, 7:00pm	^				^	Artists Dinner 			^	Unknown		^			^	Host: Carolyn Bever
+CLASS		^	August 18, 2018, 9:00am	^	August 18, 2018, 10:30am^	Strings Masterclasses		^	Stage
+CLASS		^	August 18, 2018, 9:00am	^	August 18, 2018, 10:30am^	Strings Masterclasses		^	Orchestra
+CLASS		^	August 18, 2018, 9:00am	^	August 18, 2018, 10:30am^	Strings Masterclasses		^	Classrooms
+REHEARSAL	^	August 18, 2018, 10:00am^	August 18, 2018, 10:45am^	Schumann Dress			^	Stage		^	Schumann	^	(Hyunah, Gloria)
+REHEARSAL	^	August 18, 2018, 10:45am^	August 18, 2018, 11:15am^	Schubert Dress			^	Stage		^	Schubert	^	(Hyunah, Radovan, Jeewon)
+REHEARSAL	^	August 18, 2018, 11:00am^	August 18, 2018, 12:00pm^	Shifrin Recital 2		^	VPR New Studio	^	Shifrin		^	(Shifrin, Gloria) 
+CONCERT		^	August 18, 2018, 12:00pm^				^	Michael Parloff Opening Talk	^	Stage
+CONCERT		^	August 18, 2018, 2:00pm	^				^	Lieder: Schubert & Schumann	^	Stage		^			^	Recording
+RECEPTION	^	August 18, 2018, 3:30pm	^				^	Opening Reception		^	Orchestra
+REHEARSAL	^	August 18, 2018, 3:15pm	^	August 18, 2018, 5:15pm	^	Pierrot				^	VPR New Studio 	^	Pierrot		^	(Shifrin, Fred, Steve, Jeewon, Lucy) No Josh
+RECORDING	^	August 18, 2018, 5:30pm	^	August 18, 2018, 6:30pm	^	Strauss 3			^	Stage		^	Strauss		^	(Soovin, Shifrin, Radovan, Frank, Kurt)
+RECORDING	^	August 18, 2018, 6:30pm	^	August 18, 2018, 7:45pm	^	Beethoven 3			^	Stage		^	Beethoven	^	(Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed)
+RECORDING	^	August 18, 2018, 8:00pm	^	August 18, 2018, 9:00pm	^	Bartok 3			^	Stage		^	Bartok		^	(Soovin, Shifrin, Gloria)

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @sheet.note %>
+</p>
+
+<p>
+  <strong>Pad:</strong>
+  <%= @sheet.pad_id %>
+</p>
+
+<p>
+  <strong>Pad type:</strong>
+  <%= @sheet.pad_type %>
+</p>
+
+<%= link_to 'Edit', edit_sheet_path(@sheet), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', sheets_path, class: 'btn btn-warning btn-sm' %>

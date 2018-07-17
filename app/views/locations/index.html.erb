@@ -2,25 +2,26 @@
 
 <h1>Locations</h1>
 
-<table>
+<table class='table table-hover' >
   <thead>
     <tr>
       <th>Name</th>
       <th>Nickname</th>
       <th>Color</th>
+      <th>ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @locations.each do |location| %>
+    <% @locations.order(:name).each do |location| %>
       <tr>
         <td><%= location.name %></td>
         <td><%= location.nickname %></td>
         <td><%= location.color %></td>
-        <td><%= link_to 'Show', location %></td>
-        <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= location.id %></td>
+        <td><%= link_to 'Show', location, class: 'btn btn-warning btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_location_path(location), class: 'btn btn-warning btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,10 @@
 
 <br>
 
-<%= link_to 'New Location', new_location_path %>
+<%= link_to 'New Location', new_location_path, class: 'btn btn-primary btn-lg' %>
+
+<br>
+<br>
+<br>
+
+<div id="calendar33"></div>

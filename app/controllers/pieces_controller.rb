@@ -19,6 +19,7 @@ class PiecesController < ApplicationController
 
   # GET /pieces/1/edit
   def edit
+    @piece = Piece.find_by(id: params[:id])
   end
 
   # POST /pieces
@@ -40,6 +41,7 @@ class PiecesController < ApplicationController
   # PATCH/PUT /pieces/1
   # PATCH/PUT /pieces/1.json
   def update
+    @piece = Piece.find_by(id: params[:id])
     respond_to do |format|
       if @piece.update(piece_params)
         format.html { redirect_to @piece, notice: 'Piece was successfully updated.' }
@@ -69,6 +71,7 @@ class PiecesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def piece_params
-      params.require(:piece).permit(:name, :composer_id, :arranger, :opus, :year_composed, :full_title)
+      params.require(:piece).permit(:name, :composer_id, :arranger, :opus, :year_composed, :full_title,
+        movements_attributes: [:id, :_destroy, :name, :order] )
     end
 end

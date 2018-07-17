@@ -9,13 +9,30 @@
     <%= f.input :start %>
     <%= f.input :end %>
     <%= f.association :type %>
-    <%= f.association :team %>
     <%= f.association :location %>
     <%= f.input :notes %>
     <%= f.input :color %>
   </div>
 
+  <div>
+    <p><strong>New Notes:</strong></p>
+
+    <div id="sheets">
+      <%= f.fields_for :sheets do |sheet| %>
+        <%= render 'sheet_fields', f: sheet %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'add note', f, :sheets, class: 'btn btn-success btn-sm' %>
+      </div>
+    </div>
+  </div>
+
+<br/>
+
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>
+
+

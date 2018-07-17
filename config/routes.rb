@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :sheets
+  resources :notebooks
+  resources :event_teams
   resources :events
   resources :teams
   resources :locations

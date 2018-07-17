@@ -1,19 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @concert.name %>
+  <h2> <%= @concert.name %> </h2>
 </p>
 
 <p>
-  <strong>Starttime:</strong>
-  <%= @concert.startTime %>
+    <%= @concert.location %>
 </p>
 
 <p>
-  <strong>Location:</strong>
-  <%= @concert.location %>
+    <%= @concert.startTime.strftime("%A, %B %e, %Y, %I:%M %p") %>
 </p>
 
-<%= link_to 'Edit', edit_concert_path(@concert) %> |
-<%= link_to 'Back', concerts_path %>
+<h3>Program</h3>
+
+<table class='table table-hover'>
+  <tbody>
+    <% @bits = Performance.where(concert_id: @concert.id).order(:order) %>
+    <% @bits.each do |performance| %>
+      <tr>
+        <td><%= performance.piece.composer.fullname %></td>
+        <td><%= performance.piece.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_concert_path(@concert), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', concerts_path, class: 'btn btn-warning btn-sm' %>

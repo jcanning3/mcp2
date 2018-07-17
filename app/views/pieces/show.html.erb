@@ -1,34 +1,46 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @piece.name %>
+  <h3> <%= @piece.full_title %> </h3>
 </p>
 
 <p>
-  <strong>Composer:</strong>
-  <%= @piece.composer %>
+  <%= @piece.composer.fullname %>
 </p>
 
-<p>
-  <strong>Arranger:</strong>
-  <%= @piece.arranger %>
-</p>
 
-<p>
-  <strong>Opus:</strong>
-  <%= @piece.opus %>
-</p>
+<h4>Movements</h4>
+<table class='table table-hover'>
+  <tbody>
+    <% @bits = Movement.where(piece_id: @piece.id).order(:order) %>
+    <% @bits.each do |movement| %>
+      <tr>
+        <td><%= movement.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<p>
-  <strong>Year composed:</strong>
-  <%= @piece.year_composed %>
-</p>
+<h4>Concerts</h4>
+<table class='table table-hover'>
+  <tbody>
+    <% @bits = Performance.where(piece_id: @piece.id) %>
+    <% @bits.each do |performance| %>
+      <tr>
+        <td><%= performance.concert.startTime.strftime("%A, %B %e, %Y") %></td>
+        <td><%= performance.concert.name %></td>
+      </tr>
+	    <% @bobs = Performer.where(piece_id: performance.piece_id, concert_id: performance.concert_id) %>
+	    <% @bobs.order(:order).each do |performer| %>
+		<tr>
+		    <td> </td>
+		    <td> <%= performer.listing %> </td>
+		</tr>
+	    <% end %>
+    <% end %>
+  </tbody>
+</table>
 
-<p>
-  <strong>Full title:</strong>
-  <%= @piece.full_title %>
-</p>
 
-<%= link_to 'Edit', edit_piece_path(@piece) %> |
-<%= link_to 'Back', pieces_path %>
+<%= link_to 'Edit', edit_piece_path(@piece), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', pieces_path, class: 'btn btn-warning btn-sm' %>

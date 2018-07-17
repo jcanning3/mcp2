@@ -69,6 +69,7 @@ class MusiciansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def musician_params
-      params.require(:musician).permit(:name, :first, :last, :instrument, :notes)
+      params.require(:musician).permit(:name, :first, :last, :instrument, :notes,
+        sheets_attributes: [:id, :_destroy, :note] )
     end
 end

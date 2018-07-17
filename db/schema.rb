@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_020608) do
+ActiveRecord::Schema.define(version: 2018_07_16_041918) do
 
   create_table "composers", force: :cascade do |t|
     t.string "name"
@@ -30,20 +30,27 @@ ActiveRecord::Schema.define(version: 2018_07_11_020608) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "event_teams", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_teams_on_event_id"
+    t.index ["team_id"], name: "index_event_teams_on_team_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.datetime "start"
     t.datetime "end"
     t.integer "type_id"
-    t.integer "team_id"
     t.integer "location_id"
     t.string "notes"
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["location_id"], name: "index_events_on_location_id"
-    t.index ["team_id"], name: "index_events_on_team_id"
     t.index ["type_id"], name: "index_events_on_type_id"
   end
 
@@ -104,20 +111,26 @@ ActiveRecord::Schema.define(version: 2018_07_11_020608) do
     t.integer "composer_id"
     t.integer "arranger"
     t.string "opus"
-    t.integer "year_composed"
+    t.text "year_composed"
     t.string "full_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["composer_id"], name: "index_pieces_on_composer_id"
   end
 
+  create_table "sheets", force: :cascade do |t|
+    t.text "note"
+    t.string "pad_id"
+    t.string "pad_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string "nickname"
-    t.integer "musician_id"
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["musician_id"], name: "index_teams_on_musician_id"
   end
 
   create_table "types", force: :cascade do |t|

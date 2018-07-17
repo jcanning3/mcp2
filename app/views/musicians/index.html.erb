@@ -2,12 +2,10 @@
 
 <h1>Musicians</h1>
 
-<table>
+<table class='table table-hover'>
   <thead>
     <tr>
       <th>Name</th>
-      <th>First</th>
-      <th>Last</th>
       <th>Instrument</th>
       <th>Notes</th>
       <th colspan="3"></th>
@@ -15,16 +13,13 @@
   </thead>
 
   <tbody>
-    <% @musicians.each do |musician| %>
+    <% @musicians.order('LOWER(last)').each do |musician| %>
       <tr>
         <td><%= musician.name %></td>
-        <td><%= musician.first %></td>
-        <td><%= musician.last %></td>
         <td><%= musician.instrument %></td>
         <td><%= musician.notes %></td>
-        <td><%= link_to 'Show', musician %></td>
-        <td><%= link_to 'Edit', edit_musician_path(musician) %></td>
-        <td><%= link_to 'Destroy', musician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', musician, class: 'btn btn-warning btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_musician_path(musician), class: 'btn btn-warning btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Musician', new_musician_path %>
+<%= link_to 'New Musician', new_musician_path, class: 'btn btn-primary btn-lg' %>

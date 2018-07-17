@@ -1,0 +1,37 @@
+Example
+
+    class Picture < ApplicationRecord
+      belongs_to :imageable, polymorphic: true
+    end
+     
+    class Employee < ApplicationRecord
+      has_many :pictures, as: :imageable
+    end
+     
+    class Product < ApplicationRecord
+      has_many :pictures, as: :imageable
+    end
+
+    create_table :pictures do |t|
+	  t.string  :name
+	  t.integer :imageable_id
+	  t.string  :imageable_type
+	  t.timestamps
+
+
+My attempt
+
+    class Sheet < ApplicationRecord
+      belongs_to :pad, polymorphic: true
+    end
+     
+    class Event < ApplicationRecord
+      has_many :sheets, as: :pad
+    end
+     
+    class Musician < ApplicationRecord
+      has_many :sheets, as: :pad
+    end
+
+    rails generate scaffold Sheet note:text pad_id pad_type
+

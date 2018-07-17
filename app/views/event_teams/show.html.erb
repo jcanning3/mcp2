@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @event_team.event %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @event_team.team %>
+</p>
+
+<%= link_to 'Edit', edit_event_team_path(@event_team), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', event_teams_path, class: 'btn btn-warning btn-sm' %>

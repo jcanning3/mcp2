@@ -1,18 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @musician.name %>
-</p>
-
-<p>
-  <strong>First:</strong>
-  <%= @musician.first %>
-</p>
-
-<p>
-  <strong>Last:</strong>
-  <%= @musician.last %>
+  <h3> <%= @musician.name %> </h3>
 </p>
 
 <p>
@@ -25,5 +14,39 @@
   <%= @musician.notes %>
 </p>
 
-<%= link_to 'Edit', edit_musician_path(@musician) %> |
-<%= link_to 'Back', musicians_path %>
+<%= link_to 'Edit', edit_musician_path(@musician), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', musicians_path, class: 'btn btn-warning btn-sm' %>
+
+<br>
+<br>
+
+<h4>Notes</h4>
+<table class='table table-hover'>
+  <tbody>
+    <% @bits = @musician.sheets %>
+    <% @bits.each do |s| %>
+      <tr>
+        <td><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
+        <td><%= s.note %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h4>Concerts</h4>
+<table class='table table-hover'>
+  <tbody>
+    <% @bits = Performer.where(musician_id: @musician.id) %>
+    <% @bits.each do |performer| %>
+      <tr>
+        <td><%= performer.concert.startTime.strftime("%A, %B %e, %Y") %></td>
+        <td><%= performer.concert.name %></td>
+        <td><%= performer.piece.name %></td>
+        <td><%= performer.instrument %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

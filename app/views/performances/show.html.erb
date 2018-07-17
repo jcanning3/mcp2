@@ -2,12 +2,13 @@
 
 <p>
   <strong>Concert:</strong>
-  <%= @performance.concert %>
+  <%= @performance.concert.startTime.strftime("%A, %B %e, %Y") %>
+  <%= @performance.concert.name %>
 </p>
 
 <p>
   <strong>Piece:</strong>
-  <%= @performance.piece %>
+  <%= @performance.piece.name %>
 </p>
 
 <p>

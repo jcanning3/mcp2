@@ -1,1 +1,4 @@
-json.array! @locations, partial: 'locations/location', as: :location
+json.array!(@locations) do |loc|
+  json.extract! loc, :id
+  json.title loc.name
+end
