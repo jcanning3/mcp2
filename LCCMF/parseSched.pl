@@ -21,13 +21,17 @@ $tableName = $opt_t if $opt_t;
     'Orchestra',	1,
     'Stage',		2,
     'Classrooms',	3,
-    'VPR New Studio',	4,
+    'VPR Studio One',	4,
     'VPR Old Studio',	5,
     'Unknown',		6,
     "St. Michael’s",    7,
     "St. Paul’s",	8,
     "Kitchen",		9,
     "TBA",		10,
+    "All Souls",	11,
+    "Classroom",	12,
+    "Flynn Space",	13,
+    "Pulcinella’s",	14,
 );
 
 %mapTypes = (
@@ -60,25 +64,37 @@ $tableName = $opt_t if $opt_t;
     'VYO1',		15,
     'VYO2',		16,
     'Cowell',		17,
+    '2Pianos',		18,
+    'Allan',		19,
+    'Bella',		20,
+    'Berio',		21,
+    'David',		22,
+    'Ed',		23,
+    'Gloria',		24,
+    'Haydn',		25,
+    'Jay',		26,
+    'Mendelssohn',	27,
+    'Ravel',		28,
+    'Sounding',		29,
 );
 
 if ( $opt_t ) {
     print join("\t", "TABLE", "locations", "\n");
     print join("\t", "id", "name", "nickname", "\n");
     foreach $i (sort(keys %mapLocations)) {
-	print join("\t", $mapLocations{$i}, $i, $i), "\n";
+	print join("\t", "LOCATION", $mapLocations{$i}, $i, $i), "\n";
     }
 
     print join("\t", "TABLE", "teams", "\n");
     print join("\t", "id", "nickname", "\n");
     foreach $i (sort(keys %mapTeams)) {
-	print join("\t", $mapTeams{$i}, $i), "\n";
+	print join("\t", "TEAM", $mapTeams{$i}, $i), "\n";
     }
 
     print join("\t", "TABLE", "types", "\n");
     print join("\t", "id", "nickname", "\n");
     foreach $i (sort(keys %mapTypes)) {
-	print join("\t", $mapTypes{$i}, $i), "\n";
+	print join("\t", "TYPE", $mapTypes{$i}, $i, $i), "\n";
     }
     exit;
 }
@@ -105,6 +121,8 @@ $event = 1;
 while ( <> ) {
     chop;
     #print join("^", $_, "\n") if $debug;
+
+    next if /^$/;
 
     ($type, $start, $end, $title, $location, $team, $notes) = split(/\^/);
     Clean($type, $start, $end, $title, $location, $team, $notes);

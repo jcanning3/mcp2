@@ -1,11 +1,15 @@
-id	name	nickname	
+id	nickname	name
 1	Orchestra	Orchestra
 2	Stage	Stage
 3	Classrooms	Classrooms
-4	VPR New Studio	VPR New Studio
+4	VPR Studio One	VPR Studio One
 5	VPR Old Studio	VPR Old Studio
 6	Unknown	Unknown
 7	St. Michael’s	St. Michael’s
 8	St. Paul’s	St. Paul’s
-9	Kitchen	Kitchn
+9	Kitchen	Kitchen
 10	TBA	TBA
+11	All Souls	All Souls
+12	Classroom	Classroom
+13	Flynn Space	Flynn Space
+14	Pulcinella’s	Pulcinella’s

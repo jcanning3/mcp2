@@ -1,4 +1,4 @@
-id	type_id	start	end	title	location_id	notes	
+id	type_id	start	end	name	location_id	notes	
 1	1	August 16, 2018, 3:00pm	August 16, 2018, 4:00pm	Bartok 1	4	Soovin, Shifrin, Gloria
 2	1	August 16, 2018, 3:00pm	August 16, 2018, 4:00pm	Schubert 1	5	Hyunah, Radovan, Jeewon
 3	1	August 16, 2018, 4:15pm	August 16, 2018, 6:15pm	Strauss 1	1	Soovin, Shifrin, Radovan, Frank, Kurt
@@ -16,15 +16,15 @@ id	type_id	start	end	title	location_id	notes
 15	1	August 17, 2018, 5:30pm	August 17, 2018, 6:30pm	Schubert 2	1	Hyunah, Radovan, Jeewon
 16	1	August 17, 2018, 5:30pm	August 17, 2018, 6:30pm	Michael Parloff Sound Check	2	
 17	3	August 17, 2018, 7:00pm		Artists Dinner	10	Host: Carolyn Bever
-18	5	August 18, 2018, 9:00am	August 18, 2018, 10:30am	Strings Masterclasses	2	
+18	5	August 18, 2018, 9:00am	August 18, 2018,  9:45am	Strings Masterclasses	2	
 19	5	August 18, 2018, 9:00am	August 18, 2018, 10:30am	Strings Masterclasses	1	
 20	5	August 18, 2018, 9:00am	August 18, 2018, 10:30am	Strings Masterclasses	3	
 21	1	August 18, 2018, 10:00am	August 18, 2018, 10:45am	Schumann Dress	2	Hyunah, Gloria
 22	1	August 18, 2018, 10:45am	August 18, 2018, 11:15am	Schubert Dress	2	Hyunah, Radovan, Jeewon
 23	1	August 18, 2018, 11:00am	August 18, 2018, 12:00pm	Shifrin Recital 2	4	Shifrin, Gloria
-24	6	August 18, 2018, 12:00pm		Michael Parloff Opening Talk	2	
-25	6	August 18, 2018, 2:00pm		Lieder: Schubert & Schumann	2	Recording
-26	7	August 18, 2018, 3:30pm		Opening Reception	1	
+24	6	August 18, 2018, 12:00pm	August 18, 2018, 1:30pm	Indepth: Schubert’s Lieder: A Fusion of Music and Poetry	2	Michael Parlof, Guest Speaker
+25	9	August 18, 2018, 2:00pm	August 18, 2018, 3:00pm	Poetry in Music: Schubert & Schuman Songs	2	This concert will be recorded
+26	7	August 18, 2018, 4:00pm	August 18, 2018, 5:00pm	Opening Festival Reception	1	What is the proper start time for this event?
 27	1	August 18, 2018, 3:15pm	August 18, 2018, 5:15pm	Pierrot	4	Shifrin, Fred, Steve, Jeewon, Lucy No Josh
 28	8	August 18, 2018, 5:30pm	August 18, 2018, 6:30pm	Strauss 3	2	Soovin, Shifrin, Radovan, Frank, Kurt
 29	8	August 18, 2018, 6:30pm	August 18, 2018, 7:45pm	Beethoven 3	2	Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed
@@ -33,16 +33,96 @@ id	type_id	start	end	title	location_id	notes
 32	8	August 19, 2018, 10:50am	August 19, 2018, 11:30am	Strauss Dress	2	Soovin, Shifrin, Radovan, Frank, Kurt
 33	8	August 19, 2018, 11:40am	August 19, 2018, 12:40pm	Beethoven Dress	2	Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed
 34	1	August 19, 2018, 12:50pm	August 19, 2018, 1:15pm	Schubert Dress	2	Hyunah, Radovan, Jeewon
-35	1	August 19, 2018, 5:00pm	August 19, 2018, 6:30pm	Pierrot WITHOUT Shifrin	4	Fred, Josh, Steve, Jeewon, Lucy
-36	1	August 20, 2018, 10:00am	August 20, 2018, 11:30am	Shifrin Dress	4	
-37	1	August 20, 2018, 10:00am	August 20, 2018, 11:45am	Kafka Rehearsal	5	Or Orchestra
-38	1	August 20, 2018, 10:00am	August 20, 2018, 11:30am	Tower Petroushkates 1	2	Josh, Fred, Steve, Ellen, Romie
-39	1	August 20, 2018, 12:00pm	August 20, 2018, 1:00pm	Bach Arias 1	8	Hyunah, Josh, Ed, Mark – set up ready
-40	1	August 20, 2018, 2:00pm	August 20, 2018, 3:00pm	Ludwig Paganiniana 1	2	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
-41	1	August 20, 2018, 3:30pm	August 20, 2018, 4:30pm	Alex 1	7	with piano?  Romie, Danny, Gloria
-42	1	August 20, 2018, 4:45pm	August 20, 2018, 5:45pm	Wei 1	7	with piano? Bella, Romie, Julia, Ellen
-43	1	August 20, 2018, 3:30pm	August 20, 2018, 4:30pm	Nick 1	7	without piano? Becky, Soovin, Steve L, Ed
-44	9	August 20, 2018, 5:15pm		VYO Performance	2	Soovin, Danny, Steve L., Ed
-45	9	August 20, 2018, 5:15pm		VYO Sectionals	1	Romie, Ian
-46	1	August 20, 2018, 3:30pm	August 20, 2018, 8:30pm	Pierrot	4	David, Fred, Josh, Steve, Jeewon, Lucy
-47	1	August 20, 2018, 7:00pm	August 20, 2018, 8:00pm	Cowell 1	2	Bella, Ellen, Ian
+35	5	August 19, 2018, 2:15pm	August 19, 2018, 2:45pm	Pre-concert Talk	2	
+36	6	August 19, 2018, 3:00pm	August 19, 2018, 5:00pm	Mainstage Concert: Sounds of the Wind	2	
+37	5	August 19, 2018, 5:15pm	August 19, 2018, 5:45pm	Meet the Artists	2	
+38	7	August 19, 2018, 5:15pm	August 19, 2018, 6:15pm	10th Anniversary Reception	1	
+39	1	August 19, 2018, 5:00pm	August 19, 2018, 6:30pm	Pierrot WITHOUT Shifrin	4	Fred, Josh, Steve, Jeewon, Lucy
+40	1	August 20, 2018, 10:00am	August 20, 2018, 11:30am	Shifrin Dress	4	
+41	1	August 20, 2018, 10:00am	August 20, 2018, 11:45am	Kafka Rehearsal	5	Or Orchestra
+42	1	August 20, 2018, 10:00am	August 20, 2018, 11:30am	Tower Petroushkates 1	2	Josh, Fred, Steve, Ellen, Romie
+43	9	August 20, 2018, 12:00pm	August 20, 2018, 1pm	Artist Spotlight: David Shifirn	4	David Shifrin, clarinet, Gloria Chien, piano
+44	5	August 20, 2018, 1:30pm	August 20, 2018, 2:30pm	Kafka Quartet Masterclass with Ed Arron	4	Beethoven Quartet in E-flat Major, Op. 74 "Harp"
+45	1	August 20, 2018, 12:00pm	August 20, 2018, 1:00pm	Bach Arias 1	8	Hyunah, Josh, Ed, Mark – set up ready
+46	1	August 20, 2018, 2:00pm	August 20, 2018, 3:00pm	Ludwig Paganiniana 1	2	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
+47	1	August 20, 2018, 3:30pm	August 20, 2018, 4:30pm	Alex 1	7	with piano?  Romie, Danny, Gloria
+48	1	August 20, 2018, 4:45pm	August 20, 2018, 5:45pm	Wei 1	7	with piano? Bella, Romie, Julia, Ellen
+49	1	August 20, 2018, 3:30pm	August 20, 2018, 4:30pm	Nick 1	7	without piano? Becky, Soovin, Steve L, Ed
+50	9	August 20, 2018, 5:15pm		VYO Performance	2	Soovin, Danny, Steve L., Ed
+51	9	August 20, 2018, 5:15pm		VYO Sectionals	1	Romie, Ian
+52	1	August 20, 2018, 3:30pm	August 20, 2018, 8:30pm	Pierrot	4	David, Fred, Josh, Steve, Jeewon, Lucy
+53	1	August 20, 2018, 7:00pm	August 20, 2018, 8:00pm	Cowell 1	2	Bella, Ellen, Ian
+54	1	August 21, 2018, 10:00am	August 21, 2018, 10:30am	Bach Cello Solo	8	Ed
+55	1	August 21, 2018, 10:30am	August 21, 2018, 11:30am	Bach Dress	8	Hyunah, Josh, Ed, Mark
+56	1	August 21, 2018, 10:00am	August 21, 2018, 11:30am	Ravel  1	1	Soovin, Jay
+57	1	August 21, 2018, 10:00am	August 21, 2018, 11:30am	Cowell 2	2	Bella, Ian, Ellen
+58	9	August 21, 2018, 12:15pm	August 21, 2018, 1pm	Bach-in-Church	8	
+59	5	August 21, 2018, 2:30pm	August 21, 2018, 3:30pm	David’s Inside Pitch, Beginnings: The Modernists	1	
+60	5	August 21, 2018, 4:30pm	August 21, 2018, 5:30pm	Sounding Board I	1	
+61	1	August 21, 2018, 3:00pm	August 21, 2018, 8:00pm	Pierrot	2	David, Fred, Josh, Steve, Jeewon, Lucy
+62	1	August 21, 2018, 2:00pm	August 21, 2018, 4:30pm	Mendelssohn 1	4	Bella, Ellen, Jay
+63	1	August 21, 2018, 4:45pm	August 21, 2018, 5:45pm	Ravel  2	1	Soovin, Jay
+64	5	August 22, 2018, 10:00am	August 22, 2018, 11am	David’s Inside Pitch, Endings: The Post-Modernists	1	
+65	1	August 22, 2018, 10:00am	August 22, 2018, 12:00pm	Cowell 3	2	Bella, Ian, Ellen
+66	1	August 22, 2018, 10:00am	August 22, 2018, 12:00pm	Ravel 3	12	Soovin, Jay
+67	1	August 22, 2018, 10:00am	August 22, 2018, 1:00pm	Pierrot – as needed	4	David, Fred, Josh, Steve, Jeewon, Lucy
+68	8	August 22, 2018, 12:30pm	August 22, 2018, 1:10pm	Nick	2	Becky, Soovin, Steve L, Ed
+69	8	August 22, 2018, 1:20pm	August 22, 2018, 2:00pm	Alex	2	Romie, Danny, Gloria
+70	8	August 22, 2018, 2:10pm	August 22, 2018, 2:50pm	Wei	2	Bella, Romie, Julia, Ellen
+71	8	August 22, 2018, 3:00pm	August 22, 2018, 3:45pm	Tower Solo	2	Gloria
+72	1	August 22, 2018, 4:00pm	August 22, 2018, 6:00pm	Mendelssohn 2	2	Bella, Ellen, Jay
+73	1	August 22, 2018, 3:00pm	August 22, 2018, 5:00pm	Pierrot Dress	13	only available 3-5:30pm (David, Fred, Josh, Steve, Jeewon, Lucy)
+74	1	August 22, 2018, 5:00pm	August 22, 2018, 5:30pm	Berio	13	Lucy
+75	3	August 22, 2018, 10:00pm	-	Pulcinella Dinner	14	
+76	6	August 22, 2018, 7:30pm	August 22, 2018, 9:30pm	Flynn Space Concert: Pierrot, the Reflective Modernist	13	Hosted by Fred Sherry
+77	1	August 23, 2018, 10:00am	August 23, 2018, 11:00am	Tower Petroushkates 2	2	Josh, Fred, Steve, Ellen, Romie
+78	8	August 23, 2018, 11:30am	August 23, 2018, 12:30pm	Cowell 4	2	Bella, Ellen, Ian
+79	1	August 23, 2018, 10:00am	August 23, 2018, 11:30am	Jay Recital Dress	11	
+80	9	August 23, 2018, 12pm	August 23, 2018, 1pm	Artist Spotlight: Jay Campbell	11	Jay campbell, cello, Soovin Kim, violin
+81	5	August 23, 2018, 1:30pm	August 23, 2018, 2:30pm	Kafka Quartet Masterclass with Fred Sherry	11	Beethoven Quartet in E-flat Major, Op. 74 "Harp"
+82	1	August 23, 2018, 1:00pm	August 23, 2018, 3:45pm	Two Pianos 1	2	Marc and Gloria
+83	1	August 23, 2018, 4:00pm	August 23, 2018, 6:00pm	Haydn/Tovey 1	1	Steve, Fred, Marc
+84	8	August 23, 2018, 4:00pm	August 23, 2018, 6:00pm	Mendelssohn 3	2	Bella, Ellen, Jay
+85	1	August 23, 2018, 6:30pm	August 23, 2018, 7:15pm	Tower Petroushkates 3	2	Josh, Fred, Steve, Ellen, Romie
+86	1	August 23, 2018, 7:30pm	August 23, 2018, 9:00pm	David Ludwig Paganiniana 2	2	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
+87	4	August 24, 2018, 10am	August 24, 2018, 11am	David’s Inside Pitch, Beyond: The 21st Century (You are Here)	1	
+88	4	August 24, 2018, 10:00am	August 24, 2018, 11:50am	Haydn/Tovey Dress	2	Steve, Fred, Marc
+89	4	August 24, 2018, 12:00pm	August 24, 2018, 1:00pm	Ludwig Paganiniana 3	1	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
+90	4	August 24, 2018, 12:00pm	August 24, 2018, 1:00pm	Two Pianos 2	2	Marc and Gloria
+91	4	August 24, 2018, 1:15pm	August 24, 2018, 2:00pm	Tower Petroushkates Dress	2	Josh, Fred, Steve, Ellen, Romie
+92	4	August 24, 2018, 2:15pm	August 24, 2018, 3:00pm	Mendelssohn Dress 1	2	Bella, Ellen, Jay
+93	4	August 24, 2018, 3:15pm	August 24, 2018, 4:00pm	Cowell Dress 1	2	Bella, Ellen, Ian
+94	4	August 24, 2018, 4:15pm	August 24, 2018, 5:15pm	Two Pianos 3	2	Marc and Gloria
+95	4	August 24, 2018, 5:15pm	August 24, 2018, 5:45pm	Tower Solo Dress	2	Gloria
+96	4	August 24, 2018, 5:45pm	August 24, 2018, 6:15pm	Allan Tuning one piano	2	
+97	8	August 24, 2018, 10:00am	August 24, 2018, 11:50am	Haydn/Tovey Dress	2	Steve, Fred, Marc
+98	8	August 24, 2018, 12:00pm	August 24, 2018, 12:45pm	Mendelssohn Dress 2	2	Bella, Ellen, Jay
+99	8	August 24, 2018, 1:00pm	August 24, 2018, 1:45pm	Cowell Dress 2	2	Bella, Ellen, Ian
+100	8	August 24, 2018, 2:00pm	August 24, 2018, 2:45pm	Tower Petroushkates Dress	2	Josh, Fred, Steve, Ellen, Romie
+101	8	August 24, 2018, 3:00pm	August 24, 2018, 4:00pm	Ludwig Paganiniana 3	1	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
+102	8	August 24, 2018, 3:00pm	August 24, 2018, 3:30pm	Tower Solo Dress	2	
+103	8	August 24, 2018, 3:30pm	August 24, 2018, 5:30pm	Two Pianos 4	2	
+104	8	August 24, 2018, 5:30pm	August 24, 2018, 6:00pm	Allan Tuning one piano	2	
+105	5	August 24, 2018, 6:45pm	August 24, 2018, 7:15pm	Pre-Concert Talk	2	
+106	6	August 24, 2018, 7:30pm	August 24, 2018, 9:30pm	Mainstage Concert: The Creative Journey	2	
+107	5	August 24, 2018, 9:45pm	August 24, 2018, 10:15pm	Meet the Artists	2	
+108	7	August 24, 2018, 9:30pm	August 24, 2018, 10:30pm	Reception	1	
+109	3	August 24, 2018, 10:30pm	August 24, 2018, 11:45pm	Pulcinella Dinner	14	
+110	1	August 25, 2018, 10:00am	August 25, 2018, 11:30am	Kafka Dress	2	
+111	6	August 25, 2018, 10:00am	August 25, 2018, 11am	Indepth: Bow Tasting with Bruno Price and Ron Forrester	1	
+112	6	August 25, 2018, 12:00pm	August 25, 2018, 1pm	Kafka Quartet in Concert	2	
+113	6	August 25, 2018, 2:00pm	August 25, 2018, 3pm	Family Concert	2	
+114	6	August 25, 2018, 2:00pm	August 25, 2018, 3pm	Instrument Petting Zoo	1	
+115	7	August 25, 2018, 3pm	August 25, 2018, 4pm	Pizza and Ice Cream	1	
+116	9	August 25, 2018, 3:30pm	August 25, 2018, 4:00pm	Bella Solo	2	Bella
+117	8	August 25, 2018, 4:00pm	August 25, 2018, 6:00pm	Ludwig Paganiniana 4	2	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
+118	8	August 25, 2018, 6:15pm	August 25, 2018, 8:15pm	Two Pianos 5	2	Marc and Gloria
+119	8	August 26, 2018, 9:30am	August 26, 2018, 10:45am	Ludwig Paganiniana	2	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
+120	8	August 26, 2018, 11:00am	August 26, 2018, 11:30am	Bella Solo	2	Bella
+121	8	August 26, 2018, 11:45am	August 26, 2018, 1:15pm	Two Pianos Dress	2	Marc and Gloria
+122	4	August 26, 2018, 1:15pm	August 26, 2018, 1:45pm	Allan Tuning & Stage Change	2	
+123	5	August 26, 2018, 2:15pm	August 26, 2018, 2:45pm	Pre-concert Talk	2	
+124	6	August 26, 2018, 3pm	August 26, 2018, 5pm	Mainstage Concert; Virtuosity	2	
+125	7	August 26, 2018, 5:00pm	August 26, 2018, 6:00pm	Reception	1	
+126	5	August 26, 2018, 5:15pm	August 26, 2018, 5:45pm	Meet the Artists	2	
+127	3	August 26, 2018, 6:00pm	August 26, 2018, 8:30pm	Closing Dinner	14	

@@ -14,8 +14,8 @@
   </thead>
 
   <tbody>
-    <% @types.order(:name).each do |type| %>
-      <tr>
+    <% @types.order('LOWER(color)').each do |type| %>
+      <tr bgcolor="<%=type.color%>">
         <td><%= type.name %></td>
         <td><%= type.nickname %></td>
         <td><%= type.color %></td>

@@ -16,6 +16,8 @@
       <tr>
         <td><%= sheet.note %></td>
         <td><%= sheet.pad_type %></td>
+        <td><%= sheet.pad.name %></td>
+	<td><%= sheet.pad.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
         <td><%= link_to 'Show', sheet, class: 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Edit', edit_sheet_path(sheet), class: 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Destroy', sheet, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>

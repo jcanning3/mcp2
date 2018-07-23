@@ -1,0 +1,11 @@
+
+type_id		^	start			^	end			^	name				^	location_id	^	team_id		^	notes
+CONCERT		^	August 19, 2017, 2:15pm ^	August 19, 2018, 2:45pm ^	Pre-concert Talk 		^	Stage
+CONCERT		^	August 19, 2017, 3:00pm ^	August 19, 2018, 5:00pm ^	Mainstage Concert: Sounds of the Wind	^	Stage
+
+
+CONCERT		^	August 18, 2018, 12:00pm^				^	Michael Parloff Opening Talk	^	Stage
+CONCERT		^	August 18, 2018, 2:00pm	^				^	Lieder: Schubert & Schumann	^	Stage		^			^	Recording
+CONCERT		^	August 25, 2018, 10:00am^	-			^	Bow Tasting			^	Orchestra
+CONCERT		^	August 25, 2018, 2:00pm	^	-			^	Family Concert             	^	Stage
+CONCERT		^	August 25, 2018, 2:00pm	^	-			^	Instrument Petting Zoo   	^	Orchestra
