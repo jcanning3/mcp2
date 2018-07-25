@@ -6,7 +6,7 @@ class CreatePerformers < ActiveRecord::Migration[5.2]
       t.references :musician, foreign_key: true
       t.string :instrument
       t.integer :order
-      t.references :piece, foreign_key: true
+      #t.references :piece, foreign_key: true
       t.date :concert_date
 
       t.timestamps
