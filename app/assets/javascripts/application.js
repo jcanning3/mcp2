@@ -59,11 +59,42 @@ $(function() {
 	slotLabelInterval: '01:00',
 	minTime: '08:00:00',
 
+	viewRender: function(view, element) {
+ 	    var moment = $('#calendar33').fullCalendar('getDate');
+	    if ( myStuff.currentDate ) {
+	        hideEvents(myStuff.currentDate);
+	    }
+	    myStuff.currentDate = moment.format("YYYYMMDD")
+	    showEvents(myStuff.currentDate);
+	},
+
 	eventRender: function(event, element) {
-	    element.find('.fc-title').append("<br/>" +
-		( event.notes || "") + "<br/>" +
+	    element.find('.fc-title').append("<br>" +
+		( event.notes || "") + "<br>" +
 		( event.resource || "") 
 	    );
 	},
     });
-})
+});
+
+var myStuff = {
+    currentDate: "",
+}
+
+function showEvents(t)
+{
+    console.log("Please display the set of elements identified by: " + t + ".");
+    var tE = document.getElementById(t);
+    if ( tE && tE.style ) {
+        tE.style.display = "table-row-group";
+    }
+}
+
+function hideEvents(t)
+{
+    console.log("Please hide the set of elements identified by: " + t + ".");
+    var tE = document.getElementById(t);
+    if ( tE && tE.style ) {
+        tE.style.display = "none";
+    }
+}
