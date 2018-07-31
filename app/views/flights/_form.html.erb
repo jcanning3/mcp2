@@ -1,0 +1,21 @@
+
+<%= simple_form_for(@flight) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :musician %>
+    <%= f.input :confirmation %>
+    <%= f.association :airline %>
+    <%= f.input :flight %>
+    <%= f.input :from %>
+    <%= f.input :departure %>
+    <%= f.input :destination %>
+    <%= f.input :arrival %>
+    <%= f.input :notes %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-success btn-lg' %>
+  </div>
+<% end %>

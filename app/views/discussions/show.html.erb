@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @discussion.date %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @discussion.color %>
+</p>
+
+<p>
+  <strong>Resolved:</strong>
+  <%= @discussion.resolved %>
+</p>
+
+<br> 
+
+<%= link_to 'Edit', edit_discussion_path(@discussion), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', discussions_path, class: 'btn btn-warning btn-sm' %>

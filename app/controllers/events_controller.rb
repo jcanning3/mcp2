@@ -1,10 +1,12 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
+    @flights = Flight.all
   end
 
   # GET /events/1
@@ -15,6 +17,8 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @event.start = "2018-08-16 12:00pm"
+    @event.end = "2018-08-16 12:00pm"
   end
 
   # GET /events/1/edit

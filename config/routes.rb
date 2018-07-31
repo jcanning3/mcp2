@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :discussions
+  resources :flights
+  resources :airlines
   resources :sheets
   resources :notebooks
   resources :event_teams
@@ -13,5 +17,5 @@ Rails.application.routes.draw do
   resources :movements
   resources :concerts
   resources :composers
-  root to: 'visitors#index'
+  root to: 'events#index'
 end

@@ -62,10 +62,12 @@ $(function() {
 	viewRender: function(view, element) {
  	    var moment = $('#calendar33').fullCalendar('getDate');
 	    if ( myStuff.currentDate ) {
-	        hideEvents(myStuff.currentDate);
+	        hideEvents("E" + myStuff.currentDate);
+	        hideEvents("F" + myStuff.currentDate);
 	    }
 	    myStuff.currentDate = moment.format("YYYYMMDD")
-	    showEvents(myStuff.currentDate);
+	    showEvents("E" + myStuff.currentDate);
+	    showEvents("F" + myStuff.currentDate);
 	},
 
 	eventRender: function(event, element) {

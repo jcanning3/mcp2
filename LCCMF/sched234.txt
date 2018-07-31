@@ -2,10 +2,21 @@ type_id		^	start			^	end			^	name				^	location_id	^	team_id		^	notes
 REHEARSAL	^	August 16, 2018, 3:00pm	^	August 16, 2018, 4:00pm	^	Bartok 1			^	VPR Studio One	^	Bartok		^	Soovin, Shifrin, Gloria
 REHEARSAL	^	August 16, 2018, 3:00pm	^	August 16, 2018, 4:00pm	^	Schubert 1			^	VPR Old Studio	^	Schubert	^	Hyunah, Radovan, Jeewon
 REHEARSAL	^	August 16, 2018, 4:15pm	^	August 16, 2018, 6:15pm	^	Strauss 1			^	Orchestra	^	Strauss		^	Soovin, Shifrin, Radovan, Frank, Kurt
-REHEARSAL	^	August 16, 2018, 4:15pm	^	August 16, 2018, 6:15pm	^	Schumann 1			^	VPR Studio One	^	Schumann	^	Hyunah, Gloria
+REHEARSAL	^	August 16, 2018, 1:00pm	^	August 16, 2018, 3:00pm	^	Schumann 1			^	VPR Studio One	^	Schumann	^	Hyunah, Gloria
 REHEARSAL	^	August 16, 2018, 6:30pm	^	August 16, 2018, 8:30pm	^	Beethoven 1			^	Orchestra	^	Beethoven	^	Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed
 EVENT		^	August 16, 2018, 6:30pm ^ 			        ^       Piano Delivery			^	Stage 
-EVENT		^	August 17, 2018, 8:00am	^	August 17, 2018, 10:00am^	Piano Delivery/Allan Tuning	^	Stage
+
+EVENT		^	August 17, 2018, 8am	^	August 17, 2018, 10am	^	Piano Delivery/Allan Tuning	^	Stage
+EVENT		^	August 18, 2018, 8am	^	August 18, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 19, 2018, 8am	^	August 19, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 20, 2018, 8am	^	August 20, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 21, 2018, 8am	^	August 21, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 22, 2018, 8am	^	August 22, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 23, 2018, 8am	^	August 23, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 24, 2018, 8am	^	August 24, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 25, 2018, 8am	^	August 25, 2018, 9am	^	Daily Piano Tuning		^	Stage
+EVENT		^	August 26, 2018, 8am	^	August 26, 2018, 9am	^	Daily Piano Tuning		^	Stage
+
 EVENT		^	August 17, 2018, 9:00am	^	August 17, 2018, 12:30pm^	Alan Bise Set Up		^	Stage
 REHEARSAL	^	August 17, 2018, 10:00am^	August 17, 2018, 10:50am^	Shifrin Recital 1		^	Stage		^	Shifrin		^	Shifrin, Gloria
 REHEARSAL	^	August 17, 2018, 11:00am^	August 17, 2018, 12:00pm^	Bartok 2			^	Stage		^	Bartok		^	Soovin, Shifrin, Gloria
@@ -16,33 +27,37 @@ REHEARSAL	^	August 17, 2018, 2:45pm	^	August 17, 2018, 5:15pm	^	Beethoven 2			^	
 REHEARSAL	^	August 17, 2018, 5:30pm	^	August 17, 2018, 6:30pm	^	Schubert 2			^	Orchestra	^	Schubert	^	Hyunah, Radovan, Jeewon
 REHEARSAL	^	August 17, 2018, 5:30pm	^	August 17, 2018, 6:30pm	^	Michael Parloff Sound Check	^	Stage		^	
 MEAL		^	August 17, 2018, 7:00pm	^				^	Artists Dinner 			^	TBA		^			^	Host: Carolyn Bever
+
 CLASS		^	August 18, 2018, 9:00am	^	August 18, 2018,  9:45am^	Strings Masterclasses		^	Stage
 CLASS		^	August 18, 2018, 9:00am	^	August 18, 2018, 10:30am^	Strings Masterclasses		^	Orchestra
 CLASS		^	August 18, 2018, 9:00am	^	August 18, 2018, 10:30am^	Strings Masterclasses		^	Classrooms
-REHEARSAL	^	August 18, 2018, 10:00am^	August 18, 2018, 10:45am^	Schumann Dress			^	Stage		^	Schumann	^	Hyunah, Gloria
-REHEARSAL	^	August 18, 2018, 10:45am^	August 18, 2018, 11:15am^	Schubert Dress			^	Stage		^	Schubert	^	Hyunah, Radovan, Jeewon
-REHEARSAL	^	August 18, 2018, 11:00am^	August 18, 2018, 12:00pm^	Shifrin Recital 2		^	VPR Studio One	^	Shifrin		^	Shifrin, Gloria 
+REHEARSAL	^	August 18, 2018, 10am	^	August 18, 2018, 10:45am^	Schubert Dress			^	Stage		^	Schubert	^	Hyunah, Radovan, Jeewon
+REHEARSAL	^	August 18, 2018, 10:45am^	August 18, 2018, 11:15am^	Schumann Dress			^	Stage		^	Schumann	^	Hyunah, Gloria
+REHEARSAL	^	August 18, 2018, 9:30am^	August 18, 2018, 10:30am^	Shifrin Recital 2		^	UVM Alumni House^	Shifrin		^	Shifrin, Gloria 
 CONCERT		^	August 18, 2018, 12:00pm^	August 18, 2018, 1:30pm	^	Indepth: Schubert’s Lieder: A Fusion of Music and Poetry^Stage ^ 		^	Michael Parlof, Guest Speaker
-RECITAL		^	August 18, 2018, 2:00pm	^	August 18, 2018, 3:00pm ^	Poetry in Music: Schubert & Schuman Songs ^	Stage		^			^	This concert will be recorded
-RECEPTION	^	August 18, 2018, 4:00pm	^	August 18, 2018, 5:00pm ^	Opening Festival Reception		^	Orchestra	^			^	What is the proper start time for this event?
-REHEARSAL	^	August 18, 2018, 3:15pm	^	August 18, 2018, 5:15pm	^	Pierrot				^	VPR Studio One 	^	Pierrot		^	Shifrin, Fred, Steve, Jeewon, Lucy No Josh
+RECITAL		^	August 18, 2018, 2:00pm	^	August 18, 2018, 3:00pm ^	Poetry in Music: Schubert & Schuman Songs ^	Stage		^		^	This concert will be recorded
+RECEPTION	^	August 18, 2018, 4:00pm	^	August 18, 2018, 5:00pm ^	Opening Festival Reception	^	Orchestra	^		^	What is the proper start time for this event?
+REHEARSAL	^	August 18, 2018, 3:15pm	^	August 18, 2018, 5:15pm	^	Pierrot WITHOUT Josh		^	St. Michael’s 	^	Pierrot		^	Shifrin, Fred, Steve, Jeewon, Lucy No Josh
 RECORDING	^	August 18, 2018, 5:30pm	^	August 18, 2018, 6:30pm	^	Strauss 3			^	Stage		^	Strauss		^	Soovin, Shifrin, Radovan, Frank, Kurt
 RECORDING	^	August 18, 2018, 6:30pm	^	August 18, 2018, 7:45pm	^	Beethoven 3			^	Stage		^	Beethoven	^	Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed
 RECORDING	^	August 18, 2018, 8:00pm	^	August 18, 2018, 9:00pm	^	Bartok 3			^	Stage		^	Bartok		^	Soovin, Shifrin, Gloria
+
 RECORDING	^	August 19, 2018, 10:00am^	August 19, 2018, 10:40am^	Bartok Dress			^	Stage 		^	Bartok		^	Soovin, Shifrin, Gloria
 RECORDING	^	August 19, 2018, 10:50am^	August 19, 2018, 11:30am^	Strauss Dress			^	Stage 		^	Strauss		^	Soovin, Shifrin, Radovan, Frank, Kurt
-RECORDING	^	August 19, 2018, 11:40am^	August 19, 2018, 12:40pm^	Beethoven Dress			^	Stage		^	Beethoven	^  Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed
+RECORDING	^	August 19, 2018, 11:40am^	August 19, 2018, 12:40pm^	Beethoven Dress			^	Stage		^	Beethoven	^  	Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed
 REHEARSAL	^	August 19, 2018, 12:50pm^	August 19, 2018, 1:15pm	^	Schubert Dress			^	Stage		^	Schubert	^	Hyunah, Radovan, Jeewon
 CLASS		^	August 19, 2018, 2:15pm ^	August 19, 2018, 2:45pm ^	Pre-concert Talk 		^	Stage
-CONCERT		^	August 19, 2018, 3:00pm ^	August 19, 2018, 5:00pm ^	Mainstage Concert: Sounds of the Wind	^	Stage
+CONCERT		^	August 19, 2018, 3:00pm ^	August 19, 2018, 5:00pm ^	Mainstage Concert: Sounds of the Wind^	Stage
 CLASS		^	August 19, 2018, 5:15pm ^	August 19, 2018, 5:45pm ^	Meet the Artists 		^	Stage
 RECEPTION	^	August 19, 2018, 5:15pm ^	August 19, 2018, 6:15pm ^	10th Anniversary Reception 	^	Orchestra
-REHEARSAL	^	August 19, 2018, 5:00pm	^	August 19, 2018, 6:30pm	^	Pierrot WITHOUT Shifrin		^	VPR Studio One	^	Pierrot		^	Fred, Josh, Steve, Jeewon, Lucy
+REHEARSAL	^	August 19, 2018, 5:00pm	^	August 19, 2018, 6:30pm	^	Pierrot WITHOUT Shifrin		^	St. Michael’s	^	Pierrot		^	Fred, Josh, Steve, Jeewon, Lucy
+
 REHEARSAL	^	August 20, 2018, 10:00am^	August 20, 2018, 11:30am^	Shifrin Dress			^	VPR Studio One	^	Shifrin
 REHEARSAL	^	August 20, 2018, 10:00am^	August 20, 2018, 11:45am^	Kafka Rehearsal			^	VPR Old Studio	^	Kafka		^	Or Orchestra
 REHEARSAL	^	August 20, 2018, 10:00am^	August 20, 2018, 11:30am^	Tower Petroushkates 1		^	Stage		^	Tower		^	Josh, Fred, Steve, Ellen, Romie
 RECITAL		^	August 20, 2018, 12:00pm^	August 20, 2018, 1pm	^	Artist Spotlight: David Shifirn	^	VPR Studio One	^	Shifrin		^	David Shifrin, clarinet, Gloria Chien, piano
-CLASS		^	August 20, 2018, 1:30pm	^	August 20, 2018, 2:30pm	^	Kafka Quartet Masterclass with Ed Arron	^VPR Studio One	^	Kafka		^	Beethoven Quartet in E-flat Major, Op. 74 "Harp"
+CLASS		^	August 20, 2018, 1:30pm	^	August 20, 2018, 2:30pm	^	Kafka Quartet Masterclass with Ed Arron^VPR Studio One	^	Kafka		^	Beethoven Quartet in E-flat Major, Op. 74 "Harp"
+EVENT		^	August 20, 2018, 10am	^	August 20, 2018, 11:30am^	Prepare St. Paul’s		^	St. Paul’s
 REHEARSAL	^	August 20, 2018, 12:00pm^	August 20, 2018, 1:00pm	^	Bach Arias 1			^	St. Paul’s	^	Bach		^	Hyunah, Josh, Ed, Mark – set up ready
 REHEARSAL	^	August 20, 2018, 2:00pm	^	August 20, 2018, 3:00pm	^	Ludwig Paganiniana 1		^	Stage		^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred  
 REHEARSAL	^	August 20, 2018, 3:30pm	^	August 20, 2018, 4:30pm	^	Alex 1				^	St. Michael’s	^	Alex		^	with piano?  Romie, Danny, Gloria 
@@ -50,22 +65,25 @@ REHEARSAL	^	August 20, 2018, 4:45pm	^	August 20, 2018, 5:45pm	^	Wei 1				^	St. M
 REHEARSAL	^	August 20, 2018, 3:30pm	^	August 20, 2018, 4:30pm	^	Nick 1				^	St. Michael’s	^	Nick		^	without piano? Becky, Soovin, Steve L, Ed
 RECITAL		^	August 20, 2018, 5:15pm ^				^	VYO Performance			^	Stage		^	VYO1		^	Soovin, Danny, Steve L., Ed
 RECITAL		^	August 20, 2018, 5:15pm ^				^	VYO Sectionals			^	Orchestra	^	VYO2		^	Romie, Ian
-REHEARSAL	^	August 20, 2018, 3:30pm	^	August 20, 2018, 8:30pm	^	Pierrot				^	VPR Studio One	^	Pierrot		^	David, Fred, Josh, Steve, Jeewon, Lucy
+REHEARSAL	^	August 20, 2018, 3:30pm	^	August 20, 2018, 8:30pm	^	Pierrot				^	St. Michael’s	^	Pierrot		^	David, Fred, Josh, Steve, Jeewon, Lucy
 REHEARSAL	^	August 20, 2018, 7:00pm	^	August 20, 2018, 8:00pm	^	Cowell 1			^	Stage		^	Cowell		^	Bella, Ellen, Ian
+
 REHEARSAL	^	August 21, 2018, 10:00am^	August 21, 2018, 10:30am^	Bach Cello Solo			^	St. Paul’s	^	Ed		^	Ed
 REHEARSAL	^	August 21, 2018, 10:30am^	August 21, 2018, 11:30am^	Bach Dress			^	St. Paul’s	^	Bach		^	Hyunah, Josh, Ed, Mark
-REHEARSAL	^	August 21, 2018, 10:00am^	August 21, 2018, 11:30am^	Ravel  1			^	Orchestra	^	Ravel		^	Soovin, Jay
+REHEARSAL	^	August 21, 2018, 10:00am^	August 21, 2018, 11:30am^	Ravel 1				^	Orchestra	^	Ravel		^	Soovin, Jay
 REHEARSAL	^	August 21, 2018, 10:00am^	August 21, 2018, 11:30am^	Cowell 2                	^	Stage		^	Cowell		^	Bella, Ian, Ellen
 RECITAL		^	August 21, 2018, 12:15pm^	August 21, 2018, 1pm	^	Bach-in-Church                	^	St. Paul’s	^	Ed
 CLASS		^	August 21, 2018, 2:30pm ^	August 21, 2018, 3:30pm	^	David’s Inside Pitch, Beginnings: The Modernists       	^	Orchestra	^	David
-CLASS		^	August 21, 2018, 4:30pm ^	August 21, 2018, 5:30pm	^	Sounding Board I            	^	Orchestra	^	Sounding
+CLASS		^	August 21, 2018, 4:30pm ^	August 21, 2018, 5:30pm	^	Sounding Board I            	^	Orchestra	^	Sounding	^	Bella and Ellen go last at 5pm
 REHEARSAL	^	August 21, 2018, 3:00pm	^	August 21, 2018, 8:00pm	^	Pierrot                   	^	Stage		^	Pierrot		^	David, Fred, Josh, Steve, Jeewon, Lucy
 REHEARSAL	^	August 21, 2018, 2:00pm	^	August 21, 2018, 4:30pm	^	Mendelssohn 1			^	VPR Studio One	^	Mendelssohn	^	Bella, Ellen, Jay
 REHEARSAL	^	August 21, 2018, 4:45pm	^	August 21, 2018, 5:45pm ^	Ravel  2                  	^	Orchestra	^	Ravel		^	Soovin, Jay
+
 CLASS		^	August 22, 2018, 10:00am^	August 22, 2018, 11am	^	David’s Inside Pitch, Endings: The Post-Modernists     	^	Orchestra	^	David
 REHEARSAL	^	August 22, 2018, 10:00am^	August 22, 2018, 12:00pm^	Cowell 3                	^	Stage		^	Cowell		^	Bella, Ian, Ellen
 REHEARSAL	^	August 22, 2018, 10:00am^	August 22, 2018, 12:00pm^	Ravel 3                  	^	Classroom	^	Ravel		^	Soovin, Jay
-REHEARSAL	^	August 22, 2018, 10:00am^	August 22, 2018, 1:00pm ^	Pierrot – as needed       	^	VPR Studio One	^	Pierrot		^	David, Fred, Josh, Steve, Jeewon, Lucy
+REHEARSAL	^	August 22, 2018, 10:00am^	August 22, 2018, 1:00pm ^	Pierrot – as needed       	^	VPR Studio One	^	Pierrot		^	Space requested from VPR
+REHEARSAL	^	August 22, 2018, 10:00am^	August 22, 2018, 1:00pm ^	Pierrot – as needed       	^	St. Michael’s	^	Pierrot		^	David, Fred, Josh, Steve, Jeewon, Lucy
 RECORDING	^	August 22, 2018, 12:30pm^	August 22, 2018, 1:10pm ^	Nick                        	^	Stage		^	Nick		^	Becky, Soovin, Steve L, Ed
 RECORDING	^	August 22, 2018, 1:20pm	^	August 22, 2018, 2:00pm	^	Alex                        	^	Stage		^	Alex		^	Romie, Danny, Gloria
 RECORDING	^	August 22, 2018, 2:10pm	^	August 22, 2018, 2:50pm	^	Wei                         	^	Stage		^	Wei		^	Bella, Romie, Julia, Ellen        	^	
@@ -73,8 +91,9 @@ RECORDING	^	August 22, 2018, 3:00pm	^	August 22, 2018, 3:45pm	^	Tower Solo      
 REHEARSAL	^	August 22, 2018, 4:00pm	^	August 22, 2018, 6:00pm	^	Mendelssohn 2   		^	Stage		^	Mendelssohn	^	Bella, Ellen, Jay
 REHEARSAL	^	August 22, 2018, 3:00pm	^	August 22, 2018, 5:00pm	^	Pierrot Dress       		^	Flynn Space	^	Pierrot		^	only available 3-5:30pm (David, Fred, Josh, Steve, Jeewon, Lucy)
 REHEARSAL	^	August 22, 2018, 5:00pm	^	August 22, 2018, 5:30pm	^	Berio                      	^	Flynn Space	^	Berio		^	Lucy
-MEAL		^	August 22, 2018, 10:00pm^	-			^	Pulcinella Dinner		^	Pulcinella’s
 CONCERT		^	August 22, 2018, 7:30pm ^	August 22, 2018, 9:30pm	^	Flynn Space Concert: Pierrot, the Reflective Modernist	^	Flynn Space	^ Pierrot	^	Hosted by Fred Sherry
+MEAL		^	August 22, 2018, 10:00pm^	-			^	Pulcinella Dinner		^	Pulcinella’s
+
 REHEARSAL	^	August 23, 2018, 10:00am^	August 23, 2018, 11:00am^	Tower Petroushkates 2		^	Stage		^	Tower		^	Josh, Fred, Steve, Ellen, Romie 
 RECORDING	^	August 23, 2018, 11:30am^	August 23, 2018, 12:30pm^	Cowell 4                       	^	Stage		^	Cowell		^	Bella, Ellen, Ian 
 REHEARSAL	^	August 23, 2018, 10:00am^	August 23, 2018, 11:30am^	Jay Recital Dress           	^	All Souls 	^	Jay
@@ -87,14 +106,14 @@ REHEARSAL	^	August 23, 2018, 6:30pm	^	August 23, 2018, 7:15pm	^	Tower Petroushka
 REHEARSAL	^	August 23, 2018, 7:30pm	^	August 23, 2018, 9:00pm	^	David Ludwig Paganiniana 2   	^	Stage		^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
 
 EVENT		^	August 24, 2018, 10am	^	August 24, 2018, 11am	^	David’s Inside Pitch, Beyond: The 21st Century (You are Here)^	Orchestra	^	David
-EVENT	^	August 24, 2018, 10:00am^	August 24, 2018, 11:50am^	Haydn/Tovey Dress        	^	Stage		^	Haydn		^	Steve, Fred, Marc
-EVENT	^	August 24, 2018, 12:00pm^	August 24, 2018, 1:00pm	^	Ludwig Paganiniana 3   		^	Orchestra	^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
-EVENT	^	August 24, 2018, 12:00pm^	August 24, 2018, 1:00pm	^	Two Pianos 2                   	^	Stage		^	2Pianos		^	Marc and Gloria
-EVENT	^	August 24, 2018, 1:15pm	^	August 24, 2018, 2:00pm	^	Tower Petroushkates Dress   	^	Stage		^	Tower		^	Josh, Fred, Steve, Ellen, Romie
-EVENT	^	August 24, 2018, 2:15pm	^	August 24, 2018, 3:00pm	^	Mendelssohn Dress 1    		^	Stage		^	Mendelssohn	^	Bella, Ellen, Jay
-EVENT	^	August 24, 2018, 3:15pm	^	August 24, 2018, 4:00pm	^	Cowell Dress 1                 	^	Stage		^	Cowell		^	Bella, Ellen, Ian
-EVENT	^	August 24, 2018, 4:15pm	^	August 24, 2018, 5:15pm	^	Two Pianos 3                   	^	Stage		^	2Pianos		^	Marc and Gloria
-EVENT	^	August 24, 2018, 5:15pm	^	August 24, 2018, 5:45pm	^	Tower Solo Dress          	^	Stage		^	Gloria		^	Gloria
+EVENT		^	August 24, 2018, 10:00am^	August 24, 2018, 11:50am^	Haydn/Tovey Dress        	^	Stage		^	Haydn		^	Steve, Fred, Marc
+EVENT		^	August 24, 2018, 12:00pm^	August 24, 2018, 1:00pm	^	Ludwig Paganiniana 3   		^	Orchestra	^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
+EVENT		^	August 24, 2018, 12:00pm^	August 24, 2018, 1:00pm	^	Two Pianos 2                   	^	Stage		^	2Pianos		^	Marc and Gloria
+EVENT		^	August 24, 2018, 1:15pm	^	August 24, 2018, 2:00pm	^	Tower Petroushkates Dress   	^	Stage		^	Tower		^	Josh, Fred, Steve, Ellen, Romie
+EVENT		^	August 24, 2018, 2:15pm	^	August 24, 2018, 3:00pm	^	Mendelssohn Dress 1    		^	Stage		^	Mendelssohn	^	Bella, Ellen, Jay
+EVENT		^	August 24, 2018, 3:15pm	^	August 24, 2018, 4:00pm	^	Cowell Dress 1                 	^	Stage		^	Cowell		^	Bella, Ellen, Ian
+EVENT		^	August 24, 2018, 4:15pm	^	August 24, 2018, 5:15pm	^	Two Pianos 3                   	^	Stage		^	2Pianos		^	Marc and Gloria
+EVENT		^	August 24, 2018, 5:15pm	^	August 24, 2018, 5:45pm	^	Tower Solo Dress          	^	Stage		^	Gloria		^	Gloria
 EVENT		^	August 24, 2018, 5:45pm	^	August 24, 2018, 6:15pm	^	Allan Tuning one piano		^	Stage		^	Allan
 
 RECORDING	^	August 24, 2018, 10:00am^	August 24, 2018, 11:50am^	Haydn/Tovey Dress        	^	Stage		^	Haydn		^	Steve, Fred, Marc 
@@ -104,7 +123,7 @@ RECORDING	^	August 24, 2018, 2:00pm	^	August 24, 2018, 2:45pm	^	Tower Petroushka
 RECORDING	^	August 24, 2018, 3:00pm	^	August 24, 2018, 4:00pm	^	Ludwig Paganiniana 3   		^	Orchestra	^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred 
 RECORDING	^	August 24, 2018, 3:00pm	^	August 24, 2018, 3:30pm	^	Tower Solo Dress          	^	Stage		^	Gloria
 RECORDING	^	August 24, 2018, 3:30pm	^	August 24, 2018, 5:30pm	^	Two Pianos 4                   	^	Stage		^	2Pianos
-RECORDING		^	August 24, 2018, 5:30pm	^	August 24, 2018, 6:00pm	^	Allan Tuning one piano		^	Stage		^	Allan
+RECORDING	^	August 24, 2018, 5:30pm	^	August 24, 2018, 6:00pm	^	Allan Tuning one piano		^	Stage		^	Allan
 
 CLASS		^	August 24, 2018, 6:45pm	^	August 24, 2018, 7:15pm ^	Pre-Concert Talk		^	Stage
 CONCERT		^	August 24, 2018, 7:30pm ^	August 24, 2018, 9:30pm ^	Mainstage Concert: The Creative Journey^Stage
@@ -121,6 +140,7 @@ RECEPTION	^	August 25, 2018, 3pm	^	August 25, 2018, 4pm	^	Pizza and Ice Cream		^
 RECITAL		^	August 25, 2018, 3:30pm	^	August 25, 2018, 4:00pm	^	Bella Solo			^	Stage		^	Bella		^	Bella
 RECORDING	^	August 25, 2018, 4:00pm	^	August 25, 2018, 6:00pm	^	Ludwig Paganiniana 4		^	Stage		^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred
 RECORDING	^	August 25, 2018, 6:15pm	^	August 25, 2018, 8:15pm	^	Two Pianos 5                   	^	Stage		^	2Pianos		^	Marc and Gloria
+
 RECORDING	^	August 26, 2018, 9:30am	^	August 26, 2018, 10:45am^	Ludwig Paganiniana      	^	Stage		^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred 
 RECORDING	^	August 26, 2018, 11:00am^	August 26, 2018, 11:30am^	Bella Solo			^	Stage		^	Bella		^	Bella 
 RECORDING	^	August 26, 2018, 11:45am^	August 26, 2018, 1:15pm	^	Two Pianos Dress          	^	Stage		^	2Pianos		^	Marc and Gloria 

@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_021609) do
+ActiveRecord::Schema.define(version: 2018_07_31_124103) do
+
+  create_table "airlines", force: :cascade do |t|
+    t.string "name"
+    t.string "nickname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "composers", force: :cascade do |t|
     t.string "name"
@@ -26,6 +33,14 @@ ActiveRecord::Schema.define(version: 2018_07_25_021609) do
     t.string "name"
     t.datetime "startTime"
     t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "discussions", force: :cascade do |t|
+    t.datetime "date"
+    t.string "color"
+    t.boolean "resolved"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,6 +67,22 @@ ActiveRecord::Schema.define(version: 2018_07_25_021609) do
     t.datetime "updated_at", null: false
     t.index ["location_id"], name: "index_events_on_location_id"
     t.index ["type_id"], name: "index_events_on_type_id"
+  end
+
+  create_table "flights", force: :cascade do |t|
+    t.integer "musician_id"
+    t.integer "airline_id"
+    t.string "flight"
+    t.string "from"
+    t.datetime "departure"
+    t.string "destination"
+    t.datetime "arrival"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "confirmation"
+    t.index ["airline_id"], name: "index_flights_on_airline_id"
+    t.index ["musician_id"], name: "index_flights_on_musician_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -139,6 +170,23 @@ ActiveRecord::Schema.define(version: 2018_07_25_021609) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

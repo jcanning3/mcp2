@@ -32,6 +32,7 @@ $tableName = $opt_t if $opt_t;
     "Classroom",	12,
     "Flynn Space",	13,
     "Pulcinella’s",	14,
+    "UVM Alumni House", 15,
 );
 
 %mapTypes = (

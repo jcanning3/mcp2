@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  musician: one
+  airline: one
+  flight: MyString
+  from: MyString
+  departure: 2018-07-28 16:08:11
+  destination: MyString
+  arrival: 2018-07-28 16:08:11
+  notes: MyText
+
+two:
+  musician: two
+  airline: two
+  flight: MyString
+  from: MyString
+  departure: 2018-07-28 16:08:11
+  destination: MyString
+  arrival: 2018-07-28 16:08:11
+  notes: MyText

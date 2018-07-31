@@ -25,7 +25,8 @@ rails generate scaffold Team name nickname event:references color
 
 rails generate scaffold Event name description start:datetime end:datetime type:references team:references location:references notes color
 
-rails generate scaffold Notebook message notebook_id notebook_type
+# need to add commands for notes/pads
+
 
 # rails db:migrate
 
