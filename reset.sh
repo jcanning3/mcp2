@@ -3,6 +3,9 @@
 LCCMF/parseSched.pl -h  < LCCMF/sched234.txt  > LCCMF/sched.tab
 LCCMF/parseSched.pl -he < LCCMF/sched234.txt  > LCCMF/event_team.tab
 
+LCCMF/parseNotes.pl -hs < LCCMF/notes.txt  | cut -f2- > LCCMF/sheets.tab
+LCCMF/parseNotes.pl -h  < LCCMF/notes.txt  | cut -f2- > LCCMF/discussions.tab
+
 ##
 ## Don't uncomment the next two lines - it will wipe out your color scheme
 ##
@@ -38,6 +41,9 @@ echo "puts 'starting events'" >> db/seeds.rb
 LCCMF/create.pl -t Event       -h < LCCMF/sched.tab        >> db/seeds.rb
 echo "puts 'starting event_teams'" >> db/seeds.rb
 LCCMF/create.pl -t EventTeam   -h < LCCMF/event_team.tab   >> db/seeds.rb
+echo "puts 'starting discussions'" >> db/seeds.rb
+LCCMF/create.pl -t Discussion  -h < LCCMF/discussions.tab  >> db/seeds.rb
+echo "puts 'starting sheets'" >> db/seeds.rb
+LCCMF/create.pl -t Sheet       -h < LCCMF/sheets.tab       >> db/seeds.rb
 
 #rails db:reset
-

@@ -7,6 +7,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @flights = Flight.all
+    @discussions = Discussion.all
   end
 
   # GET /events/1

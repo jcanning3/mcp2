@@ -7,15 +7,12 @@ $ret = getopts('deht');
 if (!$ret) {
     print STDERR "Usage: $0 [-deht]...\n";
     print STDERR "      -d  debug\n";
-    print STDERR "      -e  event team table\n";
+    print STDERR "      -e  dump event_team maps\n";
     print STDERR "      -h  expect column names\n";
     print STDERR "      -t  dump tables\n";
     exit 1;
 }
 $debug = $opt_d;
-$tableName = "Table";
-$tableName = $opt_t if $opt_t;
-
 
 %mapLocations = (
     'Orchestra',	1,
