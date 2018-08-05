@@ -70,6 +70,6 @@ class DiscussionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def discussion_params
-      params.require(:discussion).permit(:date, :color, :resolved)
+      params.require(:discussion).permit(:date, :color, :resolved, sheets_attributes: [:id, :_destroy, :note] )
     end
 end

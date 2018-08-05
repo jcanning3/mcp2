@@ -9,6 +9,22 @@
     <%= f.input :resolved %>
   </div>
 
+  <div>
+    <p><strong>Discussion:</strong></p>
+ 
+    <div id="sheets">
+      <%= f.fields_for :sheets do |sheet| %>
+        <%= render 'sheet_fields', f: sheet %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'add note', f, :sheets, class: 'btn btn-success btn-sm' %>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-success btn-lg' %>
   </div>

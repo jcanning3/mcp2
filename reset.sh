@@ -45,5 +45,7 @@ echo "puts 'starting discussions'" >> db/seeds.rb
 LCCMF/create.pl -t Discussion  -h < LCCMF/discussions.tab  >> db/seeds.rb
 echo "puts 'starting sheets'" >> db/seeds.rb
 LCCMF/create.pl -t Sheet       -h < LCCMF/sheets.tab       >> db/seeds.rb
+echo "puts 'starting airlines'" >> db/seeds.rb
+LCCMF/create.pl -t Airline     -h < LCCMF/airlines.tab     >> db/seeds.rb
 
 #rails db:reset

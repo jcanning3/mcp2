@@ -24,7 +24,7 @@
 $(function() {
     $('#calendar33').fullCalendar({
 	themeSystem: 'bootstrap4',
-	defaultDate: "8/16/2018",
+	defaultDate: "8/15/2018",
 	defaultView: "agendaDay",
 	header: {
 	  left: 'month,agendaWeek,agendaDay,listMonth',
@@ -62,10 +62,12 @@ $(function() {
 	viewRender: function(view, element) {
  	    var moment = $('#calendar33').fullCalendar('getDate');
 	    if ( myStuff.currentDate ) {
+	        hideEvents("D" + myStuff.currentDate);
 	        hideEvents("E" + myStuff.currentDate);
 	        hideEvents("F" + myStuff.currentDate);
 	    }
 	    myStuff.currentDate = moment.format("YYYYMMDD")
+	    showEvents("D" + myStuff.currentDate);
 	    showEvents("E" + myStuff.currentDate);
 	    showEvents("F" + myStuff.currentDate);
 	},
