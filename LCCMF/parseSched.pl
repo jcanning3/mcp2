@@ -42,6 +42,8 @@ $debug = $opt_d;
     'RECEPTION',	7,
     'RECORDING',	8,
     'RECITAL',		9,
+    'TUNING',		10,
+    'PRODUCTION',	11,
 );
 
 %mapTeams = (
@@ -74,6 +76,7 @@ $debug = $opt_d;
     'Mendelssohn',	27,
     'Ravel',		28,
     'Sounding',		29,
+    'Blue',		30,
 );
 
 if ( $opt_t ) {

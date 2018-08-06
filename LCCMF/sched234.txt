@@ -5,17 +5,67 @@ REHEARSAL	^	August 16, 2018, 4:15pm	^	August 16, 2018, 6:15pm	^	Strauss 1			^	Or
 REHEARSAL	^	August 16, 2018, 1:00pm	^	August 16, 2018, 3:00pm	^	Schumann 1			^	VPR Studio One	^	Schumann	^	Hyunah, Gloria
 REHEARSAL	^	August 16, 2018, 6:30pm	^	August 16, 2018, 8:30pm	^	Beethoven 1			^	Orchestra	^	Beethoven	^	Soovin, Shifrin, Radovan, Frank, Kurt, Thula, Ed
 EVENT		^	August 16, 2018, 6:30pm ^ 			        ^       Piano Delivery			^	Stage 
+PRODUCTION	^	August 16, 2018, 4:00pm ^ 	August 16, 2018, 4:15pm ^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+PRODUCTION	^	August 16, 2018, 6:15pm ^ 	August 16, 2018, 6:30pm ^       Set for Rehearsal		^	Orchestra	^ 	Blue 
 
-EVENT		^	August 17, 2018, 8am	^	August 17, 2018, 10am	^	Piano Delivery/Allan Tuning	^	Stage
-EVENT		^	August 18, 2018, 8am	^	August 18, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 19, 2018, 8am	^	August 19, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 20, 2018, 8am	^	August 20, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 21, 2018, 8am	^	August 21, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 22, 2018, 8am	^	August 22, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 23, 2018, 8am	^	August 23, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 24, 2018, 8am	^	August 24, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 25, 2018, 8am	^	August 25, 2018, 9am	^	Daily Piano Tuning		^	Stage
-EVENT		^	August 26, 2018, 8am	^	August 26, 2018, 9am	^	Daily Piano Tuning		^	Stage
+
+TUNING		^	August 17, 2018, 8am	^	August 17, 2018, 10am	^	Piano Delivery/Allan Tuning	^	Stage
+TUNING		^	August 18, 2018, 8am	^	August 18, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 19, 2018, 8am	^	August 19, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 20, 2018, 8am	^	August 20, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 21, 2018, 8am	^	August 21, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 22, 2018, 8am	^	August 22, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 23, 2018, 8am	^	August 23, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 24, 2018, 8am	^	August 24, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 25, 2018, 8am	^	August 25, 2018, 9am	^	Daily Piano Tuning		^	Stage
+TUNING		^	August 26, 2018, 8am	^	August 26, 2018, 9am	^	Daily Piano Tuning		^	Stage
+
+PRODUCTION	^	August 17, 2018, 9:45am ^ 	August 17, 2018, 10am	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 17, 2018, 10:45am^ 	August 17, 2018, 11am	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 17, 2018, 12:15pm^ 	August 17, 2018, 12:30pm^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 17, 2018,  2:30pm^ 	August 17, 2018, 2:45pm ^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 17, 2018, 12:15pm^ 	August 17, 2018, 12:30pm^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+PRODUCTION	^	August 18, 2018, 9:45am	^ 	August 18, 2018, 10:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 19, 2018, 9:45am	^ 	August 19, 2018, 10:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 19, 2018, 10:40am^ 	August 19, 2018, 10:50am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 19, 2018, 11:30am^ 	August 19, 2018, 11:40am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 19, 2018, 12:40pm^ 	August 19, 2018, 12:50pm^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 20, 2018, 9:45am ^ 	August 20, 2018, 10:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 20, 2018, 1:45pm ^ 	August 20, 2018,  2:00pm^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+
+PRODUCTION	^	August 21, 2018, 9:45am ^ 	August 21, 2018, 10:00am^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+PRODUCTION	^	August 21, 2018, 4:30pm ^ 	August 21, 2018,  4:45pm^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+PRODUCTION	^	August 21, 2018, 9:45am ^ 	August 21, 2018, 10:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 21, 2018, 2:45pm ^ 	August 21, 2018, 3:00pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+
+PRODUCTION	^	August 22, 2018, 9:45am	^ 	August 22, 2018, 10:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 22, 2018, 12:15pm^ 	August 22, 2018, 12:30pm^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 22, 2018, 1:10pm	^ 	August 22, 2018, 1:20pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 22, 2018, 2:00pm	^ 	August 22, 2018, 2:10pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 22, 2018, 2:50pm	^ 	August 22, 2018, 3:00pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 22, 2018, 3:45pm	^ 	August 22, 2018, 4:00pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+
+PRODUCTION	^	August 23, 2018, 3:45pm	^ 	August 23, 2018, 4:00pm	^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+PRODUCTION	^	August 23, 2018, 3:45pm	^ 	August 23, 2018, 4:00pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 23, 2018, 9:45am	^ 	August 23, 2018, 10:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 23, 2018, 11:15am^ 	August 23, 2018, 11:30am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 23, 2018, 12:45pm^ 	August 23, 2018, 1:00pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 23, 2018, 6:15pm	^ 	August 23, 2018, 6:30pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 23, 2018, 7:15pm	^ 	August 23, 2018, 7:30pm	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+
+PRODUCTION	^	August 24, 2018, 9:45am	^ 	August 24, 2018, 10:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 24, 2018, 9:45am	^ 	August 24, 2018, 10:00am^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+PRODUCTION	^	August 24, 2018, 11:45am^ 	August 24, 2018, 12:00pm^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 24, 2018, 11:45am^ 	August 24, 2018, 12:00pm^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+PRODUCTION	^	August 24, 2018,  2:45pm^ 	August 24, 2018,  3:00pm^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 24, 2018,  2:45pm^ 	August 24, 2018,  3:00pm^       Set for Rehearsal		^	Orchestra	^ 	Blue 
+
+PRODUCTION	^	August 26, 2018, 9:15am	^ 	August 26, 2018, 9:30am	^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 26, 2018, 10:45am^ 	August 26, 2018, 11:00am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+PRODUCTION	^	August 26, 2018, 11:30am^ 	August 26, 2018, 11:45am^       Set Stage for Rehearsal		^	Stage		^ 	Blue 
+
+
+
 
 EVENT		^	August 17, 2018, 9:00am	^	August 17, 2018, 12:30pm^	Alan Bise Set Up		^	Stage
 REHEARSAL	^	August 17, 2018, 10:00am^	August 17, 2018, 10:50am^	Shifrin Recital 1		^	Stage		^	Shifrin		^	Shifrin, Gloria
@@ -57,7 +107,7 @@ REHEARSAL	^	August 20, 2018, 10:00am^	August 20, 2018, 11:45am^	Kafka Rehearsal	
 REHEARSAL	^	August 20, 2018, 10:00am^	August 20, 2018, 11:30am^	Tower Petroushkates 1		^	Stage		^	Tower		^	Josh, Fred, Steve, Ellen, Romie
 RECITAL		^	August 20, 2018, 12:00pm^	August 20, 2018, 1pm	^	Artist Spotlight: David Shifirn	^	VPR Studio One	^	Shifrin		^	David Shifrin, clarinet, Gloria Chien, piano
 CLASS		^	August 20, 2018, 1:30pm	^	August 20, 2018, 2:30pm	^	Kafka Quartet Masterclass with Ed Arron^VPR Studio One	^	Kafka		^	Beethoven Quartet in E-flat Major, Op. 74 "Harp"
-EVENT		^	August 20, 2018, 10am	^	August 20, 2018, 11:30am^	Prepare St. Paul’s		^	St. Paul’s
+PRODUCTION	^	August 20, 2018, 10am	^	August 20, 2018, 11:30am^	Prepare St. Paul’s		^	St. Paul’s
 REHEARSAL	^	August 20, 2018, 12:00pm^	August 20, 2018, 1:00pm	^	Bach Arias 1			^	St. Paul’s	^	Bach		^	Hyunah, Josh, Ed, Mark – set up ready
 REHEARSAL	^	August 20, 2018, 2:00pm	^	August 20, 2018, 3:00pm	^	Ludwig Paganiniana 1		^	Stage		^	Ludwig		^	Soovin, Bella, Ellen, Ian, Romie, Josh, Fred  
 REHEARSAL	^	August 20, 2018, 3:30pm	^	August 20, 2018, 4:30pm	^	Alex 1				^	St. Michael’s	^	Alex		^	with piano?  Romie, Danny, Gloria 
