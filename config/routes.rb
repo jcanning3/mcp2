@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :team_musicians
   resources :accomodations
   resources :addresses
   devise_for :users

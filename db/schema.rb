@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_145936) do
+ActiveRecord::Schema.define(version: 2018_08_06_185909) do
 
   create_table "accomodations", force: :cascade do |t|
     t.integer "address_id"
@@ -181,6 +181,15 @@ ActiveRecord::Schema.define(version: 2018_08_06_145936) do
     t.string "pad_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "team_musicians", force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "musician_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["musician_id"], name: "index_team_musicians_on_musician_id"
+    t.index ["team_id"], name: "index_team_musicians_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|

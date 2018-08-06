@@ -6,11 +6,13 @@ class MusiciansController < ApplicationController
   # GET /musicians.json
   def index
     @musicians = Musician.all
+    @accomodations = Accomodation.all
   end
 
   # GET /musicians/1
   # GET /musicians/1.json
   def show
+    @accomodations = Accomodation.all
   end
 
   # GET /musicians/new

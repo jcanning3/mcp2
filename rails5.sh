@@ -1,9 +1,12 @@
 # rails commands to add an address book and travel accomodations
+# rails commands to connect musicians to teams (and thus events)
 #
 
 
-rails generate scaffold Address name:string nickname:string address1:string address2:string city:string state:string zip:string phone:string
-rails generate scaffold Accomodation address:references musician:references arrival:datetime departure:datetime co:string 
+#rails generate scaffold Address name:string nickname:string address1:string address2:string city:string state:string zip:string phone:string
+#rails generate scaffold Accomodation address:references musician:references arrival:datetime departure:datetime co:string notes:string
+
+rails generate scaffold Team_musician team:references musician:references 
 
 # rails db:migrate
 
