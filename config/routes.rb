@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :accomodations
+  resources :addresses
   devise_for :users
   resources :discussions
   resources :flights

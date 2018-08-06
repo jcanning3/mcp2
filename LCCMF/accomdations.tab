@@ -1,0 +1,28 @@
+address_id	arrival	departure	co	musician_id	notes
+1	August 19, 2018, 4:00pm	August 25, 2018, 12:00pm	91001792	149
+1	August 18, 2018, 4:00pm	August 25, 2018, 12:00pm	93099296	159
+1	August 19, 2018, 4:00pm	August 27, 2018, 12:00pm	96245792	80
+1	August 17, 2018, 4:00pm	August 28, 2018, 12:00pm	92576160	160
+1	August 24, 2018, 4:00pm	August 27, 2018, 12:00pm	95730592	158
+1	August 23, 2018, 4:00pm	August 27, 2018, 12:00pm	96779488	153
+1	August 16, 2018, 4:00pm	August 20, 2018, 12:00pm	93372800	151
+1	August 16, 2018, 4:00pm	August 20, 2018, 12:00pm	94159520	156
+1	August 16, 2018, 4:00pm	August 20, 2018, 12:00pm	96529792	155
+1	August 24, 2018, 4:00pm	August 26, 2018, 12:00pm	91025088	144
+1	August 20, 2018, 4:00pm	August 27, 2018, 12:00pm	90763456	148
+1	August 18, 2018, 4:00pm	August 23, 2018, 12:00pm	97579552	152
+1	August 17, 2018, 4:00pm	August 27, 2018, 12:00pm	91288416	147
+1	August 16, 2018, 4:00pm	August 23, 2018, 12:00pm	92861568	35
+1	August 19, 2018, 4:00pm	August 27, 2018, 12:00pm	97580480	97
+1	August 16, 2018, 4:00pm	August 20, 2018, 12:00pm	97319936	142
+2	August 18, 2018, 4:00pm	August 27, 2018, 12:00pm	53844340	93	2br
+2	August 18, 2018, 4:00pm	August 27, 2018, 12:00pm	53844340	81	2br
+2	August 16, 2018, 4:00pm	August 27, 2018, 12:00pm	53837356	143	1br
+2	August 15, 2018, 4:00pm	August 28, 2018, 12:00pm	53836777	28	1br
+2	August 15, 2018, 4:00pm	August 28, 2018, 12:00pm	53836777	85	1br
+2	August 16, 2018, 4:00pm	August 20, 2018, 12:00pm	53833609	146	1br - owes us ~$216 + tax/fees
+2	August 15, 2018, 4:00pm	August 23, 2018, 12:00pm	53833170	33	1br
+2	August 15, 2018, 4:00pm	August 23, 2018, 12:00pm	53833170	25	1br
+2	August 16, 2018, 4:00pm	August 27, 2018, 12:00pm	53832174	161	1br
+2	August 15, 2018, 4:00pm	August 22, 2018, 12:00pm	53831090	27	1br - owes us ~$378 + tax/fees
+3	August 15, 2018, 4:00pm	August 28, 2018, 12:00pm		79

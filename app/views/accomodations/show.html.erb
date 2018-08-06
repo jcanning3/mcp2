@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @accomodation.address %>
+</p>
+
+<p>
+  <strong>Arrival:</strong>
+  <%= @accomodation.arrival %>
+</p>
+
+<p>
+  <strong>Departure:</strong>
+  <%= @accomodation.departure %>
+</p>
+
+<p>
+  <strong>Co:</strong>
+  <%= @accomodation.co %>
+</p>
+
+<br>
+
+<%= link_to 'Edit', edit_accomodation_path(@accomodation), class: "btn btn-warning btn-sm" %> |
+<%= link_to 'Back', accomodations_path, class: "btn btn-warning btn-sm" %>

@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @address.name %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @address.nickname %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @address.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @address.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @address.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @address.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @address.zip %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @address.phone %>
+</p>
+
+<br>
+
+<%= link_to 'Edit', edit_address_path(@address), class: "btn btn-warning btn-sm" %> |
+<%= link_to 'Back', addresses_path, class: "btn btn-warning btn-sm" %>
