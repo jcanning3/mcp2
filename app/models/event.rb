@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   belongs_to :type
   belongs_to :location
-  has_many   :event_teams
+  has_many   :event_teams, dependent: :destroy
   has_many   :teams, through: :event_teams
   has_many   :sheets, as: :pad, dependent: :destroy
 
