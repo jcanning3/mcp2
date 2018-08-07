@@ -14,7 +14,7 @@
   <tbody>
     <% @event_teams.includes(:team).order('teams.nickname').each do |event_team| %>
       <tr>
-        <td><%= event_team.event %></td>
+        <td><%= event_team.event.name %></td>
         <td><%= event_team.team.nickname %></td>
         <td><%= link_to 'Show', event_team, class: 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Edit', edit_event_team_path(event_team), class: 'btn btn-warning btn-sm' %></td>
