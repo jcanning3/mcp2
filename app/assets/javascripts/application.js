@@ -52,7 +52,17 @@ $(function() {
 	  listMonth: {
 	  },
 	},
-	events: '/events.json',
+	//events: '/events.json',
+	eventSources: [
+	    {
+	      url: '/events.json',
+	    },
+	    {
+	      url: '/flights.json',
+	      color: "silver",
+	      textColor: "black",
+	    },
+	],
 	resources: '/locations.json',
 	timeFormat: 'h(:mm)t',
 	slotDuration: '00:15:00',

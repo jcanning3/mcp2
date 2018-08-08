@@ -58,6 +58,8 @@
 	  <td><%= event.name %></td>
 	  <td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
 	  <td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>
+	  <!%= (event.try(:end).try(:strftime, '%s').to_i - event.try(:start).try(:strftime, '%s').to_i)/60 %>
+	  <!%= (event.end - event.start)/60 if event.end and event.start %>
 	  <td><%= event.type.name %></td>
 	  <td><%= event.location.name %></td>
 	  <td><%= event.notes %></td>

@@ -8,4 +8,9 @@ class Event < ApplicationRecord
   accepts_nested_attributes_for :sheets, allow_destroy: true,
     reject_if: ->(attrs) { attrs['note'].blank? }
 
+  def self.minutes
+    minx = (self.end - self.start)/60
+    return minx
+  end
+
 end
