@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h3> <%= @musician.name %> </h3>
+</p>
+
+<br> <br> <br>
+
+<h4>Events</h4>
+<% @events = @musician.events.all %>
+<%= render '/events/event_index2' %>
+
+<br> <br> <br>
+
+<h4>Accomodations</h4>
+
+<% @accomodations = @accomodations.where(musician_id: @musician.id) %>
+<%= render 'accomodation_index' %>
+

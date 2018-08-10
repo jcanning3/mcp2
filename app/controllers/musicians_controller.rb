@@ -1,5 +1,4 @@
 class MusiciansController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_musician, only: [:show, :edit, :update, :destroy]
 
   # GET /musicians

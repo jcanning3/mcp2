@@ -1,26 +1,28 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Musician</th>
+      <% if user_signed_in? %> <th>Musician</th> <% end %>
       <th>Host</th>
       <th>Arrival</th>
-      <th>Departure</th>
+      <% if user_signed_in? %> <th>Departure</th> <% end %>
       <th>Co#</th>
-      <th colspan="2"></th>
+      <% if user_signed_in? %> <th colspan="2"></th> <% end %>
     </tr>
   </thead>
 
   <tbody>
     <% @accomodations.includes(:musician).order('LOWER(musicians.last)', "musicians.first").each do |accomodation| %>
       <tr>
-        <td><%= accomodation.musician.name %></td>
+        <% if user_signed_in? %> <td><%= accomodation.musician.name %></td> <% end %>
         <td><%= accomodation.address.nickname %></td>
         <td><%= accomodation.try(:arrival).try(:strftime, "%a %b %e") %></td>
-        <td><%= accomodation.try(:departure).try(:strftime, "%a %b %e") %></td>
+        <% if user_signed_in? %> <td><%= accomodation.try(:departure).try(:strftime, "%a %b %e") %></td> <% end %>
         <td><%= accomodation.co %></td>
-        <td><%= link_to 'Show', accomodation, class: 'btn btn-warning btn-sm' %></td>
-        <td><%= link_to 'Edit', edit_accomodation_path(accomodation), class: 'btn btn-warning btn-sm' %></td>
-        <td><!%= link_to 'Destroy', accomodation, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+        <% if user_signed_in? %>
+	  <td><%= link_to 'Show', accomodation, class: 'btn btn-warning btn-sm' %></td>
+          <td><%= link_to 'Edit', edit_accomodation_path(accomodation), class: 'btn btn-warning btn-sm' %></td>
+          <td><!%= link_to 'Destroy', accomodation, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+	<% end %>
       </tr>
     <% end %>
   </tbody>

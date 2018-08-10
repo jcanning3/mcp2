@@ -4,41 +4,34 @@
   <h3> <%= @musician.name %> </h3>
 </p>
 
-<p>
-  <strong>Instrument:</strong>
-  <%= @musician.instrument %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @musician.notes %>
-</p>
-
-<%= link_to 'Edit', edit_musician_path(@musician), class: 'btn btn-warning btn-sm' %> |
-<%= link_to 'Back', musicians_path, class: 'btn btn-warning btn-sm' %>
-
 <br> <br> <br>
 
 <h4>Events</h4>
 <% @events = @musician.events.all %>
-<%= render '/events/event_index' %>
+
+<% if user_signed_in? %>
+    <%= render '/events/event_index' %>
+<% else %>
+    <%= render '/events/event2_index' %>
+<% end %>
 
 <br> <br> <br>
 
-<h4>Notes</h4>
-<table class='table table-hover'>
-  <tbody>
-    <% @bits = @musician.sheets %>
-    <% @bits.each do |s| %>
-      <tr>
-        <td><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
-        <td><%= s.note %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br> <br> <br>
+<% if user_signed_in? %>
+    <h4>Notes</h4>
+    <table class='table table-hover'>
+      <tbody>
+	<% @bits = @musician.sheets %>
+	<% @bits.each do |s| %>
+	  <tr>
+	    <td><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
+	    <td><%= s.note %></td>
+	  </tr>
+	<% end %>
+      </tbody>
+    </table>
+    <br> <br> <br>
+<% end %>
 
 <h4>Accomodations</h4>
 
@@ -47,18 +40,19 @@
 
 <br> <br> <br>
 
-<h4>Concert History</h4>
-<table class='table table-hover'>
-  <tbody>
-    <% @bits = Performer.where(musician_id: @musician.id) %>
-    <% @bits.each do |performer| %>
-      <tr>
-        <td><%= performer.concert.startTime.strftime("%A, %B %e, %Y") %></td>
-        <td><%= performer.concert.name %></td>
-        <td><%= performer.piece.name %></td>
-        <td><%= performer.instrument %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<% if user_signed_in? %>
+    <h4>Concert History</h4>
+    <table class='table table-hover'>
+      <tbody>
+	<% @bits = Performer.where(musician_id: @musician.id) %>
+	<% @bits.each do |performer| %>
+	  <tr>
+	    <td><%= performer.concert.startTime.strftime("%A, %B %e, %Y") %></td>
+	    <td><%= performer.concert.name %></td>
+	    <td><%= performer.piece.name %></td>
+	    <td><%= performer.instrument %></td>
+	  </tr>
+	<% end %>
+      </tbody>
+    </table>
+<% end %>
