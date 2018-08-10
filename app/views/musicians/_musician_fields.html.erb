@@ -1,0 +1,11 @@
+<div class="nested-fields">
+  <%= f.input :name %>
+  <%= f.input :first %>
+  <%= f.input :last %>
+  <%= f.input :instrument %>
+  <%= f.input :notes %>
+
+  <%= f.check_box :_destroy %>
+
+  <!%= link_to_remove_association "remove musician", f, class: 'btn btn-danger btn-sm' %>
+</div>

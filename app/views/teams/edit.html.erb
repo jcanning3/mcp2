@@ -1,6 +1,13 @@
 <h1>Editing Team</h1>
 
 <%= render 'form', team: @team %>
-<br>
+
+<br> <br> <br>
+
+<h6>First Event Notes</h6>
+<%= @team.events.first.notes %>
+
+<br> <br> <br>
+
 <%= link_to 'Show', @team,      class: 'btn btn-warning btn-sm' %> |
 <%= link_to 'Back', teams_path, class: 'btn btn-warning btn-sm' %>

@@ -1,0 +1,35 @@
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th>Event</th>
+	<th>Start</th>
+	<th>End</th>
+	<th>Type</th>
+	<th>Location</th>
+	<th>Notes</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <% @events.order('start').each do |event| %>
+	<tr bgcolor="<%=event.type.color%>">
+	  <td><%= event.name %></td>
+	  <td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
+	  <td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>
+	  <td><%= event.type.name %></td>
+	  <td><%= event.location.name %></td>
+	  <td><%= event.notes %></td>
+	</tr>
+
+	<% @bits = event.sheets %>
+	<% @bits.each do |s| %>
+	    <tr>
+	      <td> </td>
+	      <td colspan="2" ><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
+	      <td colspan="3" ><%= s.note %></td>
+	      <td colspan="3" > <%= s.pad_id%> == <%= s.pad_type%> </td>
+	    </tr>
+	<% end %>
+      <% end %>
+    </tbody>
+  </table>

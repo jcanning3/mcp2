@@ -2,12 +2,12 @@
 
 <p>
   <strong>Event:</strong>
-  <%= @event_team.event %>
+  <%= @event_team.event.name %>
 </p>
-
+primary
 <p>
   <strong>Team:</strong>
-  <%= @event_team.team %>
+  <%= @event_team.team.nickname %>
 </p>
 
 <%= link_to 'Edit', edit_event_team_path(@event_team), class: 'btn btn-warning btn-sm' %> |

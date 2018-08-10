@@ -2,13 +2,15 @@
 
 <p>
   <strong>Team:</strong>
-  <%= @team_musician.team %>
+  <%= @team_musician.team.nickname %>
 </p>
 
 <p>
   <strong>Musician:</strong>
-  <%= @team_musician.musician %>
+  <%= @team_musician.musician.name %>
 </p>
 
-<%= link_to 'Edit', edit_team_musician_path(@team_musician) %> |
-<%= link_to 'Back', team_musicians_path %>
+<br>
+
+<%= link_to 'Edit', edit_team_musician_path(@team_musician), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', team_musicians_path, class: 'btn btn-warning btn-sm' %>

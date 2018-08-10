@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nickname:</strong>
+  <strong>Team Nickname:</strong>
   <%= @team.nickname %>
 </p>
 
@@ -9,6 +9,27 @@
   <strong>Color:</strong>
   <%= @team.color %>
 </p>
+
+
+<br> <br> <br>
+
+<h6>First Event Notes</h6>
+<%= @team.events.first.notes %>
+
+<br> <br> <br>
+
+<h4>Team Members</h4>
+<% @musicians = @team.musicians %>
+<%= render '/musicians/musician_index' %>
+
+
+<br> <br> <br>
+
+<h4>Events</h4>
+<% @events = @team.events.all %>
+<%= render '/events/event_index' %>
+
+<br> <br> <br>
 
 <%= link_to 'Edit', edit_team_path(@team), class: 'btn btn-warning btn-sm' %> |
 <%= link_to 'Back', teams_path,            class: 'btn btn-warning btn-sm' %>
