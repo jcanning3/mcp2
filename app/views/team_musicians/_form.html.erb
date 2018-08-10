@@ -5,7 +5,7 @@
 
   <div class="form-inputs">
     <%= f.association :team, label_method: :nickname, collection: Team.order(:nickname)  %>
-    <%= f.association :musician %>
+    <%= f.association :musician, collection: Musician.order('LOWER(last)', :first) %>
   </div>
 
   <div class="form-actions">

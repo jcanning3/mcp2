@@ -11,12 +11,14 @@
     <p><strong>Musicians:</strong></p>
 
     <div id="musicians">
-      <%= f.fields_for :musicians do |musician| %>
+	<%= f.association :musicians, collection: Musician.order(:name) %>
+
+      <!%= f.fields_for :musicians do |musician| %>
         <!%= render '/musicians/musician_fields', f: musician %>
-      <% end %>
+      <!% end %>
 
       <div class="links">
-        <!%= link_to_add_association 'add musician', f, :musicians, class: 'btn btn-success btn-sm' %>
+        <%= link_to_add_association 'add musician', f, :musicians, class: 'btn btn-success btn-sm' %>
       </div>
     </div>
 

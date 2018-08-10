@@ -19,6 +19,12 @@
 
 <br> <br> <br>
 
+<h4>Events</h4>
+<% @events = @musician.events.all %>
+<%= render '/events/event_index' %>
+
+<br> <br> <br>
+
 <h4>Notes</h4>
 <table class='table table-hover'>
   <tbody>

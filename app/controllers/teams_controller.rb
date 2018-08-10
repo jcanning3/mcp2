@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
   def index
     @teams = Team.all
     @events = Event.all
+    @musicians = Musician.all
   end
 
   # GET /teams/1
