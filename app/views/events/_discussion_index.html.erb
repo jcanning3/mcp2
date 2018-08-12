@@ -33,32 +33,34 @@
 
       <% @bits = d.sheets %>
       <% s = @bits.first %>
-      <tr bgcolor="<%=d.color%>">
-	<% if @allOn == true %>
-	  <td style="white-space: nowrap;"> <%= d.try(:date).try(:strftime, "%a %m/%d/%Y") %> </td>
-	<% end %>
-	<td style="white-space: nowrap;"><%= s.try(:created_at).try(:strftime, "%m/%d/%y %I:%M%p") %></td>
-	<td><%= s.note %></td>
-	<td><%= link_to 'Show', d, class: 'btn btn-warning btn-sm' %></td>
-	<td><%= link_to 'Edit', edit_discussion_path(d), class: 'btn btn-warning btn-sm' %></td>
-	<!td><!%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
-      <!/tr>
+      <% if s %>
+        <tr bgcolor="<%=d.color%>">
+	  <% if @allOn == true %>
+	    <td style="white-space: nowrap;"> <%= d.try(:date).try(:strftime, "%a %m/%d/%Y") %> </td>
+	  <% end %>
+	  <td style="white-space: nowrap;"><%= s.try(:created_at).try(:strftime, "%m/%d/%y %I:%M%p") %></td>
+	  <td><%= s.note if s.note %></td>
+	  <td><%= link_to 'Show', d, class: 'btn btn-warning btn-sm' %></td>
+	  <td><%= link_to 'Edit', edit_discussion_path(d), class: 'btn btn-warning btn-sm' %></td>
+	  <!td><!%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
+        <!/tr>
 
-      <% first = true %>
-      <% @bits.each do |s| %>
-	<% if first == true %>
+        <% first = true %>
+        <% @bits.each do |s| %>
+	  <% if first == true %>
 	  <% first = false %>
-	<% else %>
-	  <tr bgcolor="<%=d.color%>">
-	    <% if @allOn == true %>
-	      <td> </td>
-	    <% end %>
-	    <td style="white-space: nowrap;"><%= s.try(:created_at).try(:strftime, "%m/%d/%y %I:%M%p") %></td>
-	    <td><%= s.note %></td>
-	    <td></td>
-	    <td></td>
-	  </tr>
-	<% end %>
+	  <% else %>
+	    <tr bgcolor="<%=d.color%>">
+	      <% if @allOn == true %>
+	        <td> </td>
+	      <% end %>
+	      <td style="white-space: nowrap;"><%= s.try(:created_at).try(:strftime, "%m/%d/%y %I:%M%p") %></td>
+	      <td><%= s.note %></td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+	  <% end %>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
