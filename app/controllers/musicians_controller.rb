@@ -6,6 +6,7 @@ class MusiciansController < ApplicationController
   def index
     @musicians = Musician.all
     @accomodations = Accomodation.all
+    @events = Event.all
   end
 
   # GET /musicians/1

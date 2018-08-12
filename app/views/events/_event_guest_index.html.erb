@@ -1,0 +1,40 @@
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th> &nbsp; </th>
+      <th>Start</th>
+      <th>Event</th>
+      <th>Location</th>
+      <th> </th>
+    </tr>
+  </thead>
+
+    <% cdate = "" %>
+    <% inProcess = false %>
+    <% @events.order('start').each do |event| %>
+      <% edate = event.try(:start).try(:strftime, "%Y%m%d") %>
+      <% if cdate == edate %>
+	  <% # if the dates match, do nothing %>
+      <% else %> 
+        <!tr bgcolor="#ffff00">
+        <tr bgcolor="#f0f0f5">
+	  <td> </td>
+	  <td colspan="3">
+	      <h6><strong><%= event.try(:start).try(:strftime, "%A %B %e") %></strong></h6>
+	  </td>
+	  <td> </td>
+        </tr>
+	<% cdate = edate %>
+	<tbody>
+      <% end %> 
+
+	<tr bgcolor="<%=event.type.color%>">
+	  <td> </td>
+	  <td bgcolor="<%=event.type.color%>"><%= event.try(:start).try(:strftime, "%I:%M%p") %></td>
+	  <td bgcolor="<%=event.type.color%>"><%= event.name %></td>
+	  <td bgcolor="<%=event.type.color%>"ooooooooooo><%= event.location.name %></td>
+	  <td> </td>
+	</tr>
+      <% end %>
+    </tbody>
+  </table>

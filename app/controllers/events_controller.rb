@@ -6,8 +6,9 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
-    @flights = Flight.all
+    @accomodations = Accomodation.all
     @discussions = Discussion.all
+    @flights = Flight.all
   end
 
   # GET /events/1

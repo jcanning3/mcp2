@@ -1,3 +1,4 @@
+
 <%= simple_form_for(@team) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -8,17 +9,17 @@
   </div>
 
   <div>
-    <p><strong>Musicians:</strong></p>
+    <p><strong>Links to Musicians:</strong></p>
 
     <div id="musicians">
-	<%= f.association :musicians, collection: Musician.order(:name) %>
+      <%= f.fields_for :team_musicians do |tm| %>
+        <%= render 'team_musician_fields', f: tm %>
+      <% end %>
 
-      <!%= f.fields_for :musicians do |musician| %>
-        <!%= render '/musicians/musician_fields', f: musician %>
-      <!% end %>
+      <br>
 
       <div class="links">
-        <%= link_to_add_association 'add musician', f, :musicians, class: 'btn btn-success btn-sm' %>
+        <%= link_to_add_association 'add musician', f, :team_musicians, class: 'btn btn-success btn-sm' %>
       </div>
     </div>
 

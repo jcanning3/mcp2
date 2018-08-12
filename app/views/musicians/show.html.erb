@@ -10,9 +10,9 @@
 <% @events = @musician.events.all %>
 
 <% if user_signed_in? %>
-    <%= render '/events/event_index' %>
+    <%= render '/events/event_all_index' %>
 <% else %>
-    <%= render '/events/event2_index' %>
+    <%= render '/events/event_guest_index' %>
 <% end %>
 
 <br> <br> <br>

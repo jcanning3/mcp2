@@ -1,0 +1,60 @@
+<table class='table table-hover'>
+  <thead>
+    <tr>
+      <th>Event</th>
+	<th>Start</th>
+	<th>End</th>
+	<th>Type</th>
+	<th>Location</th>
+	<th>Notes</th>
+      </tr>
+    </thead>
+
+    <% cdate = "" %>
+    <% inProcess = false %>
+    <% disp = "none" %>
+    <% @events.order('start').each do |event| %>
+      <% edate = event.try(:start).try(:strftime, "%Y%m%d") %>
+      <% if cdate == edate %>
+	  <% # if the dates match, do nothing %>
+      <% else %> 
+	<% if inProcess == true %>
+	   <% # if we are already in a tbody, then close it out. %>
+	   </tbody>
+	   <% disp = "none" %>
+	<% end %>
+	<% cdate = edate %>
+	<% inProcess = true %>
+	<tbody id="<%="E" + cdate%>" style="display:<%=disp%>">
+      <% end %> 
+
+      <tr bgcolor="<%=event.type.color%>">
+	<td><%= event.name %></td>
+	<td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
+	<td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>
+	<td><%= event.type.name %></td>
+	<td><%= event.location.name %></td>
+	<td><%= event.notes %></td>
+	<td><%= link_to 'Show', event, class: 'btn btn-warning btn-sm' %></td>
+	<td><%= link_to 'Edit', edit_event_path(event), class: 'btn btn-warning btn-sm' %></td>
+	<td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
+      </tr>
+
+      <% @bits = event.sheets %>
+      <% @bits.each do |s| %>
+	<tr>
+	  <td> </td>
+	  <td colspan="2" ><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
+	  <td colspan="3" ><%= s.note %></td>
+	  <td colspan="3" ><%= s.pad_id%> == <%= s.pad_type%> </td>
+	</tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+  <br>
+
+  <%= link_to 'New Event', new_event_path, class: 'btn btn-primary btn-lg'  %>
+
+  <br> <br> <br> 
