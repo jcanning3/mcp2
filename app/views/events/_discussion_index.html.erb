@@ -13,52 +13,54 @@
 <% cdate = "" %>
 <% inProcess = false %>
 <% disp = "table-row-group" %>
-<% @discussions.order('date').each do |d| %>
-  <% edate = d.try(:date).try(:strftime, "%Y%m%d") %>
-  <% if cdate == edate %>
-      <% # if the dates match, do nothing %>
-  <% else %> 
-    <% if inProcess == true %>
-       <% # if we are already in a tbody, then close it out. %>
-       </tbody>
-       <% if @allOn == false %>
-	   <% disp = "none" %>
+  <% if @discussions %>
+    <% @discussions.order('date').each do |d| %>
+      <% edate = d.try(:date).try(:strftime, "%Y%m%d") %>
+      <% if cdate == edate %>
+	  <% # if the dates match, do nothing %>
+      <% else %> 
+	<% if inProcess == true %>
+	   <% # if we are already in a tbody, then close it out. %>
+	   </tbody>
+	   <% if @allOn == false %>
+	       <% disp = "none" %>
+	    <% end %>
 	<% end %>
-    <% end %>
-    <% cdate = edate %>
-    <% inProcess = true %>
-    <tbody id="<%="D" + cdate%>" style="display:<%=disp%>">
-  <% end %> 
+	<% cdate = edate %>
+	<% inProcess = true %>
+	<tbody id="<%="D" + cdate%>" style="display:<%=disp%>">
+      <% end %> 
 
-  <% @bits = d.sheets %>
-  <% s = @bits.first %>
-  <tr bgcolor="<%=d.color%>">
-    <% if @allOn == true %>
-      <td style="white-space: nowrap;"> <%= d.try(:date).try(:strftime, "%a %m/%d/%Y") %> </td>
-    <% end %>
-    <td style="white-space: nowrap;"><%= s.try(:created_at).try(:strftime, "%m/%d/%y %I:%M%p") %></td>
-    <td><%= s.note %></td>
-    <td><%= link_to 'Show', d, class: 'btn btn-warning btn-sm' %></td>
-    <td><%= link_to 'Edit', edit_discussion_path(d), class: 'btn btn-warning btn-sm' %></td>
-    <!td><!%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
-  <!/tr>
-
-  <% first = true %>
-  <% @bits.each do |s| %>
-    <% if first == true %>
-      <% first = false %>
-    <% else %>
+      <% @bits = d.sheets %>
+      <% s = @bits.first %>
       <tr bgcolor="<%=d.color%>">
 	<% if @allOn == true %>
-	  <td> </td>
+	  <td style="white-space: nowrap;"> <%= d.try(:date).try(:strftime, "%a %m/%d/%Y") %> </td>
 	<% end %>
 	<td style="white-space: nowrap;"><%= s.try(:created_at).try(:strftime, "%m/%d/%y %I:%M%p") %></td>
 	<td><%= s.note %></td>
-	<td></td>
-	<td></td>
-      </tr>
+	<td><%= link_to 'Show', d, class: 'btn btn-warning btn-sm' %></td>
+	<td><%= link_to 'Edit', edit_discussion_path(d), class: 'btn btn-warning btn-sm' %></td>
+	<!td><!%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
+      <!/tr>
+
+      <% first = true %>
+      <% @bits.each do |s| %>
+	<% if first == true %>
+	  <% first = false %>
+	<% else %>
+	  <tr bgcolor="<%=d.color%>">
+	    <% if @allOn == true %>
+	      <td> </td>
+	    <% end %>
+	    <td style="white-space: nowrap;"><%= s.try(:created_at).try(:strftime, "%m/%d/%y %I:%M%p") %></td>
+	    <td><%= s.note %></td>
+	    <td></td>
+	    <td></td>
+	  </tr>
+	<% end %>
+      <% end %>
     <% end %>
   <% end %>
-<% end %>
 </tbody>
 </table>
