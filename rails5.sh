@@ -7,6 +7,7 @@
 #rails generate scaffold Accomodation address:references musician:references arrival:datetime departure:datetime co:string notes:string
 #rails generate scaffold Team_musician team:references musician:references 
 
+rails generate scaffold Instrument name:text order:integer
 rails generate scaffold Task task_type:references type:references 
     rails generate scaffold TaskType name:text order:integer
 

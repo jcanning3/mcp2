@@ -10,11 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_185909) do
+ActiveRecord::Schema.define(version: 2018_08_12_214502) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "accomodations", force: :cascade do |t|
-    t.integer "address_id"
-    t.integer "musician_id"
+    t.bigint "address_id"
+    t.bigint "musician_id"
     t.datetime "arrival"
     t.datetime "departure"
     t.string "co"
@@ -72,8 +75,8 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
   end
 
   create_table "event_teams", force: :cascade do |t|
-    t.integer "event_id"
-    t.integer "team_id"
+    t.bigint "event_id"
+    t.bigint "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_event_teams_on_event_id"
@@ -85,8 +88,8 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
     t.string "description"
     t.datetime "start"
     t.datetime "end"
-    t.integer "type_id"
-    t.integer "location_id"
+    t.bigint "type_id"
+    t.bigint "location_id"
     t.string "notes"
     t.string "color"
     t.datetime "created_at", null: false
@@ -96,8 +99,8 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
   end
 
   create_table "flights", force: :cascade do |t|
-    t.integer "musician_id"
-    t.integer "airline_id"
+    t.bigint "musician_id"
+    t.bigint "airline_id"
     t.string "flight"
     t.string "from"
     t.datetime "departure"
@@ -111,6 +114,13 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
     t.index ["musician_id"], name: "index_flights_on_musician_id"
   end
 
+  create_table "instruments", force: :cascade do |t|
+    t.text "name"
+    t.integer "order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.string "nickname"
@@ -121,10 +131,10 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
 
   create_table "movements", force: :cascade do |t|
     t.string "name"
-    t.integer "piece_id"
     t.integer "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "piece_id"
     t.index ["piece_id"], name: "index_movements_on_piece_id"
   end
 
@@ -139,25 +149,25 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
   end
 
   create_table "performances", force: :cascade do |t|
-    t.integer "concert_id"
-    t.integer "piece_id"
+    t.bigint "concert_id"
     t.integer "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "piece_id"
     t.index ["concert_id"], name: "index_performances_on_concert_id"
     t.index ["piece_id"], name: "index_performances_on_piece_id"
   end
 
   create_table "performers", force: :cascade do |t|
     t.string "listing"
-    t.integer "concert_id"
-    t.integer "musician_id"
+    t.bigint "concert_id"
+    t.bigint "musician_id"
     t.string "instrument"
     t.integer "order"
-    t.integer "piece_id"
     t.date "concert_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "piece_id"
     t.index ["concert_id"], name: "index_performers_on_concert_id"
     t.index ["musician_id"], name: "index_performers_on_musician_id"
     t.index ["piece_id"], name: "index_performers_on_piece_id"
@@ -165,7 +175,7 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
 
   create_table "pieces", force: :cascade do |t|
     t.string "name"
-    t.integer "composer_id"
+    t.bigint "composer_id"
     t.integer "arranger"
     t.string "opus"
     t.text "year_composed"
@@ -184,8 +194,8 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
   end
 
   create_table "team_musicians", force: :cascade do |t|
-    t.integer "team_id"
-    t.integer "musician_id"
+    t.bigint "team_id"
+    t.bigint "musician_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["musician_id"], name: "index_team_musicians_on_musician_id"
@@ -224,4 +234,21 @@ ActiveRecord::Schema.define(version: 2018_08_06_185909) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "accomodations", "addresses"
+  add_foreign_key "accomodations", "musicians"
+  add_foreign_key "event_teams", "events"
+  add_foreign_key "event_teams", "teams"
+  add_foreign_key "events", "locations"
+  add_foreign_key "events", "types"
+  add_foreign_key "flights", "airlines"
+  add_foreign_key "flights", "musicians"
+  add_foreign_key "movements", "pieces"
+  add_foreign_key "performances", "concerts"
+  add_foreign_key "performances", "pieces"
+  add_foreign_key "performers", "concerts"
+  add_foreign_key "performers", "musicians"
+  add_foreign_key "performers", "pieces"
+  add_foreign_key "pieces", "composers"
+  add_foreign_key "team_musicians", "musicians"
+  add_foreign_key "team_musicians", "teams"
 end

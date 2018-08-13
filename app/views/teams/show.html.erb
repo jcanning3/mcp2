@@ -19,7 +19,8 @@
 <br> <br> <br>
 
 <h4>Team Members</h4>
-<% @musicians = @team.musicians %>
+<% @buttons = false %>
+<% @musicians = @team.musicians.order('LOWER(last)') %>
 <%= render '/musicians/musician_index' %>
 
 

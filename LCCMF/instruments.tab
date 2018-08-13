@@ -1,0 +1,26 @@
+order	name
+100	Flute
+110	Oboe
+120	Clarinet
+130	Bassoon
+200	Horn
+210	Trumpet
+220	Trombone
+230	Tuba
+300	Timpani
+310	Percussion
+320	Piano
+400	Violin I
+410	Violin II
+420	Violin
+430	Viola I
+440	Viola II
+450	Viola
+460	Cello I
+470	Cello II
+480	Cello
+490	Double bass
+800	Soprano
+810	Alto
+820	Tenor
+830	Bass

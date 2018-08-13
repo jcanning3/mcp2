@@ -1,5 +1,5 @@
 <div class="nested-fields">
-  <%= f.association :musician %>
+  <%= f.association :musician, collection: Musician.order(:name) %>
 
   <%= f.check_box :_destroy %>
 
