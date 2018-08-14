@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_214502) do
+ActiveRecord::Schema.define(version: 2018_08_13_042826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -142,10 +142,11 @@ ActiveRecord::Schema.define(version: 2018_08_12_214502) do
     t.string "name"
     t.string "first"
     t.string "last"
-    t.string "instrument"
+    t.string "old_instrument"
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "instrument_id"
   end
 
   create_table "performances", force: :cascade do |t|
@@ -198,6 +199,7 @@ ActiveRecord::Schema.define(version: 2018_08_12_214502) do
     t.bigint "musician_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "instrument_id"
     t.index ["musician_id"], name: "index_team_musicians_on_musician_id"
     t.index ["team_id"], name: "index_team_musicians_on_team_id"
   end
