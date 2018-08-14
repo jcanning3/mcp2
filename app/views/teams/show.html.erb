@@ -20,7 +20,7 @@
 
 <h4>Team Members</h4>
 <% @buttons = false %>
-<% @musicians = @team.musicians.order('LOWER(last)') %>
+<% @musicians = @team.musicians.includes(:instrument).order('instruments.order') %>
 <%= render '/musicians/musician_index' %>
 
 
