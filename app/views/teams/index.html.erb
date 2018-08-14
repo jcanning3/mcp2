@@ -17,7 +17,7 @@
       <tr>
         <td><%= team.nickname %></td>
         <td><%= team.color %></td>
-        <td> </td>
+        <td><%= team.id %> </td>
         <td><%= link_to 'Show', team,                 class: 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Edit', edit_team_path(team), class: 'btn btn-warning btn-sm' %></td>
       </tr>
@@ -25,8 +25,8 @@
       <% team.musicians.includes(:instrument).order('instruments.order').each do |m| %>
         <tr>
 	  <td> </td>
-	  <td> <%= m.name %> </td>
-	  <td colspan="4"> <%= m.instrument.name %> </td>
+	  <td> <%= m.name if m %> </td>
+	  <td colspan="4"> <%= m.instrument.name if m.instrument %> </td>
 	</tr>
       <% end %>
 
