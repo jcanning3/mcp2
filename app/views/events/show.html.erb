@@ -1,16 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 
-<h1>An Event</h1>
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<h2> <%= @event.name %> </h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+<br>
 
 <p>
   <strong>Start:</strong>
@@ -37,10 +30,29 @@
   <%= @event.notes %>
 </p>
 
-<p>
-  <strong>Color:</strong>
-  <%= @event.color %>
-</p>
+<br> <br> <br>
+
+<h4>Teams</h4>
+<table>
+  <tbody>
+    <% @event.teams.each do |t| %>
+      <tr>
+        <td><%= t.nickname %> </td>
+      </tr>
+
+      <% t.musicians.includes(:instrument).order('instruments.order').each do |m| %>
+        <tr>
+          <td> </td>
+          <td> <%= m.name if m %> </td>
+          <td> <%= m.instrument.name if m.instrument %> </td>
+        </tr>
+      <% end %>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br> <br> <br>
 
 <h4>Notes</h4>
 <table class='table table-hover'>

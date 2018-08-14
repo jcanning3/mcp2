@@ -10,6 +10,9 @@ class Event < ApplicationRecord
   accepts_nested_attributes_for :sheets, allow_destroy: true,
     reject_if: ->(attrs) { attrs['note'].blank? }
 
+  accepts_nested_attributes_for :event_teams, allow_destroy: true,
+    reject_if: :all_blank
+
   attr_accessor :minutes, :sname
 
   def minutes

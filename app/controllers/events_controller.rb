@@ -9,6 +9,7 @@ class EventsController < ApplicationController
     @accomodations = Accomodation.all
     @discussions = Discussion.all
     @flights = Flight.all
+    @teams = Team.all
   end
 
   # GET /events/1
@@ -76,6 +77,8 @@ class EventsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:name, :description, :start, :end, :type_id, :team_id, :location_id, :notes, :color,
-        sheets_attributes: [:id, :_destroy, :note] )
+        sheets_attributes: [:id, :_destroy, :note], event_teams_attributes: [:id, :event_id, :team_id, :_destroy])
     end
 end
+
+

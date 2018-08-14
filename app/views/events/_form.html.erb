@@ -13,6 +13,22 @@
     <%= f.input :color %>
   </div>
 
+  
+  <div>
+    <p><strong>Teams:</strong></p>
+    <div id="teams">
+      <%= f.fields_for :event_teams do |et| %>
+        <%= render 'event_team_fields', f: et %>
+      <% end %>
+
+      <br>
+
+      <div class="links">
+        <%= link_to_add_association 'Link Team to Event', f, :event_teams, class: 'btn btn-success btn-sm' %>
+      </div>
+    </div>
+  </div>
+
   <div>
     <p><strong>New Notes:</strong></p>
 
@@ -22,7 +38,7 @@
       <% end %>
 
       <div class="links">
-        <%= link_to_add_association 'add note', f, :sheets, class: 'btn btn-success btn-sm' %>
+        <%= link_to_add_association 'Add Note', f, :sheets, class: 'btn btn-success btn-sm' %>
       </div>
     </div>
   </div>
