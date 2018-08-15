@@ -23,7 +23,7 @@
 	      <h6><strong><%= event.try(:start).try(:strftime, "%A %B %e") %></strong></h6>
 	  </td>
 	  <td> </td>
-        </tr>
+	</tr>
 	<% cdate = edate %>
 	<tbody>
       <% end %> 
@@ -32,9 +32,18 @@
 	  <td> </td>
 	  <td bgcolor="<%=event.type.color%>"><%= event.try(:start).try(:strftime, "%I:%M%p") %></td>
 	  <td bgcolor="<%=event.type.color%>"><%= event.name %></td>
-	  <td bgcolor="<%=event.type.color%>"ooooooooooo><%= event.location.name %></td>
+	  <td bgcolor="<%=event.type.color%>"><%= event.location.name %></td>
 	  <td> </td>
 	</tr>
+	<% unless event.notes.nil? || event.notes.length == 0%>
+	  <tr bgcolor="<%=event.type.color%>">
+	    <td> </td>
+	    <td> </td>
+	    <td> </td>
+	    <td> <%= event.notes %> </td>
+	    <td> </td>
+	  </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>

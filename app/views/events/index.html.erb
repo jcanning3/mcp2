@@ -23,7 +23,7 @@
 
 <h4>Accomodations</h4>
 
-<% @accomodations = @accomodations.all %>
+<% @accomodations = @accomodations.all.order(:arrival) %>
 <%= render '/accomodations/accomodation_index' %>
 
 <h4>Flights</h4>

@@ -42,9 +42,8 @@
 	  <td><%= s.note if s.note %></td>
 	  <td><%= link_to 'Show', d, class: 'btn btn-warning btn-sm' %></td>
 	  <td><%= link_to 'Edit', edit_discussion_path(d), class: 'btn btn-warning btn-sm' %></td>
-	  <!td><!%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
-        <!/tr>
-
+	  <td><%= link_to 'Destroy', d, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
+        </tr>
         <% first = true %>
         <% @bits.each do |s| %>
 	  <% if first == true %>
