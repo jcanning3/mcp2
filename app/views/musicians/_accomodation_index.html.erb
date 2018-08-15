@@ -4,7 +4,7 @@
       <% if user_signed_in? %> <th>Musician</th> <% end %>
       <th>Host</th>
       <th>Arrival</th>
-      <% if user_signed_in? %> <th>Departure</th> <% end %>
+      <th>Departure</th>
       <th>Co#</th>
       <% if user_signed_in? %> <th colspan="2"></th> <% end %>
     </tr>
@@ -16,7 +16,7 @@
         <% if user_signed_in? %> <td><%= accomodation.musician.name %></td> <% end %>
         <td><%= accomodation.address.nickname %></td>
         <td><%= accomodation.try(:arrival).try(:strftime, "%a %b %e") %></td>
-        <% if user_signed_in? %> <td><%= accomodation.try(:departure).try(:strftime, "%a %b %e") %></td> <% end %>
+        <td><%= accomodation.try(:departure).try(:strftime, "%a %b %e") %></td>
         <td><%= accomodation.co %></td>
         <% if user_signed_in? %>
 	  <td><%= link_to 'Show', accomodation, class: 'btn btn-warning btn-sm' %></td>

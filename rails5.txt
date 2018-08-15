@@ -1,0 +1,76 @@
+# rails commands to add an address book and travel accomodations
+# rails commands to connect musicians to teams (and thus events)
+# rails commands to build tasks and assignments
+
+
+#rails generate scaffold Address name:string nickname:string address1:string address2:string city:string state:string zip:string phone:string
+#rails generate scaffold Accomodation address:references musician:references arrival:datetime departure:datetime co:string notes:string
+#rails generate scaffold Team_musician team:references musician:references 
+
+#rails generate scaffold Instrument name:text order:integer
+
+rails generate scaffold TaskType name:text order:integer
+rails generate scaffold Task task_type:references type:references 
+rails generate scaffold Assignment   name:string task:references event:references
+rails generate scaffold Instructions name:string task:references event:references
+
+event has many instructions through event_instructions
+
+
+
+# rails db:migrate
+
+# sh reset.sh
+# Add entries to db/seeds.rb
+
+# rails db:migrate
+# Update app/models/composers.rb to say it has many pieces
+# Add :destroy and touch: true to app/models files
+
+
+
+--
+
+  every event Type will have a list of Tasks
+
+  every Event will be able to see the list of Tasks because of its event type
+
+  every Event will use the lsit of Tasks as labels for Instructions and Assignemnts
+
+  An instruction references a Task
+  every Event will have a list of Instructions
+    you can sort these instructions by Task.order
+  every Event will have a list of Assigments
+
+  every Event
+    will use it's type to get a list of Task labels
+    will have multiple Instructions - each related to a Task
+    will have multiple Assignments - each related to a Task
+
+
+        EVENT 1
+	x		x		x	
+	Tasks		Instructions	Assignments
+	 T1		 I1		 A1
+	 T2		 I2		 A2
+
+        EVENT 2
+	x		x		x	
+	Tasks		Instructions	Assignments
+	 T1		 I1		 A1
+	 T3		 I3		 A3
+
+
+  Type			Event
+    id			  id
+    name - rehearsal	  name
+    color		  type_id
+
+
+  Task			Instruction			Assignment
+    name		  name				  name
+    type_id
+    id			  id				  id
+    			  task_id			  task_id
+			  event_ids			  event_ids
+

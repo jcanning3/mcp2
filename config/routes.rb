@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :instructions
+  resources :assignments
+  resources :tasks
+  resources :task_types
   resources :instruments
   resources :team_musicians
   resources :accomodations

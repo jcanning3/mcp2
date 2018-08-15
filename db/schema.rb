@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_13_042826) do
+ActiveRecord::Schema.define(version: 2018_08_15_191429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(version: 2018_08_13_042826) do
     t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "assignments", force: :cascade do |t|
+    t.string "name"
+    t.bigint "task_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_assignments_on_event_id"
+    t.index ["task_id"], name: "index_assignments_on_task_id"
   end
 
   create_table "composers", force: :cascade do |t|
@@ -112,6 +122,16 @@ ActiveRecord::Schema.define(version: 2018_08_13_042826) do
     t.string "confirmation"
     t.index ["airline_id"], name: "index_flights_on_airline_id"
     t.index ["musician_id"], name: "index_flights_on_musician_id"
+  end
+
+  create_table "instructions", force: :cascade do |t|
+    t.string "name"
+    t.bigint "task_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_instructions_on_event_id"
+    t.index ["task_id"], name: "index_instructions_on_task_id"
   end
 
   create_table "instruments", force: :cascade do |t|
@@ -194,6 +214,22 @@ ActiveRecord::Schema.define(version: 2018_08_13_042826) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "task_types", force: :cascade do |t|
+    t.text "name"
+    t.integer "order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.bigint "task_type_id"
+    t.bigint "type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_type_id"], name: "index_tasks_on_task_type_id"
+    t.index ["type_id"], name: "index_tasks_on_type_id"
+  end
+
   create_table "team_musicians", force: :cascade do |t|
     t.bigint "team_id"
     t.bigint "musician_id"
@@ -238,12 +274,16 @@ ActiveRecord::Schema.define(version: 2018_08_13_042826) do
 
   add_foreign_key "accomodations", "addresses"
   add_foreign_key "accomodations", "musicians"
+  add_foreign_key "assignments", "events"
+  add_foreign_key "assignments", "tasks"
   add_foreign_key "event_teams", "events"
   add_foreign_key "event_teams", "teams"
   add_foreign_key "events", "locations"
   add_foreign_key "events", "types"
   add_foreign_key "flights", "airlines"
   add_foreign_key "flights", "musicians"
+  add_foreign_key "instructions", "events"
+  add_foreign_key "instructions", "tasks"
   add_foreign_key "movements", "pieces"
   add_foreign_key "performances", "concerts"
   add_foreign_key "performances", "pieces"
@@ -251,6 +291,8 @@ ActiveRecord::Schema.define(version: 2018_08_13_042826) do
   add_foreign_key "performers", "musicians"
   add_foreign_key "performers", "pieces"
   add_foreign_key "pieces", "composers"
+  add_foreign_key "tasks", "task_types"
+  add_foreign_key "tasks", "types"
   add_foreign_key "team_musicians", "musicians"
   add_foreign_key "team_musicians", "teams"
 end
