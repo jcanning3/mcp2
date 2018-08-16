@@ -24,7 +24,6 @@
 $(function() {
     $('#calendar33').fullCalendar({
 	themeSystem: 'bootstrap4',
-	defaultDate: "8/15/2018",
 	defaultView: "agendaDay",
 	header: {
 	  left: 'month,agendaWeek,agendaDay,listMonth',
