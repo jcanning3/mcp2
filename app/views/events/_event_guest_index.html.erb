@@ -3,6 +3,7 @@
     <tr>
       <th> &nbsp; </th>
       <th>Start</th>
+      <th>End</th>
       <th>Event</th>
       <th>Location</th>
       <th> </th>
@@ -23,6 +24,7 @@
 	      <h6><strong><%= event.try(:start).try(:strftime, "%A %B %e") %></strong></h6>
 	  </td>
 	  <td> </td>
+	  <td> </td>
 	</tr>
 	<% cdate = edate %>
 	<tbody>
@@ -31,12 +33,14 @@
 	<tr bgcolor="<%=event.type.color%>">
 	  <td> </td>
 	  <td bgcolor="<%=event.type.color%>"><%= event.try(:start).try(:strftime, "%I:%M%p") %></td>
+	  <td bgcolor="<%=event.type.color%>"><%= event.try(:end).try(:strftime, "%I:%M%p") %></td>
 	  <td bgcolor="<%=event.type.color%>"><%= event.name %></td>
 	  <td bgcolor="<%=event.type.color%>"><%= event.location.name %></td>
 	  <td> </td>
 	</tr>
 	<% unless event.notes.nil? || event.notes.length == 0%>
 	  <tr bgcolor="<%=event.type.color%>">
+	    <td> </td>
 	    <td> </td>
 	    <td> </td>
 	    <td> <%= event.type.name %> </td>

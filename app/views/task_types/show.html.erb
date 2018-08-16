@@ -10,5 +10,7 @@
   <%= @task_type.order %>
 </p>
 
-<%= link_to 'Edit', edit_task_type_path(@task_type) %> |
-<%= link_to 'Back', task_types_path %>
+<br> 
+
+<%= link_to 'Edit', edit_task_type_path(@task_type), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', task_types_path, class: 'btn btn-warning btn-sm' %>
