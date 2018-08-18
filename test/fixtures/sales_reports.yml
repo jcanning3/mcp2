@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-08-18 00:42:54
+  vendor: one
+  concert: 2018-08-18 00:42:54
+  ticket_category: one
+  description: MyText
+  count: 1
+  unit_price: 1
+
+two:
+  date: 2018-08-18 00:42:54
+  vendor: two
+  concert: 2018-08-18 00:42:54
+  ticket_category: two
+  description: MyText
+  count: 1
+  unit_price: 1

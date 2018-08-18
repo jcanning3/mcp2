@@ -74,3 +74,28 @@ event has many instructions through event_instructions
     			  task_id			  task_id
 			  event_ids			  event_ids
 
+--
+
+Thoughts about ticket tracking
+
+    salesReport
+	date
+	vendor (flynn, square, lccmf)
+	concert (date)
+	category (pass, adult, student, comp)
+	description
+	count
+	unit_price
+
+
+
+rails generate scaffold ticketCategory name:text
+rails generate scaffold vendor name:text
+rails generate scaffold salesReport date:datetime vendor:references concert:datetime ticket_category:references description:text count:integer unit_price:integer
+
+    ticket_category has many sales_reports
+    vendor has many sales_reports
+
+    sales_reports belongs to ticket_category
+    sales_reports belongs to vendor
+

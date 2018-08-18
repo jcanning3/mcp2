@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_15_191429) do
+ActiveRecord::Schema.define(version: 2018_08_18_044254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -206,6 +206,20 @@ ActiveRecord::Schema.define(version: 2018_08_15_191429) do
     t.index ["composer_id"], name: "index_pieces_on_composer_id"
   end
 
+  create_table "sales_reports", force: :cascade do |t|
+    t.datetime "date"
+    t.bigint "vendor_id"
+    t.datetime "concert"
+    t.bigint "ticket_category_id"
+    t.text "description"
+    t.integer "count"
+    t.integer "unit_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_category_id"], name: "index_sales_reports_on_ticket_category_id"
+    t.index ["vendor_id"], name: "index_sales_reports_on_vendor_id"
+  end
+
   create_table "sheets", force: :cascade do |t|
     t.text "note"
     t.string "pad_id"
@@ -247,6 +261,12 @@ ActiveRecord::Schema.define(version: 2018_08_15_191429) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "ticket_categories", force: :cascade do |t|
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "types", force: :cascade do |t|
     t.string "name"
     t.string "nickname"
@@ -272,6 +292,12 @@ ActiveRecord::Schema.define(version: 2018_08_15_191429) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "vendors", force: :cascade do |t|
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "accomodations", "addresses"
   add_foreign_key "accomodations", "musicians"
   add_foreign_key "assignments", "events"
@@ -291,6 +317,8 @@ ActiveRecord::Schema.define(version: 2018_08_15_191429) do
   add_foreign_key "performers", "musicians"
   add_foreign_key "performers", "pieces"
   add_foreign_key "pieces", "composers"
+  add_foreign_key "sales_reports", "ticket_categories"
+  add_foreign_key "sales_reports", "vendors"
   add_foreign_key "tasks", "task_types"
   add_foreign_key "tasks", "types"
   add_foreign_key "team_musicians", "musicians"

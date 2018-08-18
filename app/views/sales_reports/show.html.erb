@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sales_report.date %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @sales_report.vendor.name %>
+</p>
+
+<p>
+  <strong>Concert:</strong>
+  <%= @sales_report.concert %>
+</p>
+
+<p>
+  <strong>Ticket category:</strong>
+  <%= @sales_report.ticket_category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sales_report.description %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @sales_report.count %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @sales_report.unit_price %>
+</p>
+
+<%= link_to 'Edit', edit_sales_report_path(@sales_report), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', sales_reports_path, class: 'btn btn-warning btn-sm' %>

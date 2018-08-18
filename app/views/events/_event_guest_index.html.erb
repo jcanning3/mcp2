@@ -10,9 +10,10 @@
     </tr>
   </thead>
 
+    <% now = DateTime.now %>
     <% cdate = "" %>
     <% inProcess = false %>
-    <% @events.order('start').each do |event| %>
+    <% @events.where('events.end >= ?', now).order('start').each do |event| %>
       <% edate = event.try(:start).try(:strftime, "%Y%m%d") %>
       <% if cdate == edate %>
 	  <% # if the dates match, do nothing %>

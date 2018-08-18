@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :sales_reports
+  resources :vendors
+  resources :ticket_categories
   resources :instructions
   resources :assignments
   resources :tasks

@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vendor.name %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_path(@vendor), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', vendors_path, class: 'btn btn-warning btn-sm' %>
