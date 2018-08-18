@@ -1,4 +1,8 @@
 class Task < ApplicationRecord
-  belongs_to :task_type
-  belongs_to :type
+  has_many :task_types, dependent: :destroy
+  has_many :types, through: :task_types
+
+  accepts_nested_attributes_for :task_types, allow_destroy: true,
+    reject_if: ->(attrs) { attrs['type_id'].blank? }
+
 end

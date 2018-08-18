@@ -7,12 +7,12 @@
 
 <p>
   <strong>Start:</strong>
-  <%= @event.start.strftime("%a %b %e %I:%M%p") %>
+  <%= @event.start.strftime("%a %b %e %I:%M%p %Z") %>
 </p>
 
 <p>
   <strong>End:</strong>
-  <%= @event.try(:end).try(:strftime, '%a %b %e %I:%M%p') %>
+  <%= @event.try(:end).try(:strftime, '%a %b %e %I:%M%p %Z') %>
 </p>
 
 <p>

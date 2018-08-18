@@ -10,10 +10,11 @@
     </tr>
   </thead>
 
-    <% now = DateTime.now %>
+    <% now = DateTime.now.to_i - 18000 %>
     <% cdate = "" %>
     <% inProcess = false %>
-    <% @events.where('events.end >= ?', now).order('start').each do |event| %>
+    <% @events.order('start').each do |event| %>
+      <% next if event.end.to_i < now %>
       <% edate = event.try(:start).try(:strftime, "%Y%m%d") %>
       <% if cdate == edate %>
 	  <% # if the dates match, do nothing %>
