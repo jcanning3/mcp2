@@ -11,7 +11,7 @@
     </thead>
 
     <tbody>
-    <% @events.order('start').each do |event| %>
+      <% @events.order('start').each do |event| %>
 	<tr bgcolor="<%=event.type.color%>">
 	  <td><%= event.name %></td>
 	  <td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
