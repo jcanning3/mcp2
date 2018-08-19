@@ -23,6 +23,7 @@
 
 $(function() {
     $('#calendar33').fullCalendar({
+	schedulerLicenseKey: '0790764867-fcs-1531555931',
 	themeSystem: 'bootstrap4',
 	defaultView: "agendaDay",
 	header: {

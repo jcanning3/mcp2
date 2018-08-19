@@ -7,7 +7,7 @@
 <br> <br> <br>
 
 <h4>Events</h4>
-<% @events = @musician.events.all %>
+<% @events = @musician.events.uniq %>
 
 <% if user_signed_in? %>
     <%= render '/events/event_all_index' %>
