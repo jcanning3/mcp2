@@ -8,23 +8,23 @@
 
 <h4>Discussions</h4>
 
-<% @allOn = false %>
-<%= render 'discussion_index' %>
+    <% @allOn = false %>
+    <%= render 'discussion_index' %>
 
-  <br>
+    <br>
 
-  <%= link_to 'New Discussion', new_discussion_path, class: 'btn btn-primary btn-lg'  %>
+    <%= link_to 'New Discussion', new_discussion_path, class: 'btn btn-primary btn-lg'  %>
 
-<br> <br> <br>
+    <br> <br> <br>
 
 <h4>Events</h4>
 
-  <%= render 'event_dates_index' %>
+    <%= render 'event_dates_index' %>
 
 <h4>Accomodations</h4>
 
-<% @accomodations = @accomodations.all.order(:arrival) %>
-<%= render '/accomodations/accomodation_index' %>
+    <% @accomodations = @accomodations.all.order(:arrival) %>
+    <%= render '/accomodations/accomodation_index' %>
 
 <h4>Flights</h4>
 
