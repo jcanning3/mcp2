@@ -22,7 +22,7 @@
 
   <tbody>
 
-    <% @sales_reports.order(:concert).each do |sales_report| %>
+    <% @sales_reports.order(:concert, :description).each do |sales_report| %>
       <% if sales_report.ticket_category.name == "Festival Pass" %>
         <% passCount += sales_report.count %>
 	<% countMe = false %>

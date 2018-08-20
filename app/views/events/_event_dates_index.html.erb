@@ -14,7 +14,7 @@
     <% inProcess = false %>
     <% disp = "none" %>
     <% @events.order('start').each do |event| %>
-      <% edate = event.try(:start).try(:strftime, "%Y%m%d %Z") %>
+      <% edate = event.try(:start).try(:strftime, "%Y%m%d") %>
       <% if cdate == edate %>
 	  <% # if the dates match, do nothing %>
       <% else %> 
