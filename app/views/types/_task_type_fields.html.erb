@@ -1,0 +1,9 @@
+<div class="nested-fields">
+  <%= f.association :task, label_method: :name, collection: Task.order(:order) %>
+
+  <%= f.check_box :_destroy %>
+
+  <%= link_to_remove_association "remove link", f, class: 'btn btn-danger btn-sm' %>
+</div>
+
+<br>

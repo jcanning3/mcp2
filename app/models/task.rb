@@ -4,5 +4,4 @@ class Task < ApplicationRecord
 
   accepts_nested_attributes_for :task_types, allow_destroy: true,
     reject_if: ->(attrs) { attrs['type_id'].blank? }
-
 end

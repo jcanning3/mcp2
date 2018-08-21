@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Task type:</strong>
-  <%= @task.task_type %>
+  <strong>Name:</strong>
+  <%= @task.name %>
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @task.type %>
+  <strong>Order:</strong>
+  <%= @task.order %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', tasks_path, class: 'btn btn-warning btn-sm' %>

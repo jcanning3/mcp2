@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Task</th>
       <th>Event</th>
+      <th>tmp</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +17,9 @@
     <% @instructions.each do |instruction| %>
       <tr>
         <td><%= instruction.name %></td>
-        <td><%= instruction.task %></td>
-        <td><%= instruction.event %></td>
+        <td><%= instruction.task.name %></td>
+        <td><%= instruction.event.name %></td>
+        <td><%= instruction.tmp %></td>
         <td><%= link_to 'Show', instruction %></td>
         <td><%= link_to 'Edit', edit_instruction_path(instruction) %></td>
         <td><%= link_to 'Destroy', instruction, method: :delete, data: { confirm: 'Are you sure?' } %></td>

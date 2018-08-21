@@ -1,5 +1,4 @@
-<%= simple_form_for(@event) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for(@event) do |f| %> <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
@@ -14,7 +13,18 @@
     <%= f.input :color %>
   </div>
 
+  <div>
+    <p><strong>Instructions:</strong></p>
+    <div id="instructions">
+      <% setup_instructions(@event) %>
+      <%= f.fields_for :instructions do |i| %>
+	<%= render 'instruction_fields', f: i %>
+      <% end %>
+    </div>
+  </div>
   
+  <br> <br> <br>
+
   <div>
     <p><strong>Teams:</strong></p>
     <div id="teams">

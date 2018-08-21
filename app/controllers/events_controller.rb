@@ -10,6 +10,8 @@ class EventsController < ApplicationController
     @discussions = Discussion.all
     @flights = Flight.all
     @teams = Team.all
+    @instructions = Instruction.all
+    @tasks = Task.all
   end
 
   # GET /events/1
@@ -68,6 +70,7 @@ class EventsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
@@ -78,8 +81,11 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:name, :description, :start, :end, :type_id, :team_id,
         :location_id, :notes, :color, :heads,
-        sheets_attributes: [:id, :_destroy, :note], event_teams_attributes: [:id, :event_id, :team_id, :_destroy])
+        sheets_attributes: [:id, :_destroy, :note], event_teams_attributes: [:id, :event_id, :team_id, :_destroy],
+	instructions_attributes: [:id, :_destroy, :name, :event_id, :task_id])
     end
 end
+
+
 
 

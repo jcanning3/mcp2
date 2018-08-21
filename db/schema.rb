@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_022938) do
+ActiveRecord::Schema.define(version: 2018_08_21_105116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_022938) do
     t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "tmp"
     t.index ["event_id"], name: "index_instructions_on_event_id"
     t.index ["task_id"], name: "index_instructions_on_task_id"
   end
@@ -230,19 +231,19 @@ ActiveRecord::Schema.define(version: 2018_08_20_022938) do
   end
 
   create_table "task_types", force: :cascade do |t|
-    t.text "name"
-    t.integer "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "type_id"
+    t.bigint "task_id"
+    t.index ["task_id"], name: "index_task_types_on_task_id"
+    t.index ["type_id"], name: "index_task_types_on_type_id"
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.bigint "task_type_id"
-    t.bigint "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["task_type_id"], name: "index_tasks_on_task_type_id"
-    t.index ["type_id"], name: "index_tasks_on_type_id"
+    t.text "name"
+    t.integer "order"
   end
 
   create_table "team_musicians", force: :cascade do |t|
@@ -320,8 +321,8 @@ ActiveRecord::Schema.define(version: 2018_08_20_022938) do
   add_foreign_key "pieces", "composers"
   add_foreign_key "sales_reports", "ticket_categories"
   add_foreign_key "sales_reports", "vendors"
-  add_foreign_key "tasks", "task_types"
-  add_foreign_key "tasks", "types"
+  add_foreign_key "task_types", "task_types", column: "task_id"
+  add_foreign_key "task_types", "types"
   add_foreign_key "team_musicians", "musicians"
   add_foreign_key "team_musicians", "teams"
 end

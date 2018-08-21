@@ -15,5 +15,14 @@
   <%= @type.color %>
 </p>
 
+<p>
+  <strong>Tasks:</strong>
+
+    <% @tasks = @type.tasks.all.order(:order) %>
+    <%= render '/tasks/tasks_index' %>
+
+
+</p>
+
 <%= link_to 'Edit', edit_type_path(@type), class: 'btn btn-warning btn-sm' %> |
 <%= link_to 'Back', types_path, class: 'btn btn-warning btn-sm' %>
