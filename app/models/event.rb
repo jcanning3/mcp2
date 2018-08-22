@@ -33,5 +33,26 @@ class Event < ApplicationRecord
     x.gsub!(/ \d| dress| sound check/i, "")
     return x
   end
-    
+
+  def smart_tasks
+    #
+    # if the current event has tasks, send them back
+    #
+    if self.tasks.count > 0
+      return self.tasks.all
+    end
+    #
+    # if not, look for the first event with a similar name that does
+    #
+    @ev = Event.all
+    some_events = @ev.where("name like ?", "%" + self.sname + "%")
+    if some_events
+      some_events.each do |ee|
+        if ee.tasks.count > 0
+          return ee.tasks.all
+        end
+      end
+    end
+    return nil
+  end
 end
