@@ -48,6 +48,24 @@
 
 <br> <br> <br>
 
+<h4>Concerts</h4>
+
+<br> 
+
+  <% concerts = @event.teams.first.events.where(type_id: 6) %>
+  <% if concerts %>
+    <ul>
+    <% @event.teams.first.events.where(type_id: 6).each do |ee| %>
+      <li>
+      <%= ee.try(:start).try(:strftime, '%A %B %e %I:%M%p') %> •
+      <%= ee.name %> <br>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
+
+<br> <br> 
+
 <h4>Teams</h4>
 <table>
   <tbody>
