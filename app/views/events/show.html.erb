@@ -33,7 +33,8 @@
 
 <br> <br> <br>
 
-  <h4>Tasks:</h4>
+<% if @event.tasks.count > 0 %>
+  <h4>Tasks</h4>
     <table class='table table-hover'>
       <tbody>
 	<% @event.tasks.each do |t| %>
@@ -45,26 +46,24 @@
         <% end %>
       </tbody>
     </table>
-
-<br> <br> <br>
-
-<h4>Concerts</h4>
-
-<br> 
+  <br> <br> <br>
+<% end %>
 
   <% concerts = @event.teams.first.events.where(type_id: 6) %>
-  <% if concerts %>
-    <ul>
-    <% @event.teams.first.events.where(type_id: 6).each do |ee| %>
-      <li>
-      <%= ee.try(:start).try(:strftime, '%A %B %e %I:%M%p') %> •
-      <%= ee.name %> <br>
-      </li>
+  <% if concerts.count > 0 %>
+    <h4>Concerts</h4> <br> 
+    <table class='table table-hover'>
+      <tbody>
+	<% @event.teams.first.events.where(type_id: 6).each do |ee| %>
+          <tr>
+	    <td> <%= ee.try(:start).try(:strftime, '%A %B %e %I:%M%p') %> </td>
+	    <td> <%= ee.name %> </td>
+	  </tr>
+	</tbody>
     <% end %>
-    </ul>
+    </table>
+    <br> <br> <br>
   <% end %>
-
-<br> <br> 
 
 <h4>Teams</h4>
 <table>

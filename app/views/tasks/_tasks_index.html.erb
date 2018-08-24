@@ -3,6 +3,7 @@
     <tr>
       <th>Name</th>
       <th>Order</th>
+      <th>Adjust Start</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -12,6 +13,7 @@
       <tr>
         <td><%= task.name %></td>
         <td><%= task.order %></td>
+        <td><%= task.adjust_start %></td>
         <td><%= link_to 'Show', task, class: 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Edit', edit_task_path(task), class: 'btn btn-warning btn-sm' %></td>
       </tr>
