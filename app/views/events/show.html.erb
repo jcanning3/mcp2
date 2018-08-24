@@ -27,6 +27,18 @@
 </p>
 
 <p>
+  <% if @event.heads and @event.staff %>
+    <strong>Head Count:</strong>
+    <%= @event.heads %> audience + <%= @event.staff %> staff = <%= @event.heads + @event.staff %> total
+  <% else %>
+    <% if @event.heads %> 
+      <strong>Head Count:</strong>
+      <%= @event.heads %> audience
+    <% end %>
+  <% end %>
+</p>
+
+<p>
   <strong>Notes:</strong>
   <%= @event.notes %>
 </p>
