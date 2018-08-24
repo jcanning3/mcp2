@@ -16,13 +16,18 @@
       <th>Description</th>
       <th class="text-right">Count</th>
       <th class="text-right">Unit price</th>
+      <th class="text-right">Total</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
 
-    <% @sales_reports.order(:description).each do |sales_report| %>
+    <% subTotal = 0 %>
+    <% total = 0 %>
+    <% first = true %>
+    <% oldDate = "" %>
+    <% @sales_reports.order(:date, :description, :vendor_id).each do |sales_report| %>
       <% if sales_report.ticket_category.name == "Festival Pass" %>
         <% passCount += sales_report.count %>
 	<% countMe = false %>
@@ -37,19 +42,45 @@
         <% concertCount[sales_report.description] = concertCount[sales_report.description] + sales_report.count %>
       <% end %>
 
+      <% dt = sales_report.try(:date).try(:strftime, "%a %m/%d") %>
+      <% if first == false and oldDate != dt %>
+        <tr>
+	  <td> </td>
+	  <td colspan="6"> SubTotal </td>
+	  <td class="text-right"> <%= number_to_currency subTotal, precision: 0 %> </td>
+	</tr>
+	<% total = total + subTotal %>
+	<% subTotal = 0 %>
+      <% end %>
+      <% first = false %>
+      <% oldDate = dt %>
+
       <tr>
-        <td><%= sales_report.try(:date).try(:strftime, "%a %m/%d") %></td>
-        <td><%= sales_report.vendor.name %></td>
-        <td><%= sales_report.try(:concert).try(:strftime, "%a %m/%d") %></td>
+        <td><%= dt %></td>
+        <td><%= sales_report.vendor.name %></td> <td><%= sales_report.try(:concert).try(:strftime, "%a %m/%d") %></td>
         <td><%= sales_report.ticket_category.name %></td>
         <td><%= sales_report.description %></td>
         <td class="text-right"><%= sales_report.count %></td>
-        <td class="text-right">$<%= sales_report.unit_price %></td>
+        <td class="text-right"><%= number_to_currency sales_report.unit_price, precision: 0 %></td>
+	<% amt = sales_report.count * sales_report.unit_price %>
+	<% subTotal = subTotal + amt %>
+        <td class="text-right"><%= number_to_currency amt, precision: 0  %></td>
         <td><!%= link_to 'Show', sales_report, class: 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Edit', edit_sales_report_path(sales_report), class: 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Destroy', sales_report, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
+        <tr>
+	  <td> </td>
+	  <td colspan="6"> SubTotal </td>
+	  <td class="text-right"> <%= number_to_currency subTotal, precision: 0 %> </td>
+	</tr>
+
+        <tr>
+	  <td colspan="7"> Total </td>
+	  <td class="text-right"> <%= number_to_currency total, precision: 0 %> </td>
+	</tr>
+
   </tbody>
 </table>
 
