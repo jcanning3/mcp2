@@ -30,6 +30,7 @@ group :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'sqlite3'
 end
 
 #gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -46,4 +47,3 @@ group :development do
 end
 
 gem 'pg'
-gem 'sqlite3'
