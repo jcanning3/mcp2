@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_015853) do
+ActiveRecord::Schema.define(version: 2018_08_25_225446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -172,6 +172,13 @@ ActiveRecord::Schema.define(version: 2018_08_24_015853) do
     t.integer "instrument_id"
   end
 
+  create_table "payment_methods", force: :cascade do |t|
+    t.string "name"
+    t.integer "order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "performances", force: :cascade do |t|
     t.bigint "concert_id"
     t.integer "order"
@@ -219,6 +226,10 @@ ActiveRecord::Schema.define(version: 2018_08_24_015853) do
     t.integer "unit_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "payment_method_id"
+    t.boolean "final"
+    t.boolean "quickbooks"
+    t.index ["payment_method_id"], name: "index_sales_reports_on_payment_method_id"
     t.index ["ticket_category_id"], name: "index_sales_reports_on_ticket_category_id"
     t.index ["vendor_id"], name: "index_sales_reports_on_vendor_id"
   end
@@ -321,6 +332,7 @@ ActiveRecord::Schema.define(version: 2018_08_24_015853) do
   add_foreign_key "performers", "musicians"
   add_foreign_key "performers", "pieces"
   add_foreign_key "pieces", "composers"
+  add_foreign_key "sales_reports", "payment_methods"
   add_foreign_key "sales_reports", "ticket_categories"
   add_foreign_key "sales_reports", "vendors"
   add_foreign_key "task_types", "task_types", column: "task_id"

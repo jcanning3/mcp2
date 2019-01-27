@@ -1,0 +1,129 @@
+pg_restore: connecting to database for restore
+pg_restore: disabling triggers for accomodations
+pg_restore: processing data for table "public.accomodations"
+pg_restore: enabling triggers for accomodations
+pg_restore: disabling triggers for addresses
+pg_restore: processing data for table "public.addresses"
+pg_restore: enabling triggers for addresses
+pg_restore: disabling triggers for airlines
+pg_restore: processing data for table "public.airlines"
+pg_restore: enabling triggers for airlines
+pg_restore: disabling triggers for ar_internal_metadata
+pg_restore: processing data for table "public.ar_internal_metadata"
+pg_restore: [archiver (db)] Error while PROCESSING TOC:
+pg_restore: [archiver (db)] Error from TOC entry 4148; 0 18183615 TABLE DATA ar_internal_metadata yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "ar_internal_metadata": ERROR:  duplicate key value violates unique constraint "ar_internal_metadata_pkey"
+DETAIL:  Key (key)=(environment) already exists.
+CONTEXT:  COPY ar_internal_metadata, line 1
+pg_restore: enabling triggers for ar_internal_metadata
+pg_restore: disabling triggers for assignments
+pg_restore: processing data for table "public.assignments"
+pg_restore: enabling triggers for assignments
+pg_restore: disabling triggers for composers
+pg_restore: processing data for table "public.composers"
+pg_restore: enabling triggers for composers
+pg_restore: disabling triggers for concerts
+pg_restore: processing data for table "public.concerts"
+pg_restore: enabling triggers for concerts
+pg_restore: disabling triggers for discussions
+pg_restore: processing data for table "public.discussions"
+pg_restore: enabling triggers for discussions
+pg_restore: disabling triggers for event_teams
+pg_restore: processing data for table "public.event_teams"
+pg_restore: enabling triggers for event_teams
+pg_restore: disabling triggers for events
+pg_restore: processing data for table "public.events"
+pg_restore: enabling triggers for events
+pg_restore: disabling triggers for flights
+pg_restore: processing data for table "public.flights"
+pg_restore: enabling triggers for flights
+pg_restore: disabling triggers for instructions
+pg_restore: processing data for table "public.instructions"
+pg_restore: enabling triggers for instructions
+pg_restore: disabling triggers for instruments
+pg_restore: processing data for table "public.instruments"
+pg_restore: enabling triggers for instruments
+pg_restore: disabling triggers for locations
+pg_restore: processing data for table "public.locations"
+pg_restore: enabling triggers for locations
+pg_restore: disabling triggers for movements
+pg_restore: processing data for table "public.movements"
+pg_restore: enabling triggers for movements
+pg_restore: disabling triggers for musicians
+pg_restore: processing data for table "public.musicians"
+pg_restore: enabling triggers for musicians
+pg_restore: disabling triggers for performances
+pg_restore: processing data for table "public.performances"
+pg_restore: enabling triggers for performances
+pg_restore: disabling triggers for performers
+pg_restore: processing data for table "public.performers"
+pg_restore: enabling triggers for performers
+pg_restore: disabling triggers for pieces
+pg_restore: processing data for table "public.pieces"
+pg_restore: enabling triggers for pieces
+pg_restore: disabling triggers for sales_reports
+pg_restore: processing data for table "public.sales_reports"
+pg_restore: enabling triggers for sales_reports
+pg_restore: disabling triggers for schema_migrations
+pg_restore: processing data for table "public.schema_migrations"
+pg_restore: [archiver (db)] Error from TOC entry 4147; 0 18183607 TABLE DATA schema_migrations yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "schema_migrations": ERROR:  duplicate key value violates unique constraint "schema_migrations_pkey"
+DETAIL:  Key (version)=(20180711020551) already exists.
+CONTEXT:  COPY schema_migrations, line 1
+pg_restore: enabling triggers for schema_migrations
+pg_restore: disabling triggers for sheets
+pg_restore: processing data for table "public.sheets"
+pg_restore: enabling triggers for sheets
+pg_restore: disabling triggers for task_types
+pg_restore: processing data for table "public.task_types"
+pg_restore: enabling triggers for task_types
+pg_restore: disabling triggers for tasks
+pg_restore: processing data for table "public.tasks"
+pg_restore: enabling triggers for tasks
+pg_restore: disabling triggers for team_musicians
+pg_restore: processing data for table "public.team_musicians"
+pg_restore: enabling triggers for team_musicians
+pg_restore: disabling triggers for teams
+pg_restore: processing data for table "public.teams"
+pg_restore: enabling triggers for teams
+pg_restore: disabling triggers for ticket_categories
+pg_restore: processing data for table "public.ticket_categories"
+pg_restore: enabling triggers for ticket_categories
+pg_restore: disabling triggers for types
+pg_restore: processing data for table "public.types"
+pg_restore: enabling triggers for types
+pg_restore: disabling triggers for users
+pg_restore: processing data for table "public.users"
+pg_restore: enabling triggers for users
+pg_restore: disabling triggers for vendors
+pg_restore: processing data for table "public.vendors"
+pg_restore: enabling triggers for vendors
+pg_restore: executing SEQUENCE SET accomodations_id_seq
+pg_restore: executing SEQUENCE SET addresses_id_seq
+pg_restore: executing SEQUENCE SET airlines_id_seq
+pg_restore: executing SEQUENCE SET assignments_id_seq
+pg_restore: executing SEQUENCE SET composers_id_seq
+pg_restore: executing SEQUENCE SET concerts_id_seq
+pg_restore: executing SEQUENCE SET discussions_id_seq
+pg_restore: executing SEQUENCE SET event_teams_id_seq
+pg_restore: executing SEQUENCE SET events_id_seq
+pg_restore: executing SEQUENCE SET flights_id_seq
+pg_restore: executing SEQUENCE SET instructions_id_seq
+pg_restore: executing SEQUENCE SET instruments_id_seq
+pg_restore: executing SEQUENCE SET locations_id_seq
+pg_restore: executing SEQUENCE SET movements_id_seq
+pg_restore: executing SEQUENCE SET musicians_id_seq
+pg_restore: executing SEQUENCE SET performances_id_seq
+pg_restore: executing SEQUENCE SET performers_id_seq
+pg_restore: executing SEQUENCE SET pieces_id_seq
+pg_restore: executing SEQUENCE SET sales_reports_id_seq
+pg_restore: executing SEQUENCE SET sheets_id_seq
+pg_restore: executing SEQUENCE SET task_types_id_seq
+pg_restore: executing SEQUENCE SET tasks_id_seq
+pg_restore: executing SEQUENCE SET team_musicians_id_seq
+pg_restore: executing SEQUENCE SET teams_id_seq
+pg_restore: executing SEQUENCE SET ticket_categories_id_seq
+pg_restore: executing SEQUENCE SET types_id_seq
+pg_restore: executing SEQUENCE SET users_id_seq
+pg_restore: executing SEQUENCE SET vendors_id_seq
+WARNING: errors ignored on restore: 2

@@ -6,11 +6,14 @@
   <div class="form-inputs">
     <%= f.input :date %>
     <%= f.association :vendor %>
+    <%= f.association :payment_method %>
     <%= f.input :concert %>
     <%= f.association :ticket_category %>
     <%= f.input :description %>
     <%= f.input :count %>
     <%= f.input :unit_price %>
+    <%= f.input :final %>
+    <%= f.input :quickbooks %>
   </div>
 
   <div class="form-actions">

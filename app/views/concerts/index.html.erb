@@ -14,7 +14,7 @@
   </thead>
 
   <tbody>
-    <% @concerts.order('startTime desc').each do |concert| %>
+    <% @concerts.order(startTime: :desc).each do |concert| %>
       <tr>
 	<td><%= concert.startTime.strftime("%A, %B %e, %Y") %></td>
         <td><%= concert.startTime.strftime("%I:%M %p") %></td>

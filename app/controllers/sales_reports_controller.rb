@@ -69,6 +69,6 @@ class SalesReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sales_report_params
-      params.require(:sales_report).permit(:date, :vendor_id, :concert, :ticket_category_id, :description, :count, :unit_price)
+      params.require(:sales_report).permit(:date, :vendor_id, :concert, :ticket_category_id, :description, :payment_method_id, :count, :unit_price, :final, :quick_books)
     end
 end

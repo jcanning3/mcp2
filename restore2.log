@@ -1,0 +1,1650 @@
+pg_restore: connecting to database for restore
+pg_restore: creating SCHEMA "public"
+pg_restore: creating EXTENSION "plpgsql"
+pg_restore: creating COMMENT "EXTENSION "plpgsql""
+pg_restore: creating TABLE "public.accomodations"
+pg_restore: [archiver (db)] Error while PROCESSING TOC:
+pg_restore: [archiver (db)] Error from TOC entry 235; 1259 18183947 TABLE accomodations yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "accomodations" already exists
+    Command was: CREATE TABLE "public"."accomodations" (
+    "id" bigint NOT NULL,
+    "address_id" bigint,
+    "musician_id" bigint,
+    "arrival" timestamp without time zone,
+    "departure" timestamp without time zone,
+    "co" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "notes" character varying
+);
+
+
+
+pg_restore: creating SEQUENCE "public.accomodations_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 234; 1259 18183945 SEQUENCE accomodations_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "accomodations_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."accomodations_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.accomodations_id_seq"
+pg_restore: creating TABLE "public.addresses"
+pg_restore: [archiver (db)] Error from TOC entry 233; 1259 18183936 TABLE addresses yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "addresses" already exists
+    Command was: CREATE TABLE "public"."addresses" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "nickname" character varying,
+    "address1" character varying,
+    "address2" character varying,
+    "city" character varying,
+    "state" character varying,
+    "zip" character varying,
+    "phone" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.addresses_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 232; 1259 18183934 SEQUENCE addresses_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "addresses_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."addresses_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.addresses_id_seq"
+pg_restore: creating TABLE "public.airlines"
+pg_restore: [archiver (db)] Error from TOC entry 225; 1259 18183875 TABLE airlines yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "airlines" already exists
+    Command was: CREATE TABLE "public"."airlines" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "nickname" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.airlines_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 224; 1259 18183873 SEQUENCE airlines_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "airlines_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."airlines_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.airlines_id_seq"
+pg_restore: creating TABLE "public.ar_internal_metadata"
+pg_restore: [archiver (db)] Error from TOC entry 197; 1259 18183615 TABLE ar_internal_metadata yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "ar_internal_metadata" already exists
+    Command was: CREATE TABLE "public"."ar_internal_metadata" (
+    "key" character varying NOT NULL,
+    "value" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating TABLE "public.assignments"
+pg_restore: [archiver (db)] Error from TOC entry 245; 1259 18376592 TABLE assignments yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "assignments" already exists
+    Command was: CREATE TABLE "public"."assignments" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "task_id" bigint,
+    "event_id" bigint,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.assignments_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 244; 1259 18376590 SEQUENCE assignments_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "assignments_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."assignments_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.assignments_id_seq"
+pg_restore: creating TABLE "public.composers"
+pg_restore: [archiver (db)] Error from TOC entry 199; 1259 18183650 TABLE composers yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "composers" already exists
+    Command was: CREATE TABLE "public"."composers" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "nickname" character varying,
+    "lifetime" character varying,
+    "fullname" character varying,
+    "notes" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.composers_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 198; 1259 18183648 SEQUENCE composers_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "composers_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."composers_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.composers_id_seq"
+pg_restore: creating TABLE "public.concerts"
+pg_restore: [archiver (db)] Error from TOC entry 201; 1259 18183661 TABLE concerts yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "concerts" already exists
+    Command was: CREATE TABLE "public"."concerts" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "startTime" timestamp without time zone,
+    "location" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.concerts_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 200; 1259 18183659 SEQUENCE concerts_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "concerts_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."concerts_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.concerts_id_seq"
+pg_restore: creating TABLE "public.discussions"
+pg_restore: [archiver (db)] Error from TOC entry 229; 1259 18183909 TABLE discussions yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "discussions" already exists
+    Command was: CREATE TABLE "public"."discussions" (
+    "id" bigint NOT NULL,
+    "date" timestamp without time zone,
+    "color" character varying,
+    "resolved" boolean,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.discussions_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 228; 1259 18183907 SEQUENCE discussions_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "discussions_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."discussions_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.discussions_id_seq"
+pg_restore: creating TABLE "public.event_teams"
+pg_restore: [archiver (db)] Error from TOC entry 221; 1259 18183826 TABLE event_teams yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "event_teams" already exists
+    Command was: CREATE TABLE "public"."event_teams" (
+    "id" bigint NOT NULL,
+    "event_id" bigint,
+    "team_id" bigint,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.event_teams_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 220; 1259 18183824 SEQUENCE event_teams_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "event_teams_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."event_teams_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.event_teams_id_seq"
+pg_restore: creating TABLE "public.events"
+pg_restore: [archiver (db)] Error from TOC entry 219; 1259 18183788 TABLE events yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "events" already exists
+    Command was: CREATE TABLE "public"."events" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "description" character varying,
+    "start" timestamp without time zone,
+    "end" timestamp without time zone,
+    "type_id" bigint,
+    "location_id" bigint,
+    "notes" character varying,
+    "color" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "heads" integer,
+    "staff" integer
+);
+
+
+
+pg_restore: creating SEQUENCE "public.events_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 218; 1259 18183786 SEQUENCE events_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "events_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."events_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.events_id_seq"
+pg_restore: creating TABLE "public.flights"
+pg_restore: [archiver (db)] Error from TOC entry 227; 1259 18183886 TABLE flights yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "flights" already exists
+    Command was: CREATE TABLE "public"."flights" (
+    "id" bigint NOT NULL,
+    "musician_id" bigint,
+    "airline_id" bigint,
+    "flight" character varying,
+    "from" character varying,
+    "departure" timestamp without time zone,
+    "destination" character varying,
+    "arrival" timestamp without time zone,
+    "notes" "text",
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "confirmation" character varying
+);
+
+
+
+pg_restore: creating SEQUENCE "public.flights_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 226; 1259 18183884 SEQUENCE flights_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "flights_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."flights_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.flights_id_seq"
+pg_restore: creating TABLE "public.instructions"
+pg_restore: [archiver (db)] Error from TOC entry 247; 1259 18376615 TABLE instructions yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "instructions" already exists
+    Command was: CREATE TABLE "public"."instructions" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "task_id" bigint,
+    "event_id" bigint,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "tmp" "text"
+);
+
+
+
+pg_restore: creating SEQUENCE "public.instructions_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 246; 1259 18376613 SEQUENCE instructions_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "instructions_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."instructions_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.instructions_id_seq"
+pg_restore: creating TABLE "public.instruments"
+pg_restore: [archiver (db)] Error from TOC entry 239; 1259 18325645 TABLE instruments yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "instruments" already exists
+    Command was: CREATE TABLE "public"."instruments" (
+    "id" bigint NOT NULL,
+    "name" "text",
+    "order" integer,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.instruments_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 238; 1259 18325643 SEQUENCE instruments_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "instruments_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."instruments_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.instruments_id_seq"
+pg_restore: creating TABLE "public.locations"
+pg_restore: [archiver (db)] Error from TOC entry 215; 1259 18183760 TABLE locations yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "locations" already exists
+    Command was: CREATE TABLE "public"."locations" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "nickname" character varying,
+    "color" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.locations_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 214; 1259 18183758 SEQUENCE locations_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "locations_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."locations_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.locations_id_seq"
+pg_restore: creating TABLE "public.movements"
+pg_restore: [archiver (db)] Error from TOC entry 203; 1259 18183672 TABLE movements yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "movements" already exists
+    Command was: CREATE TABLE "public"."movements" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "order" integer,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "piece_id" bigint
+);
+
+
+
+pg_restore: creating SEQUENCE "public.movements_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 202; 1259 18183670 SEQUENCE movements_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "movements_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."movements_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.movements_id_seq"
+pg_restore: creating TABLE "public.musicians"
+pg_restore: [archiver (db)] Error from TOC entry 205; 1259 18183683 TABLE musicians yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "musicians" already exists
+    Command was: CREATE TABLE "public"."musicians" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "first" character varying,
+    "last" character varying,
+    "old_instrument" character varying,
+    "notes" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "instrument_id" integer
+);
+
+
+
+pg_restore: creating SEQUENCE "public.musicians_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 204; 1259 18183681 SEQUENCE musicians_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "musicians_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."musicians_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.musicians_id_seq"
+pg_restore: creating TABLE "public.performances"
+pg_restore: [archiver (db)] Error from TOC entry 207; 1259 18183694 TABLE performances yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "performances" already exists
+    Command was: CREATE TABLE "public"."performances" (
+    "id" bigint NOT NULL,
+    "concert_id" bigint,
+    "order" integer,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "piece_id" bigint
+);
+
+
+
+pg_restore: creating SEQUENCE "public.performances_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 206; 1259 18183692 SEQUENCE performances_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "performances_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."performances_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.performances_id_seq"
+pg_restore: creating TABLE "public.performers"
+pg_restore: [archiver (db)] Error from TOC entry 209; 1259 18183708 TABLE performers yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "performers" already exists
+    Command was: CREATE TABLE "public"."performers" (
+    "id" bigint NOT NULL,
+    "listing" character varying,
+    "concert_id" bigint,
+    "musician_id" bigint,
+    "instrument" character varying,
+    "order" integer,
+    "concert_date" "date",
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "piece_id" bigint
+);
+
+
+
+pg_restore: creating SEQUENCE "public.performers_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 208; 1259 18183706 SEQUENCE performers_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "performers_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."performers_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.performers_id_seq"
+pg_restore: creating TABLE "public.pieces"
+pg_restore: [archiver (db)] Error from TOC entry 211; 1259 18183731 TABLE pieces yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "pieces" already exists
+    Command was: CREATE TABLE "public"."pieces" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "composer_id" bigint,
+    "arranger" integer,
+    "opus" character varying,
+    "year_composed" "text",
+    "full_title" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.pieces_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 210; 1259 18183729 SEQUENCE pieces_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "pieces_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."pieces_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.pieces_id_seq"
+pg_restore: creating TABLE "public.sales_reports"
+pg_restore: [archiver (db)] Error from TOC entry 253; 1259 18376660 TABLE sales_reports yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "sales_reports" already exists
+    Command was: CREATE TABLE "public"."sales_reports" (
+    "id" bigint NOT NULL,
+    "date" timestamp without time zone,
+    "vendor_id" bigint,
+    "concert" timestamp without time zone,
+    "ticket_category_id" bigint,
+    "description" "text",
+    "count" integer,
+    "unit_price" integer,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.sales_reports_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 252; 1259 18376658 SEQUENCE sales_reports_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "sales_reports_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."sales_reports_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.sales_reports_id_seq"
+pg_restore: creating TABLE "public.schema_migrations"
+pg_restore: [archiver (db)] Error from TOC entry 196; 1259 18183607 TABLE schema_migrations yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "schema_migrations" already exists
+    Command was: CREATE TABLE "public"."schema_migrations" (
+    "version" character varying NOT NULL
+);
+
+
+
+pg_restore: creating TABLE "public.sheets"
+pg_restore: [archiver (db)] Error from TOC entry 223; 1259 18183846 TABLE sheets yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "sheets" already exists
+    Command was: CREATE TABLE "public"."sheets" (
+    "id" bigint NOT NULL,
+    "note" "text",
+    "pad_id" character varying,
+    "pad_type" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.sheets_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 222; 1259 18183844 SEQUENCE sheets_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "sheets_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."sheets_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.sheets_id_seq"
+pg_restore: creating TABLE "public.task_types"
+pg_restore: [archiver (db)] Error from TOC entry 241; 1259 18376561 TABLE task_types yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "task_types" already exists
+    Command was: CREATE TABLE "public"."task_types" (
+    "id" bigint NOT NULL,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "type_id" bigint,
+    "task_id" bigint
+);
+
+
+
+pg_restore: creating SEQUENCE "public.task_types_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 240; 1259 18376559 SEQUENCE task_types_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "task_types_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."task_types_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.task_types_id_seq"
+pg_restore: creating TABLE "public.tasks"
+pg_restore: [archiver (db)] Error from TOC entry 243; 1259 18376572 TABLE tasks yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "tasks" already exists
+    Command was: CREATE TABLE "public"."tasks" (
+    "id" bigint NOT NULL,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "name" "text",
+    "order" integer,
+    "adjust_start" integer
+);
+
+
+
+pg_restore: creating SEQUENCE "public.tasks_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 242; 1259 18376570 SEQUENCE tasks_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "tasks_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."tasks_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.tasks_id_seq"
+pg_restore: creating TABLE "public.team_musicians"
+pg_restore: [archiver (db)] Error from TOC entry 237; 1259 18188823 TABLE team_musicians yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "team_musicians" already exists
+    Command was: CREATE TABLE "public"."team_musicians" (
+    "id" bigint NOT NULL,
+    "team_id" bigint,
+    "musician_id" bigint,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL,
+    "instrument_id" integer
+);
+
+
+
+pg_restore: creating SEQUENCE "public.team_musicians_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 236; 1259 18188821 SEQUENCE team_musicians_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "team_musicians_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."team_musicians_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.team_musicians_id_seq"
+pg_restore: creating TABLE "public.teams"
+pg_restore: [archiver (db)] Error from TOC entry 217; 1259 18183771 TABLE teams yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "teams" already exists
+    Command was: CREATE TABLE "public"."teams" (
+    "id" bigint NOT NULL,
+    "nickname" character varying,
+    "color" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.teams_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 216; 1259 18183769 SEQUENCE teams_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "teams_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."teams_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.teams_id_seq"
+pg_restore: creating TABLE "public.ticket_categories"
+pg_restore: [archiver (db)] Error from TOC entry 249; 1259 18376638 TABLE ticket_categories yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "ticket_categories" already exists
+    Command was: CREATE TABLE "public"."ticket_categories" (
+    "id" bigint NOT NULL,
+    "name" "text",
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.ticket_categories_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 248; 1259 18376636 SEQUENCE ticket_categories_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "ticket_categories_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."ticket_categories_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.ticket_categories_id_seq"
+pg_restore: creating TABLE "public.types"
+pg_restore: [archiver (db)] Error from TOC entry 213; 1259 18183748 TABLE types yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "types" already exists
+    Command was: CREATE TABLE "public"."types" (
+    "id" bigint NOT NULL,
+    "name" character varying,
+    "nickname" character varying,
+    "color" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.types_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 212; 1259 18183746 SEQUENCE types_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "types_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."types_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.types_id_seq"
+pg_restore: creating TABLE "public.users"
+pg_restore: [archiver (db)] Error from TOC entry 231; 1259 18183920 TABLE users yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "users" already exists
+    Command was: CREATE TABLE "public"."users" (
+    "id" bigint NOT NULL,
+    "email" character varying DEFAULT ''::character varying NOT NULL,
+    "encrypted_password" character varying DEFAULT ''::character varying NOT NULL,
+    "reset_password_token" character varying,
+    "reset_password_sent_at" timestamp without time zone,
+    "remember_created_at" timestamp without time zone,
+    "sign_in_count" integer DEFAULT 0 NOT NULL,
+    "current_sign_in_at" timestamp without time zone,
+    "last_sign_in_at" timestamp without time zone,
+    "current_sign_in_ip" character varying,
+    "last_sign_in_ip" character varying,
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.users_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 230; 1259 18183918 SEQUENCE users_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "users_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."users_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.users_id_seq"
+pg_restore: creating TABLE "public.vendors"
+pg_restore: [archiver (db)] Error from TOC entry 251; 1259 18376649 TABLE vendors yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "vendors" already exists
+    Command was: CREATE TABLE "public"."vendors" (
+    "id" bigint NOT NULL,
+    "name" "text",
+    "created_at" timestamp without time zone NOT NULL,
+    "updated_at" timestamp without time zone NOT NULL
+);
+
+
+
+pg_restore: creating SEQUENCE "public.vendors_id_seq"
+pg_restore: [archiver (db)] Error from TOC entry 250; 1259 18376647 SEQUENCE vendors_id_seq yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "vendors_id_seq" already exists
+    Command was: CREATE SEQUENCE "public"."vendors_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+
+pg_restore: creating SEQUENCE OWNED BY "public.vendors_id_seq"
+pg_restore: creating DEFAULT "public.accomodations id"
+pg_restore: creating DEFAULT "public.addresses id"
+pg_restore: creating DEFAULT "public.airlines id"
+pg_restore: creating DEFAULT "public.assignments id"
+pg_restore: creating DEFAULT "public.composers id"
+pg_restore: creating DEFAULT "public.concerts id"
+pg_restore: creating DEFAULT "public.discussions id"
+pg_restore: creating DEFAULT "public.event_teams id"
+pg_restore: creating DEFAULT "public.events id"
+pg_restore: creating DEFAULT "public.flights id"
+pg_restore: creating DEFAULT "public.instructions id"
+pg_restore: creating DEFAULT "public.instruments id"
+pg_restore: creating DEFAULT "public.locations id"
+pg_restore: creating DEFAULT "public.movements id"
+pg_restore: creating DEFAULT "public.musicians id"
+pg_restore: creating DEFAULT "public.performances id"
+pg_restore: creating DEFAULT "public.performers id"
+pg_restore: creating DEFAULT "public.pieces id"
+pg_restore: creating DEFAULT "public.sales_reports id"
+pg_restore: creating DEFAULT "public.sheets id"
+pg_restore: creating DEFAULT "public.task_types id"
+pg_restore: creating DEFAULT "public.tasks id"
+pg_restore: creating DEFAULT "public.team_musicians id"
+pg_restore: creating DEFAULT "public.teams id"
+pg_restore: creating DEFAULT "public.ticket_categories id"
+pg_restore: creating DEFAULT "public.types id"
+pg_restore: creating DEFAULT "public.users id"
+pg_restore: creating DEFAULT "public.vendors id"
+pg_restore: processing data for table "public.accomodations"
+pg_restore: [archiver (db)] Error from TOC entry 4186; 0 18183947 TABLE DATA accomodations yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "accomodations": ERROR:  duplicate key value violates unique constraint "accomodations_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY accomodations, line 1
+pg_restore: processing data for table "public.addresses"
+pg_restore: [archiver (db)] Error from TOC entry 4184; 0 18183936 TABLE DATA addresses yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "addresses": ERROR:  duplicate key value violates unique constraint "addresses_pkey"
+DETAIL:  Key (id)=(3) already exists.
+CONTEXT:  COPY addresses, line 1
+pg_restore: processing data for table "public.airlines"
+pg_restore: [archiver (db)] Error from TOC entry 4176; 0 18183875 TABLE DATA airlines yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "airlines": ERROR:  duplicate key value violates unique constraint "airlines_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY airlines, line 1
+pg_restore: processing data for table "public.ar_internal_metadata"
+pg_restore: [archiver (db)] Error from TOC entry 4148; 0 18183615 TABLE DATA ar_internal_metadata yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "ar_internal_metadata": ERROR:  duplicate key value violates unique constraint "ar_internal_metadata_pkey"
+DETAIL:  Key (key)=(environment) already exists.
+CONTEXT:  COPY ar_internal_metadata, line 1
+pg_restore: processing data for table "public.assignments"
+pg_restore: processing data for table "public.composers"
+pg_restore: [archiver (db)] Error from TOC entry 4150; 0 18183650 TABLE DATA composers yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "composers": ERROR:  duplicate key value violates unique constraint "composers_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY composers, line 1
+pg_restore: processing data for table "public.concerts"
+pg_restore: [archiver (db)] Error from TOC entry 4152; 0 18183661 TABLE DATA concerts yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "concerts": ERROR:  duplicate key value violates unique constraint "concerts_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY concerts, line 1
+pg_restore: processing data for table "public.discussions"
+pg_restore: [archiver (db)] Error from TOC entry 4180; 0 18183909 TABLE DATA discussions yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "discussions": ERROR:  duplicate key value violates unique constraint "discussions_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY discussions, line 1
+pg_restore: processing data for table "public.event_teams"
+pg_restore: [archiver (db)] Error from TOC entry 4172; 0 18183826 TABLE DATA event_teams yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "event_teams": ERROR:  duplicate key value violates unique constraint "event_teams_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY event_teams, line 1
+pg_restore: processing data for table "public.events"
+pg_restore: [archiver (db)] Error from TOC entry 4170; 0 18183788 TABLE DATA events yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "events": ERROR:  duplicate key value violates unique constraint "events_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY events, line 1
+pg_restore: processing data for table "public.flights"
+pg_restore: [archiver (db)] Error from TOC entry 4178; 0 18183886 TABLE DATA flights yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "flights": ERROR:  duplicate key value violates unique constraint "flights_pkey"
+DETAIL:  Key (id)=(41) already exists.
+CONTEXT:  COPY flights, line 1
+pg_restore: processing data for table "public.instructions"
+pg_restore: [archiver (db)] Error from TOC entry 4198; 0 18376615 TABLE DATA instructions yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "instructions": ERROR:  duplicate key value violates unique constraint "instructions_pkey"
+DETAIL:  Key (id)=(38) already exists.
+CONTEXT:  COPY instructions, line 1
+pg_restore: processing data for table "public.instruments"
+pg_restore: [archiver (db)] Error from TOC entry 4190; 0 18325645 TABLE DATA instruments yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "instruments": ERROR:  duplicate key value violates unique constraint "instruments_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY instruments, line 1
+pg_restore: processing data for table "public.locations"
+pg_restore: [archiver (db)] Error from TOC entry 4166; 0 18183760 TABLE DATA locations yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "locations": ERROR:  duplicate key value violates unique constraint "locations_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY locations, line 1
+pg_restore: processing data for table "public.movements"
+pg_restore: [archiver (db)] Error from TOC entry 4154; 0 18183672 TABLE DATA movements yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "movements": ERROR:  duplicate key value violates unique constraint "movements_pkey"
+DETAIL:  Key (id)=(2) already exists.
+CONTEXT:  COPY movements, line 1
+pg_restore: processing data for table "public.musicians"
+pg_restore: [archiver (db)] Error from TOC entry 4156; 0 18183683 TABLE DATA musicians yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "musicians": ERROR:  duplicate key value violates unique constraint "musicians_pkey"
+DETAIL:  Key (id)=(48) already exists.
+CONTEXT:  COPY musicians, line 1
+pg_restore: processing data for table "public.performances"
+pg_restore: [archiver (db)] Error from TOC entry 4158; 0 18183694 TABLE DATA performances yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "performances": ERROR:  duplicate key value violates unique constraint "performances_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY performances, line 1
+pg_restore: processing data for table "public.performers"
+pg_restore: [archiver (db)] Error from TOC entry 4160; 0 18183708 TABLE DATA performers yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "performers": ERROR:  duplicate key value violates unique constraint "performers_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY performers, line 1
+pg_restore: processing data for table "public.pieces"
+pg_restore: [archiver (db)] Error from TOC entry 4162; 0 18183731 TABLE DATA pieces yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "pieces": ERROR:  duplicate key value violates unique constraint "pieces_pkey"
+DETAIL:  Key (id)=(29) already exists.
+CONTEXT:  COPY pieces, line 1
+pg_restore: processing data for table "public.sales_reports"
+pg_restore: [archiver (db)] Error from TOC entry 4204; 0 18376660 TABLE DATA sales_reports yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "sales_reports": ERROR:  duplicate key value violates unique constraint "sales_reports_pkey"
+DETAIL:  Key (id)=(11) already exists.
+CONTEXT:  COPY sales_reports, line 1
+pg_restore: processing data for table "public.schema_migrations"
+pg_restore: [archiver (db)] Error from TOC entry 4147; 0 18183607 TABLE DATA schema_migrations yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "schema_migrations": ERROR:  duplicate key value violates unique constraint "schema_migrations_pkey"
+DETAIL:  Key (version)=(20180711020551) already exists.
+CONTEXT:  COPY schema_migrations, line 1
+pg_restore: processing data for table "public.sheets"
+pg_restore: [archiver (db)] Error from TOC entry 4174; 0 18183846 TABLE DATA sheets yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "sheets": ERROR:  duplicate key value violates unique constraint "sheets_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY sheets, line 1
+pg_restore: processing data for table "public.task_types"
+pg_restore: [archiver (db)] Error from TOC entry 4192; 0 18376561 TABLE DATA task_types yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "task_types": ERROR:  duplicate key value violates unique constraint "task_types_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY task_types, line 1
+pg_restore: processing data for table "public.tasks"
+pg_restore: [archiver (db)] Error from TOC entry 4194; 0 18376572 TABLE DATA tasks yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "tasks": ERROR:  duplicate key value violates unique constraint "tasks_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY tasks, line 1
+pg_restore: processing data for table "public.team_musicians"
+pg_restore: [archiver (db)] Error from TOC entry 4188; 0 18188823 TABLE DATA team_musicians yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "team_musicians": ERROR:  duplicate key value violates unique constraint "team_musicians_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY team_musicians, line 1
+pg_restore: processing data for table "public.teams"
+pg_restore: [archiver (db)] Error from TOC entry 4168; 0 18183771 TABLE DATA teams yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "teams": ERROR:  duplicate key value violates unique constraint "teams_pkey"
+DETAIL:  Key (id)=(3) already exists.
+CONTEXT:  COPY teams, line 1
+pg_restore: processing data for table "public.ticket_categories"
+pg_restore: [archiver (db)] Error from TOC entry 4200; 0 18376638 TABLE DATA ticket_categories yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "ticket_categories": ERROR:  duplicate key value violates unique constraint "ticket_categories_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY ticket_categories, line 1
+pg_restore: processing data for table "public.types"
+pg_restore: [archiver (db)] Error from TOC entry 4164; 0 18183748 TABLE DATA types yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "types": ERROR:  duplicate key value violates unique constraint "types_pkey"
+DETAIL:  Key (id)=(5) already exists.
+CONTEXT:  COPY types, line 1
+pg_restore: processing data for table "public.users"
+pg_restore: [archiver (db)] Error from TOC entry 4182; 0 18183920 TABLE DATA users yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "users": ERROR:  duplicate key value violates unique constraint "users_pkey"
+DETAIL:  Key (id)=(41) already exists.
+CONTEXT:  COPY users, line 1
+pg_restore: processing data for table "public.vendors"
+pg_restore: [archiver (db)] Error from TOC entry 4202; 0 18376649 TABLE DATA vendors yesysiiazdiant
+pg_restore: [archiver (db)] COPY failed for table "vendors": ERROR:  duplicate key value violates unique constraint "vendors_pkey"
+DETAIL:  Key (id)=(1) already exists.
+CONTEXT:  COPY vendors, line 1
+pg_restore: executing SEQUENCE SET accomodations_id_seq
+pg_restore: executing SEQUENCE SET addresses_id_seq
+pg_restore: executing SEQUENCE SET airlines_id_seq
+pg_restore: executing SEQUENCE SET assignments_id_seq
+pg_restore: executing SEQUENCE SET composers_id_seq
+pg_restore: executing SEQUENCE SET concerts_id_seq
+pg_restore: executing SEQUENCE SET discussions_id_seq
+pg_restore: executing SEQUENCE SET event_teams_id_seq
+pg_restore: executing SEQUENCE SET events_id_seq
+pg_restore: executing SEQUENCE SET flights_id_seq
+pg_restore: executing SEQUENCE SET instructions_id_seq
+pg_restore: executing SEQUENCE SET instruments_id_seq
+pg_restore: executing SEQUENCE SET locations_id_seq
+pg_restore: executing SEQUENCE SET movements_id_seq
+pg_restore: executing SEQUENCE SET musicians_id_seq
+pg_restore: executing SEQUENCE SET performances_id_seq
+pg_restore: executing SEQUENCE SET performers_id_seq
+pg_restore: executing SEQUENCE SET pieces_id_seq
+pg_restore: executing SEQUENCE SET sales_reports_id_seq
+pg_restore: executing SEQUENCE SET sheets_id_seq
+pg_restore: executing SEQUENCE SET task_types_id_seq
+pg_restore: executing SEQUENCE SET tasks_id_seq
+pg_restore: executing SEQUENCE SET team_musicians_id_seq
+pg_restore: executing SEQUENCE SET teams_id_seq
+pg_restore: executing SEQUENCE SET ticket_categories_id_seq
+pg_restore: executing SEQUENCE SET types_id_seq
+pg_restore: executing SEQUENCE SET users_id_seq
+pg_restore: executing SEQUENCE SET vendors_id_seq
+pg_restore: creating CONSTRAINT "public.accomodations accomodations_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3970; 2606 18183956 CONSTRAINT accomodations accomodations_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "accomodations" are not allowed
+    Command was: ALTER TABLE ONLY "public"."accomodations"
+    ADD CONSTRAINT "accomodations_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.addresses addresses_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3968; 2606 18183944 CONSTRAINT addresses addresses_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "addresses" are not allowed
+    Command was: ALTER TABLE ONLY "public"."addresses"
+    ADD CONSTRAINT "addresses_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.airlines airlines_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3956; 2606 18183883 CONSTRAINT airlines airlines_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "airlines" are not allowed
+    Command was: ALTER TABLE ONLY "public"."airlines"
+    ADD CONSTRAINT "airlines_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.ar_internal_metadata ar_internal_metadata_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3917; 2606 18183622 CONSTRAINT ar_internal_metadata ar_internal_metadata_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "ar_internal_metadata" are not allowed
+    Command was: ALTER TABLE ONLY "public"."ar_internal_metadata"
+    ADD CONSTRAINT "ar_internal_metadata_pkey" PRIMARY KEY ("key");
+
+
+
+pg_restore: creating CONSTRAINT "public.assignments assignments_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3986; 2606 18376600 CONSTRAINT assignments assignments_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "assignments" are not allowed
+    Command was: ALTER TABLE ONLY "public"."assignments"
+    ADD CONSTRAINT "assignments_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.composers composers_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3919; 2606 18183658 CONSTRAINT composers composers_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "composers" are not allowed
+    Command was: ALTER TABLE ONLY "public"."composers"
+    ADD CONSTRAINT "composers_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.concerts concerts_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3921; 2606 18183669 CONSTRAINT concerts concerts_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "concerts" are not allowed
+    Command was: ALTER TABLE ONLY "public"."concerts"
+    ADD CONSTRAINT "concerts_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.discussions discussions_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3962; 2606 18183917 CONSTRAINT discussions discussions_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "discussions" are not allowed
+    Command was: ALTER TABLE ONLY "public"."discussions"
+    ADD CONSTRAINT "discussions_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.event_teams event_teams_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3950; 2606 18183831 CONSTRAINT event_teams event_teams_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "event_teams" are not allowed
+    Command was: ALTER TABLE ONLY "public"."event_teams"
+    ADD CONSTRAINT "event_teams_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.events events_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3946; 2606 18183796 CONSTRAINT events events_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "events" are not allowed
+    Command was: ALTER TABLE ONLY "public"."events"
+    ADD CONSTRAINT "events_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.flights flights_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3958; 2606 18183894 CONSTRAINT flights flights_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "flights" are not allowed
+    Command was: ALTER TABLE ONLY "public"."flights"
+    ADD CONSTRAINT "flights_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.instructions instructions_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3992; 2606 18376623 CONSTRAINT instructions instructions_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "instructions" are not allowed
+    Command was: ALTER TABLE ONLY "public"."instructions"
+    ADD CONSTRAINT "instructions_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.instruments instruments_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3978; 2606 18325653 CONSTRAINT instruments instruments_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "instruments" are not allowed
+    Command was: ALTER TABLE ONLY "public"."instruments"
+    ADD CONSTRAINT "instruments_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.locations locations_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3942; 2606 18183768 CONSTRAINT locations locations_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "locations" are not allowed
+    Command was: ALTER TABLE ONLY "public"."locations"
+    ADD CONSTRAINT "locations_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.movements movements_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3924; 2606 18183680 CONSTRAINT movements movements_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "movements" are not allowed
+    Command was: ALTER TABLE ONLY "public"."movements"
+    ADD CONSTRAINT "movements_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.musicians musicians_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3926; 2606 18183691 CONSTRAINT musicians musicians_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "musicians" are not allowed
+    Command was: ALTER TABLE ONLY "public"."musicians"
+    ADD CONSTRAINT "musicians_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.performances performances_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3930; 2606 18183699 CONSTRAINT performances performances_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "performances" are not allowed
+    Command was: ALTER TABLE ONLY "public"."performances"
+    ADD CONSTRAINT "performances_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.performers performers_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3935; 2606 18183716 CONSTRAINT performers performers_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "performers" are not allowed
+    Command was: ALTER TABLE ONLY "public"."performers"
+    ADD CONSTRAINT "performers_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.pieces pieces_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3938; 2606 18183739 CONSTRAINT pieces pieces_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "pieces" are not allowed
+    Command was: ALTER TABLE ONLY "public"."pieces"
+    ADD CONSTRAINT "pieces_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.sales_reports sales_reports_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 4000; 2606 18376668 CONSTRAINT sales_reports sales_reports_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "sales_reports" are not allowed
+    Command was: ALTER TABLE ONLY "public"."sales_reports"
+    ADD CONSTRAINT "sales_reports_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.schema_migrations schema_migrations_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3915; 2606 18183614 CONSTRAINT schema_migrations schema_migrations_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "schema_migrations" are not allowed
+    Command was: ALTER TABLE ONLY "public"."schema_migrations"
+    ADD CONSTRAINT "schema_migrations_pkey" PRIMARY KEY ("version");
+
+
+
+pg_restore: creating CONSTRAINT "public.sheets sheets_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3954; 2606 18183854 CONSTRAINT sheets sheets_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "sheets" are not allowed
+    Command was: ALTER TABLE ONLY "public"."sheets"
+    ADD CONSTRAINT "sheets_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.task_types task_types_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3982; 2606 18376569 CONSTRAINT task_types task_types_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "task_types" are not allowed
+    Command was: ALTER TABLE ONLY "public"."task_types"
+    ADD CONSTRAINT "task_types_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.tasks tasks_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3984; 2606 18376577 CONSTRAINT tasks tasks_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "tasks" are not allowed
+    Command was: ALTER TABLE ONLY "public"."tasks"
+    ADD CONSTRAINT "tasks_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.team_musicians team_musicians_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3976; 2606 18188828 CONSTRAINT team_musicians team_musicians_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "team_musicians" are not allowed
+    Command was: ALTER TABLE ONLY "public"."team_musicians"
+    ADD CONSTRAINT "team_musicians_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.teams teams_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3944; 2606 18183779 CONSTRAINT teams teams_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "teams" are not allowed
+    Command was: ALTER TABLE ONLY "public"."teams"
+    ADD CONSTRAINT "teams_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.ticket_categories ticket_categories_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3994; 2606 18376646 CONSTRAINT ticket_categories ticket_categories_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "ticket_categories" are not allowed
+    Command was: ALTER TABLE ONLY "public"."ticket_categories"
+    ADD CONSTRAINT "ticket_categories_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.types types_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3940; 2606 18183756 CONSTRAINT types types_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "types" are not allowed
+    Command was: ALTER TABLE ONLY "public"."types"
+    ADD CONSTRAINT "types_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.users users_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3966; 2606 18183931 CONSTRAINT users users_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "users" are not allowed
+    Command was: ALTER TABLE ONLY "public"."users"
+    ADD CONSTRAINT "users_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating CONSTRAINT "public.vendors vendors_pkey"
+pg_restore: [archiver (db)] Error from TOC entry 3996; 2606 18376657 CONSTRAINT vendors vendors_pkey yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  multiple primary keys for table "vendors" are not allowed
+    Command was: ALTER TABLE ONLY "public"."vendors"
+    ADD CONSTRAINT "vendors_pkey" PRIMARY KEY ("id");
+
+
+
+pg_restore: creating INDEX "public.index_accomodations_on_address_id"
+pg_restore: [archiver (db)] Error from TOC entry 3971; 1259 18183967 INDEX index_accomodations_on_address_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_accomodations_on_address_id" already exists
+    Command was: CREATE INDEX "index_accomodations_on_address_id" ON "public"."accomodations" USING "btree" ("address_id");
+
+
+
+pg_restore: creating INDEX "public.index_accomodations_on_musician_id"
+pg_restore: [archiver (db)] Error from TOC entry 3972; 1259 18183968 INDEX index_accomodations_on_musician_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_accomodations_on_musician_id" already exists
+    Command was: CREATE INDEX "index_accomodations_on_musician_id" ON "public"."accomodations" USING "btree" ("musician_id");
+
+
+
+pg_restore: creating INDEX "public.index_assignments_on_event_id"
+pg_restore: [archiver (db)] Error from TOC entry 3987; 1259 18376612 INDEX index_assignments_on_event_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_assignments_on_event_id" already exists
+    Command was: CREATE INDEX "index_assignments_on_event_id" ON "public"."assignments" USING "btree" ("event_id");
+
+
+
+pg_restore: creating INDEX "public.index_assignments_on_task_id"
+pg_restore: [archiver (db)] Error from TOC entry 3988; 1259 18376611 INDEX index_assignments_on_task_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_assignments_on_task_id" already exists
+    Command was: CREATE INDEX "index_assignments_on_task_id" ON "public"."assignments" USING "btree" ("task_id");
+
+
+
+pg_restore: creating INDEX "public.index_event_teams_on_event_id"
+pg_restore: [archiver (db)] Error from TOC entry 3951; 1259 18183842 INDEX index_event_teams_on_event_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_event_teams_on_event_id" already exists
+    Command was: CREATE INDEX "index_event_teams_on_event_id" ON "public"."event_teams" USING "btree" ("event_id");
+
+
+
+pg_restore: creating INDEX "public.index_event_teams_on_team_id"
+pg_restore: [archiver (db)] Error from TOC entry 3952; 1259 18183843 INDEX index_event_teams_on_team_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_event_teams_on_team_id" already exists
+    Command was: CREATE INDEX "index_event_teams_on_team_id" ON "public"."event_teams" USING "btree" ("team_id");
+
+
+
+pg_restore: creating INDEX "public.index_events_on_location_id"
+pg_restore: [archiver (db)] Error from TOC entry 3947; 1259 18183814 INDEX index_events_on_location_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_events_on_location_id" already exists
+    Command was: CREATE INDEX "index_events_on_location_id" ON "public"."events" USING "btree" ("location_id");
+
+
+
+pg_restore: creating INDEX "public.index_events_on_type_id"
+pg_restore: [archiver (db)] Error from TOC entry 3948; 1259 18183812 INDEX index_events_on_type_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_events_on_type_id" already exists
+    Command was: CREATE INDEX "index_events_on_type_id" ON "public"."events" USING "btree" ("type_id");
+
+
+
+pg_restore: creating INDEX "public.index_flights_on_airline_id"
+pg_restore: [archiver (db)] Error from TOC entry 3959; 1259 18183906 INDEX index_flights_on_airline_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_flights_on_airline_id" already exists
+    Command was: CREATE INDEX "index_flights_on_airline_id" ON "public"."flights" USING "btree" ("airline_id");
+
+
+
+pg_restore: creating INDEX "public.index_flights_on_musician_id"
+pg_restore: [archiver (db)] Error from TOC entry 3960; 1259 18183905 INDEX index_flights_on_musician_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_flights_on_musician_id" already exists
+    Command was: CREATE INDEX "index_flights_on_musician_id" ON "public"."flights" USING "btree" ("musician_id");
+
+
+
+pg_restore: creating INDEX "public.index_instructions_on_event_id"
+pg_restore: [archiver (db)] Error from TOC entry 3989; 1259 18376635 INDEX index_instructions_on_event_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_instructions_on_event_id" already exists
+    Command was: CREATE INDEX "index_instructions_on_event_id" ON "public"."instructions" USING "btree" ("event_id");
+
+
+
+pg_restore: creating INDEX "public.index_instructions_on_task_id"
+pg_restore: [archiver (db)] Error from TOC entry 3990; 1259 18376634 INDEX index_instructions_on_task_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_instructions_on_task_id" already exists
+    Command was: CREATE INDEX "index_instructions_on_task_id" ON "public"."instructions" USING "btree" ("task_id");
+
+
+
+pg_restore: creating INDEX "public.index_movements_on_piece_id"
+pg_restore: [archiver (db)] Error from TOC entry 3922; 1259 18183855 INDEX index_movements_on_piece_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_movements_on_piece_id" already exists
+    Command was: CREATE INDEX "index_movements_on_piece_id" ON "public"."movements" USING "btree" ("piece_id");
+
+
+
+pg_restore: creating INDEX "public.index_performances_on_concert_id"
+pg_restore: [archiver (db)] Error from TOC entry 3927; 1259 18183705 INDEX index_performances_on_concert_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_performances_on_concert_id" already exists
+    Command was: CREATE INDEX "index_performances_on_concert_id" ON "public"."performances" USING "btree" ("concert_id");
+
+
+
+pg_restore: creating INDEX "public.index_performances_on_piece_id"
+pg_restore: [archiver (db)] Error from TOC entry 3928; 1259 18183867 INDEX index_performances_on_piece_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_performances_on_piece_id" already exists
+    Command was: CREATE INDEX "index_performances_on_piece_id" ON "public"."performances" USING "btree" ("piece_id");
+
+
+
+pg_restore: creating INDEX "public.index_performers_on_concert_id"
+pg_restore: [archiver (db)] Error from TOC entry 3931; 1259 18183727 INDEX index_performers_on_concert_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_performers_on_concert_id" already exists
+    Command was: CREATE INDEX "index_performers_on_concert_id" ON "public"."performers" USING "btree" ("concert_id");
+
+
+
+pg_restore: creating INDEX "public.index_performers_on_musician_id"
+pg_restore: [archiver (db)] Error from TOC entry 3932; 1259 18183728 INDEX index_performers_on_musician_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_performers_on_musician_id" already exists
+    Command was: CREATE INDEX "index_performers_on_musician_id" ON "public"."performers" USING "btree" ("musician_id");
+
+
+
+pg_restore: creating INDEX "public.index_performers_on_piece_id"
+pg_restore: [archiver (db)] Error from TOC entry 3933; 1259 18183861 INDEX index_performers_on_piece_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_performers_on_piece_id" already exists
+    Command was: CREATE INDEX "index_performers_on_piece_id" ON "public"."performers" USING "btree" ("piece_id");
+
+
+
+pg_restore: creating INDEX "public.index_pieces_on_composer_id"
+pg_restore: [archiver (db)] Error from TOC entry 3936; 1259 18183745 INDEX index_pieces_on_composer_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_pieces_on_composer_id" already exists
+    Command was: CREATE INDEX "index_pieces_on_composer_id" ON "public"."pieces" USING "btree" ("composer_id");
+
+
+
+pg_restore: creating INDEX "public.index_sales_reports_on_ticket_category_id"
+pg_restore: [archiver (db)] Error from TOC entry 3997; 1259 18376680 INDEX index_sales_reports_on_ticket_category_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_sales_reports_on_ticket_category_id" already exists
+    Command was: CREATE INDEX "index_sales_reports_on_ticket_category_id" ON "public"."sales_reports" USING "btree" ("ticket_category_id");
+
+
+
+pg_restore: creating INDEX "public.index_sales_reports_on_vendor_id"
+pg_restore: [archiver (db)] Error from TOC entry 3998; 1259 18376679 INDEX index_sales_reports_on_vendor_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_sales_reports_on_vendor_id" already exists
+    Command was: CREATE INDEX "index_sales_reports_on_vendor_id" ON "public"."sales_reports" USING "btree" ("vendor_id");
+
+
+
+pg_restore: creating INDEX "public.index_task_types_on_task_id"
+pg_restore: [archiver (db)] Error from TOC entry 3979; 1259 18404754 INDEX index_task_types_on_task_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_task_types_on_task_id" already exists
+    Command was: CREATE INDEX "index_task_types_on_task_id" ON "public"."task_types" USING "btree" ("task_id");
+
+
+
+pg_restore: creating INDEX "public.index_task_types_on_type_id"
+pg_restore: [archiver (db)] Error from TOC entry 3980; 1259 18404748 INDEX index_task_types_on_type_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_task_types_on_type_id" already exists
+    Command was: CREATE INDEX "index_task_types_on_type_id" ON "public"."task_types" USING "btree" ("type_id");
+
+
+
+pg_restore: creating INDEX "public.index_team_musicians_on_musician_id"
+pg_restore: [archiver (db)] Error from TOC entry 3973; 1259 18188840 INDEX index_team_musicians_on_musician_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_team_musicians_on_musician_id" already exists
+    Command was: CREATE INDEX "index_team_musicians_on_musician_id" ON "public"."team_musicians" USING "btree" ("musician_id");
+
+
+
+pg_restore: creating INDEX "public.index_team_musicians_on_team_id"
+pg_restore: [archiver (db)] Error from TOC entry 3974; 1259 18188839 INDEX index_team_musicians_on_team_id yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_team_musicians_on_team_id" already exists
+    Command was: CREATE INDEX "index_team_musicians_on_team_id" ON "public"."team_musicians" USING "btree" ("team_id");
+
+
+
+pg_restore: creating INDEX "public.index_users_on_email"
+pg_restore: [archiver (db)] Error from TOC entry 3963; 1259 18183932 INDEX index_users_on_email yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_users_on_email" already exists
+    Command was: CREATE UNIQUE INDEX "index_users_on_email" ON "public"."users" USING "btree" ("email");
+
+
+
+pg_restore: creating INDEX "public.index_users_on_reset_password_token"
+pg_restore: [archiver (db)] Error from TOC entry 3964; 1259 18183933 INDEX index_users_on_reset_password_token yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  relation "index_users_on_reset_password_token" already exists
+    Command was: CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "public"."users" USING "btree" ("reset_password_token");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.instructions fk_rails_064ac72766"
+pg_restore: [archiver (db)] Error from TOC entry 4022; 2606 18376624 FK CONSTRAINT instructions fk_rails_064ac72766 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_064ac72766" for relation "instructions" already exists
+    Command was: ALTER TABLE ONLY "public"."instructions"
+    ADD CONSTRAINT "fk_rails_064ac72766" FOREIGN KEY ("task_id") REFERENCES "public"."tasks"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.task_types fk_rails_0b80b9fc59"
+pg_restore: [archiver (db)] Error from TOC entry 4019; 2606 18404755 FK CONSTRAINT task_types fk_rails_0b80b9fc59 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_0b80b9fc59" for relation "task_types" already exists
+    Command was: ALTER TABLE ONLY "public"."task_types"
+    ADD CONSTRAINT "fk_rails_0b80b9fc59" FOREIGN KEY ("task_id") REFERENCES "public"."task_types"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.task_types fk_rails_1f3a2e9669"
+pg_restore: [archiver (db)] Error from TOC entry 4018; 2606 18404749 FK CONSTRAINT task_types fk_rails_1f3a2e9669 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_1f3a2e9669" for relation "task_types" already exists
+    Command was: ALTER TABLE ONLY "public"."task_types"
+    ADD CONSTRAINT "fk_rails_1f3a2e9669" FOREIGN KEY ("type_id") REFERENCES "public"."types"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.performances fk_rails_2137cc6638"
+pg_restore: [archiver (db)] Error from TOC entry 4003; 2606 18183868 FK CONSTRAINT performances fk_rails_2137cc6638 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_2137cc6638" for relation "performances" already exists
+    Command was: ALTER TABLE ONLY "public"."performances"
+    ADD CONSTRAINT "fk_rails_2137cc6638" FOREIGN KEY ("piece_id") REFERENCES "public"."pieces"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.accomodations fk_rails_25a569151c"
+pg_restore: [archiver (db)] Error from TOC entry 4015; 2606 18183962 FK CONSTRAINT accomodations fk_rails_25a569151c yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_25a569151c" for relation "accomodations" already exists
+    Command was: ALTER TABLE ONLY "public"."accomodations"
+    ADD CONSTRAINT "fk_rails_25a569151c" FOREIGN KEY ("musician_id") REFERENCES "public"."musicians"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.event_teams fk_rails_27d2a44384"
+pg_restore: [archiver (db)] Error from TOC entry 4010; 2606 18183832 FK CONSTRAINT event_teams fk_rails_27d2a44384 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_27d2a44384" for relation "event_teams" already exists
+    Command was: ALTER TABLE ONLY "public"."event_teams"
+    ADD CONSTRAINT "fk_rails_27d2a44384" FOREIGN KEY ("event_id") REFERENCES "public"."events"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.performers fk_rails_31d19b337d"
+pg_restore: [archiver (db)] Error from TOC entry 4005; 2606 18183722 FK CONSTRAINT performers fk_rails_31d19b337d yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_31d19b337d" for relation "performers" already exists
+    Command was: ALTER TABLE ONLY "public"."performers"
+    ADD CONSTRAINT "fk_rails_31d19b337d" FOREIGN KEY ("musician_id") REFERENCES "public"."musicians"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.sales_reports fk_rails_357f507c2f"
+pg_restore: [archiver (db)] Error from TOC entry 4025; 2606 18376674 FK CONSTRAINT sales_reports fk_rails_357f507c2f yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_357f507c2f" for relation "sales_reports" already exists
+    Command was: ALTER TABLE ONLY "public"."sales_reports"
+    ADD CONSTRAINT "fk_rails_357f507c2f" FOREIGN KEY ("ticket_category_id") REFERENCES "public"."ticket_categories"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.accomodations fk_rails_36530d81c3"
+pg_restore: [archiver (db)] Error from TOC entry 4014; 2606 18183957 FK CONSTRAINT accomodations fk_rails_36530d81c3 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_36530d81c3" for relation "accomodations" already exists
+    Command was: ALTER TABLE ONLY "public"."accomodations"
+    ADD CONSTRAINT "fk_rails_36530d81c3" FOREIGN KEY ("address_id") REFERENCES "public"."addresses"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.events fk_rails_3d0bd29ec6"
+pg_restore: [archiver (db)] Error from TOC entry 4009; 2606 18183807 FK CONSTRAINT events fk_rails_3d0bd29ec6 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_3d0bd29ec6" for relation "events" already exists
+    Command was: ALTER TABLE ONLY "public"."events"
+    ADD CONSTRAINT "fk_rails_3d0bd29ec6" FOREIGN KEY ("location_id") REFERENCES "public"."locations"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.sales_reports fk_rails_601a3e1789"
+pg_restore: [archiver (db)] Error from TOC entry 4024; 2606 18376669 FK CONSTRAINT sales_reports fk_rails_601a3e1789 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_601a3e1789" for relation "sales_reports" already exists
+    Command was: ALTER TABLE ONLY "public"."sales_reports"
+    ADD CONSTRAINT "fk_rails_601a3e1789" FOREIGN KEY ("vendor_id") REFERENCES "public"."vendors"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.flights fk_rails_6225f6ac82"
+pg_restore: [archiver (db)] Error from TOC entry 4012; 2606 18183895 FK CONSTRAINT flights fk_rails_6225f6ac82 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_6225f6ac82" for relation "flights" already exists
+    Command was: ALTER TABLE ONLY "public"."flights"
+    ADD CONSTRAINT "fk_rails_6225f6ac82" FOREIGN KEY ("musician_id") REFERENCES "public"."musicians"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.assignments fk_rails_6a5328b71e"
+pg_restore: [archiver (db)] Error from TOC entry 4021; 2606 18376606 FK CONSTRAINT assignments fk_rails_6a5328b71e yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_6a5328b71e" for relation "assignments" already exists
+    Command was: ALTER TABLE ONLY "public"."assignments"
+    ADD CONSTRAINT "fk_rails_6a5328b71e" FOREIGN KEY ("event_id") REFERENCES "public"."events"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.flights fk_rails_761559f6a6"
+pg_restore: [archiver (db)] Error from TOC entry 4013; 2606 18183900 FK CONSTRAINT flights fk_rails_761559f6a6 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_761559f6a6" for relation "flights" already exists
+    Command was: ALTER TABLE ONLY "public"."flights"
+    ADD CONSTRAINT "fk_rails_761559f6a6" FOREIGN KEY ("airline_id") REFERENCES "public"."airlines"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.instructions fk_rails_7c8367a85b"
+pg_restore: [archiver (db)] Error from TOC entry 4023; 2606 18376629 FK CONSTRAINT instructions fk_rails_7c8367a85b yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_7c8367a85b" for relation "instructions" already exists
+    Command was: ALTER TABLE ONLY "public"."instructions"
+    ADD CONSTRAINT "fk_rails_7c8367a85b" FOREIGN KEY ("event_id") REFERENCES "public"."events"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.team_musicians fk_rails_7e643a6de5"
+pg_restore: [archiver (db)] Error from TOC entry 4017; 2606 18188834 FK CONSTRAINT team_musicians fk_rails_7e643a6de5 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_7e643a6de5" for relation "team_musicians" already exists
+    Command was: ALTER TABLE ONLY "public"."team_musicians"
+    ADD CONSTRAINT "fk_rails_7e643a6de5" FOREIGN KEY ("musician_id") REFERENCES "public"."musicians"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.pieces fk_rails_952fdc35b1"
+pg_restore: [archiver (db)] Error from TOC entry 4007; 2606 18183740 FK CONSTRAINT pieces fk_rails_952fdc35b1 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_952fdc35b1" for relation "pieces" already exists
+    Command was: ALTER TABLE ONLY "public"."pieces"
+    ADD CONSTRAINT "fk_rails_952fdc35b1" FOREIGN KEY ("composer_id") REFERENCES "public"."composers"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.performers fk_rails_95b0040f34"
+pg_restore: [archiver (db)] Error from TOC entry 4004; 2606 18183717 FK CONSTRAINT performers fk_rails_95b0040f34 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_95b0040f34" for relation "performers" already exists
+    Command was: ALTER TABLE ONLY "public"."performers"
+    ADD CONSTRAINT "fk_rails_95b0040f34" FOREIGN KEY ("concert_id") REFERENCES "public"."concerts"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.movements fk_rails_a96696a445"
+pg_restore: [archiver (db)] Error from TOC entry 4001; 2606 18183856 FK CONSTRAINT movements fk_rails_a96696a445 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_a96696a445" for relation "movements" already exists
+    Command was: ALTER TABLE ONLY "public"."movements"
+    ADD CONSTRAINT "fk_rails_a96696a445" FOREIGN KEY ("piece_id") REFERENCES "public"."pieces"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.assignments fk_rails_b7c53ee3b6"
+pg_restore: [archiver (db)] Error from TOC entry 4020; 2606 18376601 FK CONSTRAINT assignments fk_rails_b7c53ee3b6 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_b7c53ee3b6" for relation "assignments" already exists
+    Command was: ALTER TABLE ONLY "public"."assignments"
+    ADD CONSTRAINT "fk_rails_b7c53ee3b6" FOREIGN KEY ("task_id") REFERENCES "public"."tasks"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.events fk_rails_c6c031df6e"
+pg_restore: [archiver (db)] Error from TOC entry 4008; 2606 18183797 FK CONSTRAINT events fk_rails_c6c031df6e yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_c6c031df6e" for relation "events" already exists
+    Command was: ALTER TABLE ONLY "public"."events"
+    ADD CONSTRAINT "fk_rails_c6c031df6e" FOREIGN KEY ("type_id") REFERENCES "public"."types"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.team_musicians fk_rails_d1f974f4a4"
+pg_restore: [archiver (db)] Error from TOC entry 4016; 2606 18188829 FK CONSTRAINT team_musicians fk_rails_d1f974f4a4 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_d1f974f4a4" for relation "team_musicians" already exists
+    Command was: ALTER TABLE ONLY "public"."team_musicians"
+    ADD CONSTRAINT "fk_rails_d1f974f4a4" FOREIGN KEY ("team_id") REFERENCES "public"."teams"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.performances fk_rails_d53c8efbbd"
+pg_restore: [archiver (db)] Error from TOC entry 4002; 2606 18183700 FK CONSTRAINT performances fk_rails_d53c8efbbd yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_d53c8efbbd" for relation "performances" already exists
+    Command was: ALTER TABLE ONLY "public"."performances"
+    ADD CONSTRAINT "fk_rails_d53c8efbbd" FOREIGN KEY ("concert_id") REFERENCES "public"."concerts"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.performers fk_rails_dca43affae"
+pg_restore: [archiver (db)] Error from TOC entry 4006; 2606 18183862 FK CONSTRAINT performers fk_rails_dca43affae yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_dca43affae" for relation "performers" already exists
+    Command was: ALTER TABLE ONLY "public"."performers"
+    ADD CONSTRAINT "fk_rails_dca43affae" FOREIGN KEY ("piece_id") REFERENCES "public"."pieces"("id");
+
+
+
+pg_restore: creating FK CONSTRAINT "public.event_teams fk_rails_dea58daf25"
+pg_restore: [archiver (db)] Error from TOC entry 4011; 2606 18183837 FK CONSTRAINT event_teams fk_rails_dea58daf25 yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  constraint "fk_rails_dea58daf25" for relation "event_teams" already exists
+    Command was: ALTER TABLE ONLY "public"."event_teams"
+    ADD CONSTRAINT "fk_rails_dea58daf25" FOREIGN KEY ("team_id") REFERENCES "public"."teams"("id");
+
+
+
+WARNING: errors ignored on restore: 169

@@ -1,0 +1,528 @@
+pg_restore: connecting to database for restore
+pg_restore: dropping FK CONSTRAINT event_teams fk_rails_dea58daf25
+pg_restore: dropping FK CONSTRAINT performers fk_rails_dca43affae
+pg_restore: dropping FK CONSTRAINT performances fk_rails_d53c8efbbd
+pg_restore: dropping FK CONSTRAINT team_musicians fk_rails_d1f974f4a4
+pg_restore: dropping FK CONSTRAINT events fk_rails_c6c031df6e
+pg_restore: dropping FK CONSTRAINT assignments fk_rails_b7c53ee3b6
+pg_restore: dropping FK CONSTRAINT movements fk_rails_a96696a445
+pg_restore: dropping FK CONSTRAINT performers fk_rails_95b0040f34
+pg_restore: dropping FK CONSTRAINT pieces fk_rails_952fdc35b1
+pg_restore: dropping FK CONSTRAINT team_musicians fk_rails_7e643a6de5
+pg_restore: dropping FK CONSTRAINT instructions fk_rails_7c8367a85b
+pg_restore: dropping FK CONSTRAINT flights fk_rails_761559f6a6
+pg_restore: dropping FK CONSTRAINT assignments fk_rails_6a5328b71e
+pg_restore: dropping FK CONSTRAINT flights fk_rails_6225f6ac82
+pg_restore: dropping FK CONSTRAINT sales_reports fk_rails_601a3e1789
+pg_restore: dropping FK CONSTRAINT events fk_rails_3d0bd29ec6
+pg_restore: dropping FK CONSTRAINT accomodations fk_rails_36530d81c3
+pg_restore: dropping FK CONSTRAINT sales_reports fk_rails_357f507c2f
+pg_restore: dropping FK CONSTRAINT performers fk_rails_31d19b337d
+pg_restore: dropping FK CONSTRAINT event_teams fk_rails_27d2a44384
+pg_restore: dropping FK CONSTRAINT accomodations fk_rails_25a569151c
+pg_restore: dropping FK CONSTRAINT performances fk_rails_2137cc6638
+pg_restore: dropping FK CONSTRAINT task_types fk_rails_1f3a2e9669
+pg_restore: dropping FK CONSTRAINT task_types fk_rails_0b80b9fc59
+pg_restore: dropping FK CONSTRAINT instructions fk_rails_064ac72766
+pg_restore: dropping INDEX index_users_on_reset_password_token
+pg_restore: dropping INDEX index_users_on_email
+pg_restore: dropping INDEX index_team_musicians_on_team_id
+pg_restore: dropping INDEX index_team_musicians_on_musician_id
+pg_restore: dropping INDEX index_task_types_on_type_id
+pg_restore: dropping INDEX index_task_types_on_task_id
+pg_restore: dropping INDEX index_sales_reports_on_vendor_id
+pg_restore: dropping INDEX index_sales_reports_on_ticket_category_id
+pg_restore: dropping INDEX index_pieces_on_composer_id
+pg_restore: dropping INDEX index_performers_on_piece_id
+pg_restore: dropping INDEX index_performers_on_musician_id
+pg_restore: dropping INDEX index_performers_on_concert_id
+pg_restore: dropping INDEX index_performances_on_piece_id
+pg_restore: dropping INDEX index_performances_on_concert_id
+pg_restore: dropping INDEX index_movements_on_piece_id
+pg_restore: dropping INDEX index_instructions_on_task_id
+pg_restore: dropping INDEX index_instructions_on_event_id
+pg_restore: dropping INDEX index_flights_on_musician_id
+pg_restore: dropping INDEX index_flights_on_airline_id
+pg_restore: dropping INDEX index_events_on_type_id
+pg_restore: dropping INDEX index_events_on_location_id
+pg_restore: dropping INDEX index_event_teams_on_team_id
+pg_restore: dropping INDEX index_event_teams_on_event_id
+pg_restore: dropping INDEX index_assignments_on_task_id
+pg_restore: dropping INDEX index_assignments_on_event_id
+pg_restore: dropping INDEX index_accomodations_on_musician_id
+pg_restore: dropping INDEX index_accomodations_on_address_id
+pg_restore: dropping CONSTRAINT vendors vendors_pkey
+pg_restore: dropping CONSTRAINT users users_pkey
+pg_restore: dropping CONSTRAINT types types_pkey
+pg_restore: dropping CONSTRAINT ticket_categories ticket_categories_pkey
+pg_restore: dropping CONSTRAINT teams teams_pkey
+pg_restore: dropping CONSTRAINT team_musicians team_musicians_pkey
+pg_restore: dropping CONSTRAINT tasks tasks_pkey
+pg_restore: dropping CONSTRAINT task_types task_types_pkey
+pg_restore: dropping CONSTRAINT sheets sheets_pkey
+pg_restore: dropping CONSTRAINT schema_migrations schema_migrations_pkey
+pg_restore: dropping CONSTRAINT sales_reports sales_reports_pkey
+pg_restore: dropping CONSTRAINT pieces pieces_pkey
+pg_restore: dropping CONSTRAINT performers performers_pkey
+pg_restore: dropping CONSTRAINT performances performances_pkey
+pg_restore: dropping CONSTRAINT musicians musicians_pkey
+pg_restore: dropping CONSTRAINT movements movements_pkey
+pg_restore: dropping CONSTRAINT locations locations_pkey
+pg_restore: dropping CONSTRAINT instruments instruments_pkey
+pg_restore: dropping CONSTRAINT instructions instructions_pkey
+pg_restore: dropping CONSTRAINT flights flights_pkey
+pg_restore: dropping CONSTRAINT events events_pkey
+pg_restore: dropping CONSTRAINT event_teams event_teams_pkey
+pg_restore: dropping CONSTRAINT discussions discussions_pkey
+pg_restore: dropping CONSTRAINT concerts concerts_pkey
+pg_restore: dropping CONSTRAINT composers composers_pkey
+pg_restore: dropping CONSTRAINT assignments assignments_pkey
+pg_restore: dropping CONSTRAINT ar_internal_metadata ar_internal_metadata_pkey
+pg_restore: dropping CONSTRAINT airlines airlines_pkey
+pg_restore: dropping CONSTRAINT addresses addresses_pkey
+pg_restore: dropping CONSTRAINT accomodations accomodations_pkey
+pg_restore: dropping SEQUENCE SET vendors_id_seq
+pg_restore: dropping SEQUENCE SET users_id_seq
+pg_restore: dropping SEQUENCE SET types_id_seq
+pg_restore: dropping SEQUENCE SET ticket_categories_id_seq
+pg_restore: dropping SEQUENCE SET teams_id_seq
+pg_restore: dropping SEQUENCE SET team_musicians_id_seq
+pg_restore: dropping SEQUENCE SET tasks_id_seq
+pg_restore: dropping SEQUENCE SET task_types_id_seq
+pg_restore: dropping SEQUENCE SET sheets_id_seq
+pg_restore: dropping SEQUENCE SET sales_reports_id_seq
+pg_restore: dropping SEQUENCE SET pieces_id_seq
+pg_restore: dropping SEQUENCE SET performers_id_seq
+pg_restore: dropping SEQUENCE SET performances_id_seq
+pg_restore: dropping SEQUENCE SET musicians_id_seq
+pg_restore: dropping SEQUENCE SET movements_id_seq
+pg_restore: dropping SEQUENCE SET locations_id_seq
+pg_restore: dropping SEQUENCE SET instruments_id_seq
+pg_restore: dropping SEQUENCE SET instructions_id_seq
+pg_restore: dropping SEQUENCE SET flights_id_seq
+pg_restore: dropping SEQUENCE SET events_id_seq
+pg_restore: dropping SEQUENCE SET event_teams_id_seq
+pg_restore: dropping SEQUENCE SET discussions_id_seq
+pg_restore: dropping SEQUENCE SET concerts_id_seq
+pg_restore: dropping SEQUENCE SET composers_id_seq
+pg_restore: dropping SEQUENCE SET assignments_id_seq
+pg_restore: dropping SEQUENCE SET airlines_id_seq
+pg_restore: dropping SEQUENCE SET addresses_id_seq
+pg_restore: dropping SEQUENCE SET accomodations_id_seq
+pg_restore: dropping TABLE DATA vendors
+pg_restore: dropping TABLE DATA users
+pg_restore: dropping TABLE DATA types
+pg_restore: dropping TABLE DATA ticket_categories
+pg_restore: dropping TABLE DATA teams
+pg_restore: dropping TABLE DATA team_musicians
+pg_restore: dropping TABLE DATA tasks
+pg_restore: dropping TABLE DATA task_types
+pg_restore: dropping TABLE DATA sheets
+pg_restore: dropping TABLE DATA schema_migrations
+pg_restore: dropping TABLE DATA sales_reports
+pg_restore: dropping TABLE DATA pieces
+pg_restore: dropping TABLE DATA performers
+pg_restore: dropping TABLE DATA performances
+pg_restore: dropping TABLE DATA musicians
+pg_restore: dropping TABLE DATA movements
+pg_restore: dropping TABLE DATA locations
+pg_restore: dropping TABLE DATA instruments
+pg_restore: dropping TABLE DATA instructions
+pg_restore: dropping TABLE DATA flights
+pg_restore: dropping TABLE DATA events
+pg_restore: dropping TABLE DATA event_teams
+pg_restore: dropping TABLE DATA discussions
+pg_restore: dropping TABLE DATA concerts
+pg_restore: dropping TABLE DATA composers
+pg_restore: dropping TABLE DATA assignments
+pg_restore: dropping TABLE DATA ar_internal_metadata
+pg_restore: dropping TABLE DATA airlines
+pg_restore: dropping TABLE DATA addresses
+pg_restore: dropping TABLE DATA accomodations
+pg_restore: dropping DEFAULT vendors id
+pg_restore: dropping DEFAULT users id
+pg_restore: dropping DEFAULT types id
+pg_restore: dropping DEFAULT ticket_categories id
+pg_restore: dropping DEFAULT teams id
+pg_restore: dropping DEFAULT team_musicians id
+pg_restore: dropping DEFAULT tasks id
+pg_restore: dropping DEFAULT task_types id
+pg_restore: dropping DEFAULT sheets id
+pg_restore: dropping DEFAULT sales_reports id
+pg_restore: dropping DEFAULT pieces id
+pg_restore: dropping DEFAULT performers id
+pg_restore: dropping DEFAULT performances id
+pg_restore: dropping DEFAULT musicians id
+pg_restore: dropping DEFAULT movements id
+pg_restore: dropping DEFAULT locations id
+pg_restore: dropping DEFAULT instruments id
+pg_restore: dropping DEFAULT instructions id
+pg_restore: dropping DEFAULT flights id
+pg_restore: dropping DEFAULT events id
+pg_restore: dropping DEFAULT event_teams id
+pg_restore: dropping DEFAULT discussions id
+pg_restore: dropping DEFAULT concerts id
+pg_restore: dropping DEFAULT composers id
+pg_restore: dropping DEFAULT assignments id
+pg_restore: dropping DEFAULT airlines id
+pg_restore: dropping DEFAULT addresses id
+pg_restore: dropping DEFAULT accomodations id
+pg_restore: dropping SEQUENCE OWNED BY vendors_id_seq
+pg_restore: dropping SEQUENCE vendors_id_seq
+pg_restore: dropping TABLE vendors
+pg_restore: dropping SEQUENCE OWNED BY users_id_seq
+pg_restore: dropping SEQUENCE users_id_seq
+pg_restore: dropping TABLE users
+pg_restore: dropping SEQUENCE OWNED BY types_id_seq
+pg_restore: dropping SEQUENCE types_id_seq
+pg_restore: dropping TABLE types
+pg_restore: dropping SEQUENCE OWNED BY ticket_categories_id_seq
+pg_restore: dropping SEQUENCE ticket_categories_id_seq
+pg_restore: dropping TABLE ticket_categories
+pg_restore: dropping SEQUENCE OWNED BY teams_id_seq
+pg_restore: dropping SEQUENCE teams_id_seq
+pg_restore: dropping TABLE teams
+pg_restore: dropping SEQUENCE OWNED BY team_musicians_id_seq
+pg_restore: dropping SEQUENCE team_musicians_id_seq
+pg_restore: dropping TABLE team_musicians
+pg_restore: dropping SEQUENCE OWNED BY tasks_id_seq
+pg_restore: dropping SEQUENCE tasks_id_seq
+pg_restore: dropping TABLE tasks
+pg_restore: dropping SEQUENCE OWNED BY task_types_id_seq
+pg_restore: dropping SEQUENCE task_types_id_seq
+pg_restore: dropping TABLE task_types
+pg_restore: dropping SEQUENCE OWNED BY sheets_id_seq
+pg_restore: dropping SEQUENCE sheets_id_seq
+pg_restore: dropping TABLE sheets
+pg_restore: dropping TABLE schema_migrations
+pg_restore: dropping SEQUENCE OWNED BY sales_reports_id_seq
+pg_restore: dropping SEQUENCE sales_reports_id_seq
+pg_restore: dropping TABLE sales_reports
+pg_restore: dropping SEQUENCE OWNED BY pieces_id_seq
+pg_restore: dropping SEQUENCE pieces_id_seq
+pg_restore: dropping TABLE pieces
+pg_restore: dropping SEQUENCE OWNED BY performers_id_seq
+pg_restore: dropping SEQUENCE performers_id_seq
+pg_restore: dropping TABLE performers
+pg_restore: dropping SEQUENCE OWNED BY performances_id_seq
+pg_restore: dropping SEQUENCE performances_id_seq
+pg_restore: dropping TABLE performances
+pg_restore: dropping SEQUENCE OWNED BY musicians_id_seq
+pg_restore: dropping SEQUENCE musicians_id_seq
+pg_restore: dropping TABLE musicians
+pg_restore: dropping SEQUENCE OWNED BY movements_id_seq
+pg_restore: dropping SEQUENCE movements_id_seq
+pg_restore: dropping TABLE movements
+pg_restore: dropping SEQUENCE OWNED BY locations_id_seq
+pg_restore: dropping SEQUENCE locations_id_seq
+pg_restore: dropping TABLE locations
+pg_restore: dropping SEQUENCE OWNED BY instruments_id_seq
+pg_restore: dropping SEQUENCE instruments_id_seq
+pg_restore: dropping TABLE instruments
+pg_restore: dropping SEQUENCE OWNED BY instructions_id_seq
+pg_restore: dropping SEQUENCE instructions_id_seq
+pg_restore: dropping TABLE instructions
+pg_restore: dropping SEQUENCE OWNED BY flights_id_seq
+pg_restore: dropping SEQUENCE flights_id_seq
+pg_restore: dropping TABLE flights
+pg_restore: dropping SEQUENCE OWNED BY events_id_seq
+pg_restore: dropping SEQUENCE events_id_seq
+pg_restore: dropping TABLE events
+pg_restore: dropping SEQUENCE OWNED BY event_teams_id_seq
+pg_restore: dropping SEQUENCE event_teams_id_seq
+pg_restore: dropping TABLE event_teams
+pg_restore: dropping SEQUENCE OWNED BY discussions_id_seq
+pg_restore: dropping SEQUENCE discussions_id_seq
+pg_restore: dropping TABLE discussions
+pg_restore: dropping SEQUENCE OWNED BY concerts_id_seq
+pg_restore: dropping SEQUENCE concerts_id_seq
+pg_restore: dropping TABLE concerts
+pg_restore: dropping SEQUENCE OWNED BY composers_id_seq
+pg_restore: dropping SEQUENCE composers_id_seq
+pg_restore: dropping TABLE composers
+pg_restore: dropping SEQUENCE OWNED BY assignments_id_seq
+pg_restore: dropping SEQUENCE assignments_id_seq
+pg_restore: dropping TABLE assignments
+pg_restore: dropping TABLE ar_internal_metadata
+pg_restore: dropping SEQUENCE OWNED BY airlines_id_seq
+pg_restore: dropping SEQUENCE airlines_id_seq
+pg_restore: dropping TABLE airlines
+pg_restore: dropping SEQUENCE OWNED BY addresses_id_seq
+pg_restore: dropping SEQUENCE addresses_id_seq
+pg_restore: dropping TABLE addresses
+pg_restore: dropping SEQUENCE OWNED BY accomodations_id_seq
+pg_restore: dropping SEQUENCE accomodations_id_seq
+pg_restore: dropping TABLE accomodations
+pg_restore: dropping COMMENT EXTENSION "plpgsql"
+pg_restore: dropping EXTENSION plpgsql
+pg_restore: dropping SCHEMA public
+pg_restore: [archiver (db)] Error while PROCESSING TOC:
+pg_restore: [archiver (db)] Error from TOC entry 3; 2615 18183606 SCHEMA public yesysiiazdiant
+pg_restore: [archiver (db)] could not execute query: ERROR:  cannot drop schema public because other objects depend on it
+DETAIL:  table public.payment_methods depends on schema public
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+    Command was: DROP SCHEMA "public";
+
+pg_restore: creating SCHEMA "public"
+pg_restore: [archiver (db)] could not execute query: ERROR:  schema "public" already exists
+    Command was: CREATE SCHEMA public;
+
+
+
+pg_restore: creating EXTENSION "plpgsql"
+pg_restore: creating COMMENT "EXTENSION "plpgsql""
+pg_restore: creating TABLE "public.accomodations"
+pg_restore: creating SEQUENCE "public.accomodations_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.accomodations_id_seq"
+pg_restore: creating TABLE "public.addresses"
+pg_restore: creating SEQUENCE "public.addresses_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.addresses_id_seq"
+pg_restore: creating TABLE "public.airlines"
+pg_restore: creating SEQUENCE "public.airlines_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.airlines_id_seq"
+pg_restore: creating TABLE "public.ar_internal_metadata"
+pg_restore: creating TABLE "public.assignments"
+pg_restore: creating SEQUENCE "public.assignments_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.assignments_id_seq"
+pg_restore: creating TABLE "public.composers"
+pg_restore: creating SEQUENCE "public.composers_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.composers_id_seq"
+pg_restore: creating TABLE "public.concerts"
+pg_restore: creating SEQUENCE "public.concerts_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.concerts_id_seq"
+pg_restore: creating TABLE "public.discussions"
+pg_restore: creating SEQUENCE "public.discussions_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.discussions_id_seq"
+pg_restore: creating TABLE "public.event_teams"
+pg_restore: creating SEQUENCE "public.event_teams_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.event_teams_id_seq"
+pg_restore: creating TABLE "public.events"
+pg_restore: creating SEQUENCE "public.events_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.events_id_seq"
+pg_restore: creating TABLE "public.flights"
+pg_restore: creating SEQUENCE "public.flights_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.flights_id_seq"
+pg_restore: creating TABLE "public.instructions"
+pg_restore: creating SEQUENCE "public.instructions_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.instructions_id_seq"
+pg_restore: creating TABLE "public.instruments"
+pg_restore: creating SEQUENCE "public.instruments_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.instruments_id_seq"
+pg_restore: creating TABLE "public.locations"
+pg_restore: creating SEQUENCE "public.locations_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.locations_id_seq"
+pg_restore: creating TABLE "public.movements"
+pg_restore: creating SEQUENCE "public.movements_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.movements_id_seq"
+pg_restore: creating TABLE "public.musicians"
+pg_restore: creating SEQUENCE "public.musicians_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.musicians_id_seq"
+pg_restore: creating TABLE "public.performances"
+pg_restore: creating SEQUENCE "public.performances_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.performances_id_seq"
+pg_restore: creating TABLE "public.performers"
+pg_restore: creating SEQUENCE "public.performers_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.performers_id_seq"
+pg_restore: creating TABLE "public.pieces"
+pg_restore: creating SEQUENCE "public.pieces_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.pieces_id_seq"
+pg_restore: creating TABLE "public.sales_reports"
+pg_restore: creating SEQUENCE "public.sales_reports_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.sales_reports_id_seq"
+pg_restore: creating TABLE "public.schema_migrations"
+pg_restore: creating TABLE "public.sheets"
+pg_restore: creating SEQUENCE "public.sheets_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.sheets_id_seq"
+pg_restore: creating TABLE "public.task_types"
+pg_restore: creating SEQUENCE "public.task_types_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.task_types_id_seq"
+pg_restore: creating TABLE "public.tasks"
+pg_restore: creating SEQUENCE "public.tasks_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.tasks_id_seq"
+pg_restore: creating TABLE "public.team_musicians"
+pg_restore: creating SEQUENCE "public.team_musicians_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.team_musicians_id_seq"
+pg_restore: creating TABLE "public.teams"
+pg_restore: creating SEQUENCE "public.teams_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.teams_id_seq"
+pg_restore: creating TABLE "public.ticket_categories"
+pg_restore: creating SEQUENCE "public.ticket_categories_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.ticket_categories_id_seq"
+pg_restore: creating TABLE "public.types"
+pg_restore: creating SEQUENCE "public.types_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.types_id_seq"
+pg_restore: creating TABLE "public.users"
+pg_restore: creating SEQUENCE "public.users_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.users_id_seq"
+pg_restore: creating TABLE "public.vendors"
+pg_restore: creating SEQUENCE "public.vendors_id_seq"
+pg_restore: creating SEQUENCE OWNED BY "public.vendors_id_seq"
+pg_restore: creating DEFAULT "public.accomodations id"
+pg_restore: creating DEFAULT "public.addresses id"
+pg_restore: creating DEFAULT "public.airlines id"
+pg_restore: creating DEFAULT "public.assignments id"
+pg_restore: creating DEFAULT "public.composers id"
+pg_restore: creating DEFAULT "public.concerts id"
+pg_restore: creating DEFAULT "public.discussions id"
+pg_restore: creating DEFAULT "public.event_teams id"
+pg_restore: creating DEFAULT "public.events id"
+pg_restore: creating DEFAULT "public.flights id"
+pg_restore: creating DEFAULT "public.instructions id"
+pg_restore: creating DEFAULT "public.instruments id"
+pg_restore: creating DEFAULT "public.locations id"
+pg_restore: creating DEFAULT "public.movements id"
+pg_restore: creating DEFAULT "public.musicians id"
+pg_restore: creating DEFAULT "public.performances id"
+pg_restore: creating DEFAULT "public.performers id"
+pg_restore: creating DEFAULT "public.pieces id"
+pg_restore: creating DEFAULT "public.sales_reports id"
+pg_restore: creating DEFAULT "public.sheets id"
+pg_restore: creating DEFAULT "public.task_types id"
+pg_restore: creating DEFAULT "public.tasks id"
+pg_restore: creating DEFAULT "public.team_musicians id"
+pg_restore: creating DEFAULT "public.teams id"
+pg_restore: creating DEFAULT "public.ticket_categories id"
+pg_restore: creating DEFAULT "public.types id"
+pg_restore: creating DEFAULT "public.users id"
+pg_restore: creating DEFAULT "public.vendors id"
+pg_restore: processing data for table "public.accomodations"
+pg_restore: processing data for table "public.addresses"
+pg_restore: processing data for table "public.airlines"
+pg_restore: processing data for table "public.ar_internal_metadata"
+pg_restore: processing data for table "public.assignments"
+pg_restore: processing data for table "public.composers"
+pg_restore: processing data for table "public.concerts"
+pg_restore: processing data for table "public.discussions"
+pg_restore: processing data for table "public.event_teams"
+pg_restore: processing data for table "public.events"
+pg_restore: processing data for table "public.flights"
+pg_restore: processing data for table "public.instructions"
+pg_restore: processing data for table "public.instruments"
+pg_restore: processing data for table "public.locations"
+pg_restore: processing data for table "public.movements"
+pg_restore: processing data for table "public.musicians"
+pg_restore: processing data for table "public.performances"
+pg_restore: processing data for table "public.performers"
+pg_restore: processing data for table "public.pieces"
+pg_restore: processing data for table "public.sales_reports"
+pg_restore: processing data for table "public.schema_migrations"
+pg_restore: processing data for table "public.sheets"
+pg_restore: processing data for table "public.task_types"
+pg_restore: processing data for table "public.tasks"
+pg_restore: processing data for table "public.team_musicians"
+pg_restore: processing data for table "public.teams"
+pg_restore: processing data for table "public.ticket_categories"
+pg_restore: processing data for table "public.types"
+pg_restore: processing data for table "public.users"
+pg_restore: processing data for table "public.vendors"
+pg_restore: executing SEQUENCE SET accomodations_id_seq
+pg_restore: executing SEQUENCE SET addresses_id_seq
+pg_restore: executing SEQUENCE SET airlines_id_seq
+pg_restore: executing SEQUENCE SET assignments_id_seq
+pg_restore: executing SEQUENCE SET composers_id_seq
+pg_restore: executing SEQUENCE SET concerts_id_seq
+pg_restore: executing SEQUENCE SET discussions_id_seq
+pg_restore: executing SEQUENCE SET event_teams_id_seq
+pg_restore: executing SEQUENCE SET events_id_seq
+pg_restore: executing SEQUENCE SET flights_id_seq
+pg_restore: executing SEQUENCE SET instructions_id_seq
+pg_restore: executing SEQUENCE SET instruments_id_seq
+pg_restore: executing SEQUENCE SET locations_id_seq
+pg_restore: executing SEQUENCE SET movements_id_seq
+pg_restore: executing SEQUENCE SET musicians_id_seq
+pg_restore: executing SEQUENCE SET performances_id_seq
+pg_restore: executing SEQUENCE SET performers_id_seq
+pg_restore: executing SEQUENCE SET pieces_id_seq
+pg_restore: executing SEQUENCE SET sales_reports_id_seq
+pg_restore: executing SEQUENCE SET sheets_id_seq
+pg_restore: executing SEQUENCE SET task_types_id_seq
+pg_restore: executing SEQUENCE SET tasks_id_seq
+pg_restore: executing SEQUENCE SET team_musicians_id_seq
+pg_restore: executing SEQUENCE SET teams_id_seq
+pg_restore: executing SEQUENCE SET ticket_categories_id_seq
+pg_restore: executing SEQUENCE SET types_id_seq
+pg_restore: executing SEQUENCE SET users_id_seq
+pg_restore: executing SEQUENCE SET vendors_id_seq
+pg_restore: creating CONSTRAINT "public.accomodations accomodations_pkey"
+pg_restore: creating CONSTRAINT "public.addresses addresses_pkey"
+pg_restore: creating CONSTRAINT "public.airlines airlines_pkey"
+pg_restore: creating CONSTRAINT "public.ar_internal_metadata ar_internal_metadata_pkey"
+pg_restore: creating CONSTRAINT "public.assignments assignments_pkey"
+pg_restore: creating CONSTRAINT "public.composers composers_pkey"
+pg_restore: creating CONSTRAINT "public.concerts concerts_pkey"
+pg_restore: creating CONSTRAINT "public.discussions discussions_pkey"
+pg_restore: creating CONSTRAINT "public.event_teams event_teams_pkey"
+pg_restore: creating CONSTRAINT "public.events events_pkey"
+pg_restore: creating CONSTRAINT "public.flights flights_pkey"
+pg_restore: creating CONSTRAINT "public.instructions instructions_pkey"
+pg_restore: creating CONSTRAINT "public.instruments instruments_pkey"
+pg_restore: creating CONSTRAINT "public.locations locations_pkey"
+pg_restore: creating CONSTRAINT "public.movements movements_pkey"
+pg_restore: creating CONSTRAINT "public.musicians musicians_pkey"
+pg_restore: creating CONSTRAINT "public.performances performances_pkey"
+pg_restore: creating CONSTRAINT "public.performers performers_pkey"
+pg_restore: creating CONSTRAINT "public.pieces pieces_pkey"
+pg_restore: creating CONSTRAINT "public.sales_reports sales_reports_pkey"
+pg_restore: creating CONSTRAINT "public.schema_migrations schema_migrations_pkey"
+pg_restore: creating CONSTRAINT "public.sheets sheets_pkey"
+pg_restore: creating CONSTRAINT "public.task_types task_types_pkey"
+pg_restore: creating CONSTRAINT "public.tasks tasks_pkey"
+pg_restore: creating CONSTRAINT "public.team_musicians team_musicians_pkey"
+pg_restore: creating CONSTRAINT "public.teams teams_pkey"
+pg_restore: creating CONSTRAINT "public.ticket_categories ticket_categories_pkey"
+pg_restore: creating CONSTRAINT "public.types types_pkey"
+pg_restore: creating CONSTRAINT "public.users users_pkey"
+pg_restore: creating CONSTRAINT "public.vendors vendors_pkey"
+pg_restore: creating INDEX "public.index_accomodations_on_address_id"
+pg_restore: creating INDEX "public.index_accomodations_on_musician_id"
+pg_restore: creating INDEX "public.index_assignments_on_event_id"
+pg_restore: creating INDEX "public.index_assignments_on_task_id"
+pg_restore: creating INDEX "public.index_event_teams_on_event_id"
+pg_restore: creating INDEX "public.index_event_teams_on_team_id"
+pg_restore: creating INDEX "public.index_events_on_location_id"
+pg_restore: creating INDEX "public.index_events_on_type_id"
+pg_restore: creating INDEX "public.index_flights_on_airline_id"
+pg_restore: creating INDEX "public.index_flights_on_musician_id"
+pg_restore: creating INDEX "public.index_instructions_on_event_id"
+pg_restore: creating INDEX "public.index_instructions_on_task_id"
+pg_restore: creating INDEX "public.index_movements_on_piece_id"
+pg_restore: creating INDEX "public.index_performances_on_concert_id"
+pg_restore: creating INDEX "public.index_performances_on_piece_id"
+pg_restore: creating INDEX "public.index_performers_on_concert_id"
+pg_restore: creating INDEX "public.index_performers_on_musician_id"
+pg_restore: creating INDEX "public.index_performers_on_piece_id"
+pg_restore: creating INDEX "public.index_pieces_on_composer_id"
+pg_restore: creating INDEX "public.index_sales_reports_on_ticket_category_id"
+pg_restore: creating INDEX "public.index_sales_reports_on_vendor_id"
+pg_restore: creating INDEX "public.index_task_types_on_task_id"
+pg_restore: creating INDEX "public.index_task_types_on_type_id"
+pg_restore: creating INDEX "public.index_team_musicians_on_musician_id"
+pg_restore: creating INDEX "public.index_team_musicians_on_team_id"
+pg_restore: creating INDEX "public.index_users_on_email"
+pg_restore: creating INDEX "public.index_users_on_reset_password_token"
+pg_restore: creating FK CONSTRAINT "public.instructions fk_rails_064ac72766"
+pg_restore: creating FK CONSTRAINT "public.task_types fk_rails_0b80b9fc59"
+pg_restore: creating FK CONSTRAINT "public.task_types fk_rails_1f3a2e9669"
+pg_restore: creating FK CONSTRAINT "public.performances fk_rails_2137cc6638"
+pg_restore: creating FK CONSTRAINT "public.accomodations fk_rails_25a569151c"
+pg_restore: creating FK CONSTRAINT "public.event_teams fk_rails_27d2a44384"
+pg_restore: creating FK CONSTRAINT "public.performers fk_rails_31d19b337d"
+pg_restore: creating FK CONSTRAINT "public.sales_reports fk_rails_357f507c2f"
+pg_restore: creating FK CONSTRAINT "public.accomodations fk_rails_36530d81c3"
+pg_restore: creating FK CONSTRAINT "public.events fk_rails_3d0bd29ec6"
+pg_restore: creating FK CONSTRAINT "public.sales_reports fk_rails_601a3e1789"
+pg_restore: creating FK CONSTRAINT "public.flights fk_rails_6225f6ac82"
+pg_restore: creating FK CONSTRAINT "public.assignments fk_rails_6a5328b71e"
+pg_restore: creating FK CONSTRAINT "public.flights fk_rails_761559f6a6"
+pg_restore: creating FK CONSTRAINT "public.instructions fk_rails_7c8367a85b"
+pg_restore: creating FK CONSTRAINT "public.team_musicians fk_rails_7e643a6de5"
+pg_restore: creating FK CONSTRAINT "public.pieces fk_rails_952fdc35b1"
+pg_restore: creating FK CONSTRAINT "public.performers fk_rails_95b0040f34"
+pg_restore: creating FK CONSTRAINT "public.movements fk_rails_a96696a445"
+pg_restore: creating FK CONSTRAINT "public.assignments fk_rails_b7c53ee3b6"
+pg_restore: creating FK CONSTRAINT "public.events fk_rails_c6c031df6e"
+pg_restore: creating FK CONSTRAINT "public.team_musicians fk_rails_d1f974f4a4"
+pg_restore: creating FK CONSTRAINT "public.performances fk_rails_d53c8efbbd"
+pg_restore: creating FK CONSTRAINT "public.performers fk_rails_dca43affae"
+pg_restore: creating FK CONSTRAINT "public.event_teams fk_rails_dea58daf25"
+WARNING: errors ignored on restore: 2

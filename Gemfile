@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby '2.5.1'
+ruby '2.5.3'
 gem 'rails', '~> 5.2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -32,7 +32,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0'
 gem 'simple_form'
 gem 'high_voltage'
@@ -45,11 +45,5 @@ group :development do
   gem 'rails_layout'
 end
 
-group :development, :test do
-  #gem 'sqlite3'
-  gem 'pg'
-end
-
-group :production do
-  gem 'pg'
-end
+gem 'pg'
+gem 'sqlite3'
