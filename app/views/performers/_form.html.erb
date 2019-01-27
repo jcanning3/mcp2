@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :listing %>
     <%= f.association :concert %>
-    <%= f.association :musician %>
+    <%= f.association :musician, collection: Musician.order(:name) %>
     <%= f.input :instrument %>
     <%= f.input :order %>
     <%= f.association :piece %>

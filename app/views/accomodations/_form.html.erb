@@ -5,7 +5,7 @@
 
   <div class="form-inputs">
     <%= f.association :address, label_method: :nickname, collection: Address.order(:nickname) %>
-    <%= f.association :musician %>
+    <%= f.association :musician, collection: Musician.order(:name) %>
     <%= f.input :arrival %>
     <%= f.input :departure %>
     <%= f.input :co %>
