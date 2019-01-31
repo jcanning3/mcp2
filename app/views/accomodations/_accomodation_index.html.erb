@@ -11,7 +11,8 @@
   </thead>
 
   <tbody>
-    <% @accomodations.includes(:musician).order('LOWER(musicians.last)', "musicians.first").each do |accomodation| %>
+    <!% @accomodations.includes(:musician).order(arrival: :asc, 'LOWER(musicians.last)', "musicians.first").each do |accomodation| %>
+    <% @accomodations.order(arrival: :asc).each do |accomodation| %>
       <tr>
         <% if user_signed_in? %> <td><%= accomodation.musician.name %></td> <% end %>
         <td><%= accomodation.address.nickname %></td>
