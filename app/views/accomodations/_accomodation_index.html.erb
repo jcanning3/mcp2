@@ -22,9 +22,16 @@
         <% if user_signed_in? %>
 	  <td><%= link_to 'Show', accomodation, class: 'btn btn-warning btn-sm' %></td>
           <td><%= link_to 'Edit', edit_accomodation_path(accomodation), class: 'btn btn-warning btn-sm' %></td>
-          <td><!%= link_to 'Destroy', accomodation, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+          <td><%= link_to 'Destroy', accomodation, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
 	<% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+
+<br>
+
+  <%= link_to 'New Accomodation', new_accomodation_path, class: 'btn btn-primary btn-lg'  %>
+
+<br> <br> <br>
