@@ -12,7 +12,8 @@
 
 <% cdate = "" %>
 <% inProcess = false %>
-<% disp = "table-row-group" %>
+<!% disp = "table-row-group" %>
+<% disp = "none" %>
   <% if @discussions %>
     <% @discussions.order('date').each do |d| %>
       <% edate = d.try(:date).try(:strftime, "%Y%m%d") %>
@@ -65,3 +66,9 @@
   <% end %>
 </tbody>
 </table>
+
+    <br>
+
+    <%= link_to 'New Discussion', new_discussion_path, class: 'btn btn-primary btn-lg'  %>
+
+    <br> <br> <br>

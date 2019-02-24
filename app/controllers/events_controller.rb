@@ -21,9 +21,10 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
+    time = Time.new
     @event = Event.new
-    @event.start = "2018-08-16 12:00pm"
-    @event.end = "2018-08-16 12:00pm"
+    @event.start = time.strftime("%Y-%m-%d %H:00")
+    @event.end = time.strftime("%Y-%m-%d %H:00")
   end
 
   # GET /events/1/edit

@@ -1,0 +1,56 @@
+<! flights/_flights_index..html/erb >
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+	<th>Musician</th>
+	<th>Date</th>
+	<th>Flight</th>
+	<th>From</th>
+	<th>To</th>
+	<th>Notes</th>
+	<th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <% cdate = "" %>
+    <% inProcess = false %>
+    <% disp = "table-row-group" %>
+    <% @flights.order('departure').each do |flight| %>
+      <% edate = flight.try(:departure).try(:strftime, "%Y%m%d") %>
+      <% if cdate == edate %>
+	  <% # if the dates match, do nothing %>
+      <% else %> 
+	<% if inProcess == true %>
+	   <% # if we are already in a tbody, then close it out. %>
+	   </tbody>
+	   <% disp = "none" %>
+	<% end %>
+	<% cdate = edate %>
+	<% inProcess = true %>
+	<tbody id="<%="F" + cdate%>" style="display:<%=disp%>">
+
+	<tr>
+	  <td><%= flight.musician.name %></td>
+	  <td><%= flight.try(:departure).try(:strftime, "%m/%d/%y") %></td>
+	  <td><%= flight.airline.nickname %> <%= flight.flight %></td>
+	  <td><%= flight.from %>
+	      <%= flight.try(:departure).try(:strftime, "%I:%M%p") %></td>
+	  <td><%= flight.destination %>
+	      <%= flight.try(:arrival).try(:strftime, "%I:%M%p") %></td>
+	  <td><%= flight.notes %></td>
+	  <td><!%= link_to 'Show', flight, class: 'btn btn-warning btn-sm' %></td>
+	  <td><!%= link_to 'Edit', edit_flight_path(flight), class: 'btn btn-warning btn-sm' %></td>
+	  <td><!%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td></tr>
+	</tr>
+
+	<% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+      <br>
+
+      <%= link_to 'New Flight', new_flight_path, class: 'btn btn-primary btn-lg'  %>
+
+      <br> <br> <br>

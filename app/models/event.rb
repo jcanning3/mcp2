@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many   :event_teams, dependent: :destroy
   has_many   :teams, through: :event_teams
   has_many   :sheets, as: :pad, dependent: :destroy
-  has_many   :team_musicians, dependent: :destroy
+  has_many   :team_musicians
   has_many   :musicians, through: :team_musicians
   has_many   :instructions, dependent: :destroy
   has_many   :tasks, through: :type

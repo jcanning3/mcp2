@@ -61,21 +61,21 @@
   <br> <br> <br>
 <% end %>
 
-  <% concerts = @event.teams.first.events.where(type_id: 6) %>
-  <% if concerts.count > 0 %>
-    <h4>Concerts</h4> <br> 
-    <table class='table table-hover'>
-      <tbody>
-	<% @event.teams.first.events.where(type_id: 6).each do |ee| %>
-          <tr>
-	    <td> <%= ee.try(:start).try(:strftime, '%A %B %e %I:%M%p') %> </td>
-	    <td> <%= ee.name %> </td>
-	  </tr>
-	</tbody>
-    <% end %>
-    </table>
-    <br> <br> <br>
-  <% end %>
+  <!% concerts = @event.teams.first.events.where(type_id: 6) %>
+  <!% if concerts.count > 0 %>
+    <!h4>Concerts</h4> <br> 
+    <!table class='table table-hover'>
+      <!tbody>
+	<!% @event.teams.first.events.where(type_id: 6).each do |ee| %>
+          <!tr>
+	    <!td> <%= ee.try(:start).try(:strftime, '%A %B %e %I:%M%p') %> </td>
+	    <!td> <%= ee.name %> </td>
+	  <!/tr>
+	<!/tbody>
+    <!% end %>
+    <!/table>
+    <!br> <!br> <!br>
+  <!% end %>
 
 <h4>Teams</h4>
 <table>
