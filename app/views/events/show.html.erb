@@ -61,7 +61,7 @@
   <br> <br> <br>
 <% end %>
 
-<% if @events.teams.present? %>
+<% if @event.teams.present? %>
   <% concerts = @event.teams.first.events.where(type_id: 6) %>
   <% if concerts.count > 0 %>
     <h4>Concerts</h4> <br> 
