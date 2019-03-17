@@ -1,0 +1,3 @@
+[submodule "css/startbootstrap-simple-sidebar"]
+	path = css/startbootstrap-simple-sidebar
+	url = https://github.com/BlackrockDigital/startbootstrap-simple-sidebar
