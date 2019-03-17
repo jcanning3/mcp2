@@ -1,4 +1,5 @@
 class Team < ApplicationRecord
+  belongs_to :festival
   has_many :event_teams, dependent: :destroy
   has_many :events, through: :event_teams
 

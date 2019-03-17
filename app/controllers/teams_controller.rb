@@ -4,7 +4,7 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    @teams = Team.all
+    @teams = Team.where(festival_id: [nil, 2, 3])
     @events = Event.all
     @musicians = Musician.all
   end
@@ -71,7 +71,7 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:nickname, :musician_id, :color,
+      params.require(:team).permit(:nickname, :musician_id, :color, :festival_id,
         team_musicians_attributes: [:id, :_destroy, :musician_id] )
     end
 end

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @festival.name %>
+</p>
+
+<p>
+  <strong>Dates:</strong>
+  <%= @festival.dates %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @festival.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @festival.end %>
+</p>
+
+<p>
+  <strong>Defaultstartdate:</strong>
+  <%= @festival.defaultStartDate %>
+</p>
+
+<p>
+  <strong>Defaultenddate:</strong>
+  <%= @festival.defaultEndDate %>
+</p>
+
+<%= link_to 'Edit', edit_festival_path(@festival), class: 'btn btn-warning btn-sm' %> |
+<%= link_to 'Back', festivals_path,                class: 'btn btn-warning btn-sm' %>

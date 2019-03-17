@@ -1,17 +1,21 @@
 <%# add navigation links to this file %>
 
-<li class='nav-item'><%= link_to 'Ticket Counts', '/sales_reports', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Musicians', '/musicians', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Teams', '/teams', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Disussions', '/discussions', class: 'nav-link' %></li>
-<br>
-<li class='nav-item'><%= link_to 'Event Types', '/types', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Event Tasks', '/tasks', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Locations', '/locations', class: 'nav-link' %></li>
-<br>
-<li class='nav-item'><%= link_to 'Flights', '/flights', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Accomodations', '/accomodations', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Airlines', '/airlines', class: 'nav-link' %></li>
-<li class='nav-item'><%= link_to 'Hotels/Hosts', '/addresses', class: 'nav-link' %></li>
-<br>
-<li class='nav-item'> <%= link_to 'Log Out', destroy_user_session_path, method: :delete %> </li>
+<a href="/festivals"     class="list-group-item list-group-item-action bg-light">Festivals</a>
+<a href="/events"        class="list-group-item list-group-item-action bg-light">Events</a>
+<a href="/musicians"     class="list-group-item list-group-item-action bg-light">Musicians</a>
+<a href="/teams"         class="list-group-item list-group-item-action bg-light">Teams</a>
+<a href="/discussions"   class="list-group-item list-group-item-action bg-light">Discussions</a>
+
+
+<a href="/sales_reports" class="list-group-item list-group-item-action bg-light">Ticket Counts</a>
+<a href="/types"         class="list-group-item list-group-item-action bg-light">Types</a>
+<a href="/tasks"         class="list-group-item list-group-item-action bg-light">Tasks</a>
+<a href="/locations"     class="list-group-item list-group-item-action bg-light">Locations</a>
+
+<a href="/flights"       class="list-group-item list-group-item-action bg-light">Flights</a>
+<a href="/accomodations" class="list-group-item list-group-item-action bg-light">Accommodations</a>
+<a href="/airlines"      class="list-group-item list-group-item-action bg-light">Airlines</a>
+<a href="/addresses"     class="list-group-item list-group-item-action bg-light">Hotels/Hosts</a>
+
+<li class="list-group-item list-group-item-action bg-light"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+

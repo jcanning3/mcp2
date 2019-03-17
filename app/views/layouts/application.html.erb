@@ -9,15 +9,30 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <%= csrf_meta_tags %>
   </head>
+
   <body>
-    <header>
+
+    <div class="d-flex" id="wrapper">
+
       <%= render 'layouts/navigation' %>
-    </header>
-    <div class="container">
-	<main role="main">
-	   <%= render 'layouts/messages' %>
-	   <%= yield %>
-	</main>
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <%= render 'layouts/navbar' %>
+        <div class="container-fluid">
+	  <%= render 'layouts/messages' %>
+	  <%= yield %>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+
     </div>
   </body>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 </html>

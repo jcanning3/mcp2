@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_25_225446) do
+ActiveRecord::Schema.define(version: 2019_03_17_071316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,17 @@ ActiveRecord::Schema.define(version: 2018_08_25_225446) do
     t.integer "staff"
     t.index ["location_id"], name: "index_events_on_location_id"
     t.index ["type_id"], name: "index_events_on_type_id"
+  end
+
+  create_table "festivals", force: :cascade do |t|
+    t.string "name"
+    t.string "dates"
+    t.date "start"
+    t.date "end"
+    t.date "defaultStartDate"
+    t.date "defaultEndDate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "flights", force: :cascade do |t|
@@ -274,6 +285,7 @@ ActiveRecord::Schema.define(version: 2018_08_25_225446) do
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "festival_id"
   end
 
   create_table "ticket_categories", force: :cascade do |t|
