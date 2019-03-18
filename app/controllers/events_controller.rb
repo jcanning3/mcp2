@@ -5,11 +5,13 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    # @events = Event.all
+    @events = Event.where(festival_id: [nil, 2, 3])
     @accomodations = Accomodation.all
     @discussions = Discussion.all
     @flights = Flight.all
-    @teams = Team.all
+    #@teams = Team.all
+    @teams = Team.where(festival_id: [nil, 2, 3])
     @instructions = Instruction.all
     @tasks = Task.all
   end
@@ -25,6 +27,7 @@ class EventsController < ApplicationController
     @event = Event.new
     @event.start = time.strftime("%Y-%m-%d %H:00")
     @event.end = time.strftime("%Y-%m-%d %H:00")
+    @event.festival_id = 2
   end
 
   # GET /events/1/edit
@@ -81,7 +84,7 @@ class EventsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:name, :description, :start, :end, :type_id, :team_id,
-        :location_id, :notes, :color, :heads, :staff,
+        :festival_id, :location_id, :notes, :color, :heads, :staff,
         sheets_attributes: [:id, :_destroy, :note], event_teams_attributes: [:id, :event_id, :team_id, :_destroy],
 	instructions_attributes: [:id, :_destroy, :name, :event_id, :task_id])
     end

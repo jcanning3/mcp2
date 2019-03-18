@@ -10,7 +10,7 @@
 
   <tbody>
 
-    <% @musicians.order('LOWER(last)').each do |musician| %>
+    <% @musicians.each do |musician| %>
       <tr>
         <td><%= musician.name %></td>
 	<td><%= musician.instrument.name if musician.instrument %> </td>

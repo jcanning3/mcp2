@@ -6,6 +6,11 @@
 <br>
 
 <p>
+  <strong>Festival:</strong>
+  <%= @event.festival.name if @event.festival %>
+</p>
+
+<p>
   <strong>Start:</strong>
   <%= @event.start.strftime("%a %b %e %I:%M%p %Z") %>
 </p>
