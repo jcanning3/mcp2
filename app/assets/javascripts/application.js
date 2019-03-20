@@ -25,6 +25,7 @@ $(function() {
     $('#calendar33').fullCalendar({
 	schedulerLicenseKey: '0790764867-fcs-1531555931',
 	themeSystem: 'bootstrap4',
+	defaultDate: "8/15/2019",
 	defaultView: "agendaDay",
 	header: {
 	  left: 'month,agendaWeek,agendaDay,listMonth',
