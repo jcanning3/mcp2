@@ -17,7 +17,7 @@
   </thead>
 
   <tbody>
-    <% @festivals.each do |festival| %>
+    <% @festivals.order(start: :desc).each do |festival| %>
       <tr>
         <td><%= festival.name %></td>
         <td><%= festival.dates %></td>
