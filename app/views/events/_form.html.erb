@@ -7,8 +7,8 @@
     <%= f.association :festival %>
     <%= f.input :start %>
     <%= f.input :end %>
-    <%= f.association :type %>
-    <%= f.association :location %>
+    <%= f.association :type, collection: Type.order(:name) %>
+    <%= f.association :location, collection: Location.order(:name) %>
     <%= f.input :heads, label: "Head Count" %>
     <%= f.input :staff, label: "Staff Count" %>
     <%= f.input :notes %>

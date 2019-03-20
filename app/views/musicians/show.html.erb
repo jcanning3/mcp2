@@ -9,7 +9,7 @@
 <h4>Events</h4>
 
 
-<% @events = @musician.events %>
+<% @events = @musician.events.where(festival_id: 2) %>
 <% if user_signed_in? %>
     <%= render '/events/event_all_index' %>
 <% else %>
@@ -36,8 +36,8 @@
 
 <h4>Accomodations</h4>
 
-<% @accomodations = @accomodations.where(musician_id: @musician.id) %>
-<%= render 'accomodation_index' %>
+  <!% @accomodations = @accomodations.where(musician_id: @musician.id) %>
+  <!%= render 'accomodation_index' %>
 
 <br> <br> <br>
 

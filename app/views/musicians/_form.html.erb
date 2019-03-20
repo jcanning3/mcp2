@@ -7,7 +7,7 @@
     <%= f.input :name %>
     <%= f.input :first %>
     <%= f.input :last %>
-    <%= f.association :instrument %>
+    <%= f.association :instrument, collection: Instrument.order(:order) %>
     <%= f.input :notes %>
   </div>
 

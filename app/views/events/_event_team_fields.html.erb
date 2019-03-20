@@ -1,5 +1,5 @@
 <div class="nested-fields">
-  <%= f.association :team, label_method: :nickname, collection: Team.order(:nickname) %>
+  <%= f.association :team, label_method: :nickname, collection: Team.where(festival_id: [nil, 2, 3]).order(:nickname) %>
 
   <%= f.check_box :_destroy %>
 

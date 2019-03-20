@@ -11,7 +11,7 @@
   <tbody>
 
     <% @musicians.order('LOWER(last)').each do |musician| %>
-      <% if musician.events.first %>
+      <!% if musician.events.first %>
         <tr>
           <td><%= musician.name %> </td>
 	  <td><%= musician.instrument.name if musician.instrument %> </td>
@@ -19,7 +19,7 @@
           <td><%= link_to 'Show', musician, class: 'btn btn-warning btn-sm' %></td>
           <td><%= link_to 'Edit', edit_musician_path(musician), class: 'btn btn-warning btn-sm' %></td>
         </tr>
-      <% end %>
+      <!% end %>
     <% end %>
 
   </tbody>
