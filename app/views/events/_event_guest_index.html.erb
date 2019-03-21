@@ -13,7 +13,7 @@
     <% now = DateTime.now.to_i - 18000 %>
     <% cdate = "" %>
     <% inProcess = false %>
-    <% @events.order('start').each do |event| %>
+    <% @events.order('start').uniq.each do |event| %>
       <% next if event.end.to_i < now %>
       <% edate = event.try(:start).try(:strftime, "%Y%m%d") %>
       <% if cdate == edate %>

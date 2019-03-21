@@ -1,3 +1,4 @@
+<h4> event_all_index.html.erb </h4>
 <table class='table table-hover'>
   <thead>
     <tr>
@@ -12,7 +13,7 @@
     </thead>
 
     <tbody>
-      <% @events.order('start').each do |event| %>
+      <% @events.order('start').uniq.each do |event| %>
 	<tr bgcolor="<%=event.type.color%>">
 	  <td><%= event.name %></td>
 	  <td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
