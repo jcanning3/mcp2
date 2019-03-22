@@ -33,7 +33,7 @@
 
       <tr bgcolor="<%=event.type.color%>">
 	<td><%= event.name %></td>
-	<td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
+	<td><%= event.try(:start).try(:strftime, "%I:%M%p") %></td>
 	<td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>
 	<td><%= event.type.name %></td>
 	<td><%= event.location.name %></td>

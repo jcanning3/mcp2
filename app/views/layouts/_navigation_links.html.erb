@@ -1,20 +1,19 @@
 <%# add navigation links to this file %>
 
+<a href="/festivals/2"   class="list-group-item list-group-item-action bg-light">2019 Festival</a>
+<a href="/events"        class="list-group-item list-group-item-action bg-light">Daily Schedule of Events</a>
 <a href="/festivals"     class="list-group-item list-group-item-action bg-light">Festivals</a>
-<a href="/events"        class="list-group-item list-group-item-action bg-light">Events</a>
 <a href="/musicians"     class="list-group-item list-group-item-action bg-light">Musicians</a>
 <a href="/teams"         class="list-group-item list-group-item-action bg-light">Teams</a>
-<a href="/discussions"   class="list-group-item list-group-item-action bg-light">Discussions</a>
 
-<a href="/types"         class="list-group-item list-group-item-action bg-light">Types</a>
-<a href="/tasks"         class="list-group-item list-group-item-action bg-light">Tasks</a>
-<a href="/locations"     class="list-group-item list-group-item-action bg-light">Locations</a>
+<a href="#"              class="list-group-item list-group-item-action bg-light">&nbsp;</a>
+<a href="/discussions"   class="list-group-item list-group-item-action bg-light">Discussions and Notes</a>
+<a href="#"              class="list-group-item list-group-item-action bg-light">&nbsp;</a>
 
-<!-- a href="/sales_reports" class="list-group-item list-group-item-action bg-light">Ticket Counts</a> -->
-<!-- a href="/flights"       class="list-group-item list-group-item-action bg-light">Flights</a> -->
-<!-- a href="/accomodations" class="list-group-item list-group-item-action bg-light">Accommodations</a> -->
-<!-- a href="/airlines"      class="list-group-item list-group-item-action bg-light">Airlines</a> -->
-<!-- a href="/addresses"     class="list-group-item list-group-item-action bg-light">Hotels/Hosts</a> -->
+<a href="/sales_reports" class="list-group-item list-group-item-action bg-light">2018 Ticket Counts</a>
+<a href="/flights"       class="list-group-item list-group-item-action bg-light">2018 Flights</a>
+<a href="/accomodations" class="list-group-item list-group-item-action bg-light">2018 Accommodations</a>
 
-<li class="list-group-item list-group-item-action bg-light"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+<a href="#"              class="list-group-item list-group-item-action bg-light"></a>
 
+<%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "list-group-item list-group-item-action bg-light" %>
