@@ -14,6 +14,11 @@ class EventsController < ApplicationController
     @teams = Team.where(festival_id: [nil, 2, 3])
     @instructions = Instruction.all
     @tasks = Task.all
+
+    respond_to do |format|
+	format.html
+	format.xlsx
+    end
   end
 
   # GET /events/1

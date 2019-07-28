@@ -1,0 +1,65 @@
+
+require "time"
+
+#
+# this is a script to generate a spreadsheet of the Festival schedule
+# ideally, it would be told which event types to include/exclude
+# ideally, it would be told the start and end times, as well as the block size
+# maybe use data from current Festival to set start/end dates and times ??1
+#
+
+startDate = Date.new(2019, 8, 14)
+endDate = Date.new(2019, 8, 25)
+dateArray = []
+rowArray = []
+dateHash = Hash.new
+ct = 0
+dateArray.push("Time")
+rowArray.push("Time")
+startDate.upto(endDate) do |dt|
+    key = dt.strftime("%a %b %d")
+    dateArray.push(key)
+    rowArray.push("")
+    ct = ct + 1
+    dateHash[ key ] = ct
+end
+
+startHour = 10
+endHour = 23
+block = 15
+
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "2019 Festival Events") do |sheet|
+
+    #
+    # add the header row
+    #
+    sheet.add_row dateArray
+
+    am = "am"
+    (startHour..endHour).each do |ctime|
+	# add rows
+	hr = ctime
+	if ( hr > 12 )
+	    hr = hr - 12
+	    am = "pm"
+	end
+	rowArray[0] = hr.to_s + " " + am
+	sheet.add_row rowArray
+    end
+
+    style = wb.styles
+    @events.where(festival_id: 2).each do |event|
+	blocks = (event.minutes/block).round
+	key = event.start.strftime("%a %b %d")
+	colID = dateHash[ key ]
+	rowID = event.start.hour - startHour + 1
+        color = event.type.color
+	color = color.gsub('#', '')
+	highlight_cell = style.add_style(bg_color: color,
+	    alignment: { horizontal: :center, vertical: :center } )
+	sheet.rows[rowID].cells[colID].value = event.name
+	sheet.rows[rowID].cells[colID].style = highlight_cell
+    end
+
+end
