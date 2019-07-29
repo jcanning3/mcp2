@@ -28,7 +28,7 @@
     <% @accomodations = Accomodation.where(festival_id: [nil, 2, 3]).order(:arrival) %>
     <%= render '/accomodations/accomodation_index' %>
 
-<h4>Flights</h4>
+<h4>Transportation</h4>
 
     <% @buttons = false %>
     <% @flights = Flight.where(festival_id: [nil, 2, 3]).order(:departure) %>
