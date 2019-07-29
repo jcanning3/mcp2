@@ -40,5 +40,10 @@
   <%= @flight.notes %>
 </p>
 
+<p>
+  <strong>Festival:</strong>
+  <%= @flight.festival.name if @flight.festival %>
+</p>
+
 <%= link_to 'Edit', edit_flight_path(@flight), class: 'btn btn-warning btn-sm' %> |
 <%= link_to 'Back', flights_path, class: 'btn btn-warning btn-sm' %>

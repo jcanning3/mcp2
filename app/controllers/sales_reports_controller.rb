@@ -4,7 +4,7 @@ class SalesReportsController < ApplicationController
   # GET /sales_reports
   # GET /sales_reports.json
   def index
-    @sales_reports = SalesReport.all
+    @sales_reports = SalesReport.where(festival_id: [nil, 2, 3])
   end
 
   # GET /sales_reports/1
@@ -15,6 +15,7 @@ class SalesReportsController < ApplicationController
   # GET /sales_reports/new
   def new
     @sales_report = SalesReport.new
+    @sales_report.festival_id = 2
   end
 
   # GET /sales_reports/1/edit
@@ -69,6 +70,7 @@ class SalesReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sales_report_params
-      params.require(:sales_report).permit(:date, :vendor_id, :concert, :ticket_category_id, :description, :payment_method_id, :count, :unit_price, :final, :quick_books)
+      params.require(:sales_report).permit(:date, :vendor_id, :concert, :ticket_category_id, :description, :payment_method_id, :count,
+        :unit_price, :final, :quick_books, :festival_id)
     end
 end

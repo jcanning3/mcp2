@@ -1,4 +1,5 @@
 <! flights/_flights_index..html/erb >
+<! this script groups floights by departure date>
 
   <table class="table table-hover">
     <thead>
@@ -39,9 +40,9 @@
 	  <td><%= flight.destination %>
 	      <%= flight.try(:arrival).try(:strftime, "%I:%M%p") %></td>
 	  <td><%= flight.notes %></td>
-	  <td><!%= link_to 'Show', flight, class: 'btn btn-warning btn-sm' %></td>
-	  <td><!%= link_to 'Edit', edit_flight_path(flight), class: 'btn btn-warning btn-sm' %></td>
-	  <td><!%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td></tr>
+	  <td><%= link_to 'Show', flight, class: 'btn btn-warning btn-sm' if @buttons %></td>
+	  <td><%= link_to 'Edit', edit_flight_path(flight), class: 'btn btn-warning btn-sm'  if @buttons%></td>
+	  <td><%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm'  if @buttons%></td></tr>
 	</tr>
 
 	<% end %>

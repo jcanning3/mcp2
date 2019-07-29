@@ -4,7 +4,7 @@ class FlightsController < ApplicationController
   # GET /flights
   # GET /flights.json
   def index
-    @flights = Flight.all
+    @flights = Flight.all.where(festival_id: [nil, 2, 3])
   end
 
   # GET /flights/1
@@ -15,6 +15,7 @@ class FlightsController < ApplicationController
   # GET /flights/new
   def new
     @flight = Flight.new
+    @flight.festival_id = 2
   end
 
   # GET /flights/1/edit
@@ -69,6 +70,6 @@ class FlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
-      params.require(:flight).permit(:musician_id, :airline_id, :flight, :from, :departure, :destination, :arrival, :notes)
+      params.require(:flight).permit(:musician_id, :airline_id, :flight, :from, :departure, :destination, :arrival, :notes, :festival_id)
     end
 end

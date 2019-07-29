@@ -5,6 +5,7 @@
 <table class='table table-hover'>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Dates</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @festivals.order(start: :desc).each do |festival| %>
       <tr>
+        <td><%= festival.id %></td>
         <td><%= festival.name %></td>
         <td><%= festival.dates %></td>
 

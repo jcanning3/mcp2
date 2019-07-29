@@ -4,7 +4,7 @@ class AccomodationsController < ApplicationController
   # GET /accomodations
   # GET /accomodations.json
   def index
-    @accomodations = Accomodation.all
+    @accomodations = Accomodation.where(festival_id: [nil, 2, 3])
   end
 
   # GET /accomodations/1
@@ -15,6 +15,7 @@ class AccomodationsController < ApplicationController
   # GET /accomodations/new
   def new
     @accomodation = Accomodation.new
+    @accomodation.festival_id = 2
   end
 
   # GET /accomodations/1/edit
@@ -69,6 +70,6 @@ class AccomodationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def accomodation_params
-      params.require(:accomodation).permit(:address_id, :musician_id, :arrival, :departure, :co)
+      params.require(:accomodation).permit(:address_id, :musician_id, :arrival, :departure, :co, :festival_id)
     end
 end

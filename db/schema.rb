@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_092632) do
+ActiveRecord::Schema.define(version: 2019_07_29_054848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,9 @@ ActiveRecord::Schema.define(version: 2019_03_18_092632) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "notes"
+    t.bigint "festival_id"
     t.index ["address_id"], name: "index_accomodations_on_address_id"
+    t.index ["festival_id"], name: "index_accomodations_on_festival_id"
     t.index ["musician_id"], name: "index_accomodations_on_musician_id"
   end
 
@@ -134,7 +136,9 @@ ActiveRecord::Schema.define(version: 2019_03_18_092632) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "confirmation"
+    t.bigint "festival_id"
     t.index ["airline_id"], name: "index_flights_on_airline_id"
+    t.index ["festival_id"], name: "index_flights_on_festival_id"
     t.index ["musician_id"], name: "index_flights_on_musician_id"
   end
 
@@ -241,6 +245,8 @@ ActiveRecord::Schema.define(version: 2019_03_18_092632) do
     t.bigint "payment_method_id"
     t.boolean "final"
     t.boolean "quickbooks"
+    t.bigint "festival_id"
+    t.index ["festival_id"], name: "index_sales_reports_on_festival_id"
     t.index ["payment_method_id"], name: "index_sales_reports_on_payment_method_id"
     t.index ["ticket_category_id"], name: "index_sales_reports_on_ticket_category_id"
     t.index ["vendor_id"], name: "index_sales_reports_on_vendor_id"
@@ -327,6 +333,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_092632) do
   end
 
   add_foreign_key "accomodations", "addresses"
+  add_foreign_key "accomodations", "festivals"
   add_foreign_key "accomodations", "musicians"
   add_foreign_key "assignments", "events"
   add_foreign_key "assignments", "tasks"
@@ -335,6 +342,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_092632) do
   add_foreign_key "events", "locations"
   add_foreign_key "events", "types"
   add_foreign_key "flights", "airlines"
+  add_foreign_key "flights", "festivals"
   add_foreign_key "flights", "musicians"
   add_foreign_key "instructions", "events"
   add_foreign_key "instructions", "tasks"
@@ -345,6 +353,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_092632) do
   add_foreign_key "performers", "musicians"
   add_foreign_key "performers", "pieces"
   add_foreign_key "pieces", "composers"
+  add_foreign_key "sales_reports", "festivals"
   add_foreign_key "sales_reports", "payment_methods"
   add_foreign_key "sales_reports", "ticket_categories"
   add_foreign_key "sales_reports", "vendors"

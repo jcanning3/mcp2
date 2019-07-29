@@ -20,6 +20,11 @@
   <%= @accomodation.co %>
 </p>
 
+<p>
+  <strong>Festival:</strong>
+  <%= @accomodation.festival.name if @accomodation.festival %>
+</p>
+
 <br>
 
 <%= link_to 'Edit', edit_accomodation_path(@accomodation), class: "btn btn-warning btn-sm" %> |
