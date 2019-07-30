@@ -36,8 +36,8 @@
 
 <h4>Accommodations</h4>
 
-  <!% @accomodations = @accomodations.where(musician_id: @musician.id) %>
-  <!%= render 'accomodation_index' %>
+  <% @accomodations = @accomodations.where(musician_id: @musician.id, festival_id: 2) %>
+  <%= render 'accomodation_index' %>
 
 <br> <br> <br>
 

@@ -1,4 +1,5 @@
 class SalesReportsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_sales_report, only: [:show, :edit, :update, :destroy]
 
   # GET /sales_reports

@@ -1,4 +1,5 @@
 class ConcertsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_concert, only: [:show, :edit, :update, :destroy]
 
   # GET /concerts

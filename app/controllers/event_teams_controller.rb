@@ -1,4 +1,5 @@
 class EventTeamsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_event_team, only: [:show, :edit, :update, :destroy]
 
   # GET /event_teams

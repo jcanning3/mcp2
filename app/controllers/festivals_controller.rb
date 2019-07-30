@@ -1,4 +1,5 @@
 class FestivalsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_festival, only: [:show, :edit, :update, :destroy]
 
   # GET /festivals
