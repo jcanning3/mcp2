@@ -16,6 +16,8 @@ class AccomodationsController < ApplicationController
   # GET /accomodations/new
   def new
     @accomodation = Accomodation.new
+    @accomodation.arrival = "2019-08-15 16:00"
+    @accomodation.departure = "2019-08-15 12:00"
     @accomodation.festival_id = 2
   end
 
