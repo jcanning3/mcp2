@@ -5,7 +5,7 @@ require "time"
 # this is a script to generate a spreadsheet of the Festival schedule
 # ideally, it would be told which event types to include/exclude
 # ideally, it would be told the start and end times, as well as the block size
-# maybe use data from current Festival to set start/end dates and times ??1
+# maybe use data from current Festival to set start/end dates and times ??
 #
 
 startDate = Date.new(2019, 8, 14)
@@ -24,7 +24,7 @@ startDate.upto(endDate) do |dt|
     dateHash[ key ] = ct
 end
 
-startHour = 10
+startHour = 8
 endHour = 23
 block = 15
 

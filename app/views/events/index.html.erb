@@ -17,14 +17,8 @@
 
     <%= render 'event_dates_index' %>
 
-<!--  <h4>Spreadsheet</h1> -->
-
-    <!%= link_to 'Download as .xlsx', events_path(format: :xlsx) %>
-    <!br> <!br> <!br>
-
 <h4>Accommodations</h4>
 
-    <! @accomodations = @accomodations.order(:arrival) %>
     <% @accomodations = Accomodation.where(festival_id: [nil, 2, 3]).order(:arrival) %>
     <%= render '/accomodations/accomodation_index' %>
 
@@ -33,4 +27,10 @@
     <% @buttons = false %>
     <% @flights = Flight.where(festival_id: [nil, 2, 3]).order(:departure) %>
     <%= render '/flights/flight_index' %>
+
+
+<h4>Spreadsheet</h1>
+
+    <%= link_to 'Download as .xlsx', events_path(format: :xlsx) %>
+    <br> <br> <br>
 
