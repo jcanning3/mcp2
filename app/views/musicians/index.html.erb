@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Musicians</h1>
-
+<h1>Festival Musicians and Staff</h1>
 <% @buttons = true %>
-<%= render 'active_musician_index' %>
+<% @festival = @festivals.where(id: 2).first %>
+<% @musicians = @festival.musicians.distinct.includes(:instrument).order('instruments.order') %>
+<%= render '/musicians/active_musician_index' %>
 
 <br>
 

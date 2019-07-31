@@ -8,12 +8,14 @@ class MusiciansController < ApplicationController
     @musicians = Musician.all
     @accomodations = Accomodation.all
     @events = Event.all
+    @festivals = Festival.all
   end
 
   # GET /musicians/1
   # GET /musicians/1.json
   def show
     @accomodations = Accomodation.all
+    @festivals = Festival.all
   end
 
   # GET /musicians/new
@@ -74,7 +76,7 @@ class MusiciansController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def musician_params
       params.require(:musician).permit(:name, :first, :last, :instrument_id, :old_instrument, :notes,
-        sheets_attributes: [:id, :_destroy, :note],
+        sheets_attributes: [:id, :_destroy, :note], 
 	team_musicians_attributes: [:id, :_destroy ] )
     end
 end
