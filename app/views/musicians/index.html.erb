@@ -1,9 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Festival Musicians and Staff</h1>
 <% @buttons = true %>
-<% @festival = @festivals.where(id: 2).first %>
-<% @musicians = @festival.musicians.distinct.includes(:instrument).order('instruments.order') %>
+
+<% if params[:festival_id].present? %>
+
+    <% festival_id = params[:festival_id] %>
+    <% @festival = @festivals.where(id: festival_id).first %>
+    <% @musicians = @festival.musicians.distinct.includes(:instrument).order('instruments.order') %>
+    <h3> <%= @festival.name %> Musicians and Staff</h3>
+
+<% else %>
+
+    <% @musicians = Musician.all.order(:last, :first) %>
+    <h3>All Musicians and Staff</h3>
+
+<% end %>
+
 <%= render '/musicians/active_musician_index' %>
 
 <br>

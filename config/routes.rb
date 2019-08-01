@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :festivals
+  resources :festivals do
+    resources :musicians
+  end
   resources :payment_methods
   resources :sales_reports
   resources :vendors
