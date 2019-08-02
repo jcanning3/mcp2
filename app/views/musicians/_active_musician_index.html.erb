@@ -1,9 +1,8 @@
   <table class='table table-hover'>
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Tap Name for Schedule</th>
         <th>Instrument</th>
-        <th>URL</th>
         <th colspan="3"></th>
       </tr>
   </thead>
@@ -12,12 +11,11 @@
 
     <% @musicians.each do |musician| %>
       <tr>
-        <td><%= musician.name %> </td>
+	<td> <%= link_to musician.name, musician, class: 'btn btn-info btn-sm' %></td>
         <td><%= musician.instrument.name if musician.instrument %> </td>
-        <td> <a href=https://lccmfmcp.herokuapp.com/musicians/<%=musician.id=%>>link(<%=musician.id%>)</td>
-        <td><%= link_to 'Show', musician, class: 'btn btn-warning btn-sm' %></td>
-        <td><%= link_to 'Edit', edit_musician_path(musician), class: 'btn btn-warning btn-sm' %></td>
+        <!-- td><%= link_to 'Show', musician, class: 'btn btn-warning btn-sm' %></td> -->
 	<% if current_user.email == "john@pcc.com" %>
+          <td><%= link_to 'Edit', edit_musician_path(musician), class: 'btn btn-warning btn-sm' %></td>
 	  <td><%= link_to 'Destroy', musician, method: :delete, data: { confirm: 'Really?' }, class: 'btn btn-danger btn-sm' %></td>
 	<% end %>
       </tr>
