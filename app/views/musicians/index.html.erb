@@ -6,7 +6,7 @@
 
     <% festival_id = params[:festival_id] %>
     <% @festival = @festivals.where(id: festival_id).first %>
-    <% @musicians = @festival.musicians.distinct.includes(:instrument).order('instruments.order') %>
+    <% @musicians = @festival.musicians.distinct.includes(:instrument).order('instruments.order', :last, :first) %>
     <h3> <%= @festival.name %> Musicians and Staff</h3>
 
 <% else %>

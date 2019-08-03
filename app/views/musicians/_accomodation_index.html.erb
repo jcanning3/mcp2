@@ -5,7 +5,7 @@
       <th>Host</th>
       <th>Arrival</th>
       <th>Departure</th>
-      <th>Co#</th>
+      <th>Notes</th>
       <% if user_signed_in? %> <th colspan="2"></th> <% end %>
     </tr>
   </thead>
@@ -14,7 +14,21 @@
     <% @accomodations.includes(:musician).order('LOWER(musicians.last)', "musicians.first").each do |accomodation| %>
       <tr>
         <% if user_signed_in? %> <td><%= accomodation.musician.name %></td> <% end %>
-        <td><%= accomodation.address.nickname %></td>
+        <td>
+	    <button class='btn btn-info btn-sm'>
+	      <% address = accomodation.address.address1 + ' ' + accomodation.address.city + ' ' + accomodation.address.state %>
+	      <a href=<%= URI.encode( "http://maps.apple.com/?q=" + address) %>>
+	        <%= accomodation.address.nickname %>
+	        <span class='fas fa-directions'></span>
+	      </a>
+	    </button>
+	    &nbsp;
+	    <button class='btn btn-info btn-sm'>
+	      <a href="tel:<%=accomodation.address.phone %>">
+	        <span class='fas fa-phone'></span>
+	      </a>
+	    </button>
+	</td>
         <td><%= accomodation.try(:arrival).try(:strftime, "%a %b %e") %></td>
         <td><%= accomodation.try(:departure).try(:strftime, "%a %b %e") %></td>
         <td><%= accomodation.co %></td>
