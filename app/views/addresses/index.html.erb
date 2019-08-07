@@ -18,7 +18,7 @@
   </thead>
 
   <tbody>
-    <% @addresses.each do |address| %>
+    <% @addresses.order(:nickname).each do |address| %>
       <tr>
         <td><%= address.name %></td>
         <td><%= address.nickname %></td>
