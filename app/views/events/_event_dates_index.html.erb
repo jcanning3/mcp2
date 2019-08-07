@@ -36,7 +36,7 @@
 	<td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
 	<td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>
 	<td><%= event.type.name %></td>
-	<td nowrap><%= event.location.htmlButton %></td>
+	<td nowrap><%= event.location.mapButton %></td>
 	<td><%= event.heads %></td>
 	<td><%= event.staff %></td>
 	<td><%= event.notes %></td>

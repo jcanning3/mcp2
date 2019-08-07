@@ -2,10 +2,10 @@ class Location < ApplicationRecord
   belongs_to :address
   has_many :events
 
-  attr_reader :htmlButton
+  attr_reader :mapButton
 
 
-  def htmlButton
+  def mapButton
     if ( self.address.present? && self.address.address1 )
       x = " <button class='btn btn-basic btn-sm'> " +
           "<a href=" + self.address.mapURL + "> " +

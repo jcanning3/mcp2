@@ -37,7 +37,7 @@
 	  <td bgcolor="<%=event.type.color%>"><%= event.try(:start).try(:strftime, "%I:%M%p") %></td>
 	  <td bgcolor="<%=event.type.color%>"><%= event.try(:end).try(:strftime, "%I:%M%p") %></td>
 	  <td bgcolor="<%=event.type.color%>"><%= event.name %></td>
-	  <td bgcolor="<%=event.type.color%>"><%= event.location.htmlButton %></td>
+	  <td nowrap bgcolor="<%=event.type.color%>"><%= event.location.mapButton %></td>
 	  <td> </td>
 	</tr>
 	<% unless event.notes.nil? || event.notes.length == 0%>

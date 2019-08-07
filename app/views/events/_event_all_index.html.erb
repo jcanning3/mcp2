@@ -38,7 +38,7 @@
 	<td><%= event.try(:start).try(:strftime, "%I:%M%p") %></td>
 	<td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>
 	<td><%= event.type.name %></td>
-	<td nowrap><%= event.location.htmlButton %></td>
+	<td nowrap><%= event.location.mapButton %></td>
 	<td><%= event.notes %></td>
 	<td><%= link_to 'Edit', edit_event_path(event), class: 'btn btn-warning btn-sm' %></td>
       </tr>

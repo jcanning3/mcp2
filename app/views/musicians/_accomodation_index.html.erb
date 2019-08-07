@@ -14,19 +14,9 @@
     <% @accomodations.includes(:musician).order('LOWER(musicians.last)', "musicians.first").each do |accomodation| %>
       <tr>
         <% if user_signed_in? %> <td><%= accomodation.musician.name %></td> <% end %>
-        <td>
-	    <button class='btn btn-info btn-sm'>
-	      <a href=<%= accomodation.address.mapURL %>>
-	        <%= accomodation.address.nickname %>
-	        <span class='fas fa-directions'></span>
-	      </a>
-	    </button>
-	    &nbsp;
-	    <button class='btn btn-info btn-sm'>
-	      <a href="tel:<%=accomodation.address.phone %>">
-	        <span class='fas fa-phone'></span>
-	      </a>
-	    </button>
+        <td nowrap>
+	  <%= accomodation.address.mapButton  %>
+	  <%= accomodation.address.phoneButton  %>
 	</td>
         <td><%= accomodation.try(:arrival).try(:strftime, "%a %b %e") %></td>
         <td><%= accomodation.try(:departure).try(:strftime, "%a %b %e") %></td>

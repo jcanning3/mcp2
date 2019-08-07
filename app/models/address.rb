@@ -3,7 +3,7 @@ class Address < ApplicationRecord
   has_many :locations
   has_many :musicians, through: :accomodations
 
-  attr_reader :mapURL, :htmlButton
+  attr_reader :mapURL, :mapButton, :phoneURL, :phoneButton
 
   def mapURL
     x = self.address1 + ' ' + self.city + ' ' + self.state
@@ -11,7 +11,12 @@ class Address < ApplicationRecord
     return x
   end
 
-  def htmlButton
+  def phoneURL
+    x = URI.encode("tel:" + self.phone)
+    return x
+  end
+
+  def mapButton
     if ( self.present? && self.address1 )
       x = "<button class='btn btn-info btn-sm'> " +
           "<a href=" + self.mapURL + "> " +
@@ -22,6 +27,15 @@ class Address < ApplicationRecord
     else
       x = self.name
     end 
+    return x.html_safe
+  end
+
+  def phoneButton
+    x = "<button class='btn btn-info btn-sm'> " +
+        "<a href=" + self.phoneURL + "> " +
+        "<span class='fas fa-phone'></span> " +
+        "</a> " +
+        "</button>"
     return x.html_safe
   end
 
