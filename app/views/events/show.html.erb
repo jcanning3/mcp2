@@ -28,16 +28,7 @@
 
 <p>
   <strong>Location:</strong>
-  <% if ( @event.location.address.present? && @event.location.address.address1 ) %>
-    <button class='btn btn-info btn-sm'>
-      <a href=<%= @event.location.address.mapURL %>>
-        <%= @event.location.address.nickname %>
-        <span class='fas fa-directions'></span>
-      </a>
-    </button>
-  <% else %>
-    <%= @event.location.name %>
-  <% end %>
+  <%= @event.location.htmlButton %>
 </p>
 
 <p>
