@@ -36,7 +36,20 @@
 	<td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
 	<td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>
 	<td><%= event.type.name %></td>
-	<td><%= event.location.name %></td>
+
+	<td>
+	  <% if ( event.location.address.present? && event.location.address.address1 ) %>
+	    <button class='btn btn-info btn-sm'>
+              <a href=<%= event.location.address.mapURL %>>
+                <%= event.location.address.nickname %>
+                <span class='fas fa-directions'></span>
+              </a>
+            </button>
+	  <% else %>
+	    <%= event.location.name %>
+	  <% end %>
+	</td>
+
 	<td><%= event.heads %></td>
 	<td><%= event.staff %></td>
 	<td><%= event.notes %></td>
@@ -51,7 +64,7 @@
 	  <td> </td>
 	  <td colspan="2" ><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
 	  <td colspan="3" ><%= s.note %></td>
-	  <td colspan="3" ><%= s.pad_id%> == <%= s.pad_type%> </td>
+	  <td colspan="3" ></td>
 	</tr>
       <% end %>
     <% end %>

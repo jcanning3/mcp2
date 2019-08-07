@@ -16,8 +16,7 @@
         <% if user_signed_in? %> <td><%= accomodation.musician.name %></td> <% end %>
         <td>
 	    <button class='btn btn-info btn-sm'>
-	      <% address = accomodation.address.address1 + ' ' + accomodation.address.city + ' ' + accomodation.address.state %>
-	      <a href=<%= URI.encode( "http://maps.apple.com/?q=" + address) %>>
+	      <a href=<%= accomodation.address.mapURL %>>
 	        <%= accomodation.address.nickname %>
 	        <span class='fas fa-directions'></span>
 	      </a>
