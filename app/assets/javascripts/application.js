@@ -21,11 +21,23 @@
 //= require fullcalendar
 //= require scheduler
 
+var myStuff = {
+    defaultDate: "8/15/2019",
+    currentDate: null,
+}
+
 $(function() {
+    if ( myStuff.currentDate == null ) {
+	myStuff.currentDate = getCookie("cdate");
+	if ( myStuff.currentDate == null ) {
+	    myStuff.currentDate = myStuff.defaultDate;
+	}
+	document.cookie = "cdate=" + myStuff.currentDate;
+    }
     $('#calendar33').fullCalendar({
 	schedulerLicenseKey: '0267366947-fcs-1564302432',
 	themeSystem: 'bootstrap4',
-	defaultDate: "8/15/2019",
+	defaultDate: myStuff.currentDate,
 	defaultView: "agendaDay",
 	header: {
 	  left: 'month,agendaWeek,agendaDay,listMonth',
@@ -78,6 +90,7 @@ $(function() {
 	        hideEvents("F" + myStuff.currentDate);
 	    }
 	    myStuff.currentDate = moment.format("YYYYMMDD")
+	    document.cookie = "cdate=" + myStuff.currentDate;
 	    showEvents("D" + myStuff.currentDate);
 	    showEvents("E" + myStuff.currentDate);
 	    showEvents("F" + myStuff.currentDate);
@@ -92,13 +105,10 @@ $(function() {
     });
 });
 
-var myStuff = {
-    currentDate: "",
-}
 
 function showEvents(t)
 {
-    console.log("Please display the set of elements identified by: " + t + ".");
+    // console.log("Please display the set of elements identified by: " + t + ".");
     var tE = document.getElementById(t);
     if ( tE && tE.style ) {
         tE.style.display = "table-row-group";
@@ -107,9 +117,29 @@ function showEvents(t)
 
 function hideEvents(t)
 {
-    console.log("Please hide the set of elements identified by: " + t + ".");
+    // console.log("Please hide the set of elements identified by: " + t + ".");
     var tE = document.getElementById(t);
     if ( tE && tE.style ) {
         tE.style.display = "none";
     }
+}
+
+function getCookie(name) {
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
+
+    // Loop through the array elements
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+
+        /* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+        if(name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    // Return null if not found
+    return null;
 }
