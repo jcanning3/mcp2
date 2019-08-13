@@ -32,7 +32,7 @@ $(function() {
 	if ( myStuff.currentDate == null ) {
 	    myStuff.currentDate = myStuff.defaultDate;
 	}
-	document.cookie = "cdate=" + myStuff.currentDate;
+	document.cookie = "cdate=" + myStuff.currentDate + ";path=/";
     }
     $('#calendar33').fullCalendar({
 	schedulerLicenseKey: '0267366947-fcs-1564302432',
@@ -90,7 +90,8 @@ $(function() {
 	        hideEvents("F" + myStuff.currentDate);
 	    }
 	    myStuff.currentDate = moment.format("YYYYMMDD")
-	    document.cookie = "cdate=" + myStuff.currentDate;
+	    document.cookie = "cdate=" + myStuff.currentDate + ";path=/";
+	    console.log("Updated cdate to: " + myStuff.currentDate);
 	    showEvents("D" + myStuff.currentDate);
 	    showEvents("E" + myStuff.currentDate);
 	    showEvents("F" + myStuff.currentDate);

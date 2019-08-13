@@ -54,11 +54,11 @@
   <h4>Tasks</h4>
     <table class='table table-hover'>
       <tbody>
-	<% @event.smart_tasks.each do |t| %>
+	<% @event.smart_tasks.order(:order).each do |t| %>
 	  <% ins = @event.instructions.where(task_id: t.id, event_id: @event.id).first %>
           <tr>
 	    <td> <%= t.name =%> </td>
-	    <td> <%= ins.name if ins %> </td>
+	    <td> <%= ins.name if ins and ins.name != "instructions please" %> </td>
           </tr>
         <% end %>
       </tbody>
