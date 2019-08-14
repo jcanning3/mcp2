@@ -59,6 +59,17 @@
 	  <td colspan="3" ><%= s.note %></td>
 	</tr>
       <% end %>
+
+      <% if @showInstructions and event.smart_tasks and event.smart_tasks.count > 0 %>
+        <% event.smart_tasks.order(:order).each do |t| %>
+        <% ins = event.instructions.where(task_id: t.id, event_id: event.id).first %>
+          <tr>
+	    <td> </td>
+            <td colspan="2"> <%= t.name =%> </td>
+            <td colspan="3"> <%= ins.name if ins and ins.name != "instructions please" %> </td>
+          </tr>
+        <% end %>
+      <% end %>
     <% end %>
   </tbody>
 </table>

@@ -10,6 +10,7 @@
 
 
 <% @events = @musician.events.where(festival_id: 2) %>
+<% @showInstructions = false %>
 <% if user_signed_in? %>
     <%= render '/events/event_all_index' %>
 <% else %>
