@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_04_083754) do
+ActiveRecord::Schema.define(version: 2019_08_14_055128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 2019_08_04_083754) do
     t.integer "heads"
     t.integer "staff"
     t.integer "festival_id"
+    t.string "label"
     t.index ["location_id"], name: "index_events_on_location_id"
     t.index ["type_id"], name: "index_events_on_type_id"
   end
@@ -248,6 +249,8 @@ ActiveRecord::Schema.define(version: 2019_08_04_083754) do
     t.boolean "final"
     t.boolean "quickbooks"
     t.bigint "festival_id"
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_sales_reports_on_event_id"
     t.index ["festival_id"], name: "index_sales_reports_on_festival_id"
     t.index ["payment_method_id"], name: "index_sales_reports_on_payment_method_id"
     t.index ["ticket_category_id"], name: "index_sales_reports_on_ticket_category_id"
@@ -356,6 +359,7 @@ ActiveRecord::Schema.define(version: 2019_08_04_083754) do
   add_foreign_key "performers", "musicians"
   add_foreign_key "performers", "pieces"
   add_foreign_key "pieces", "composers"
+  add_foreign_key "sales_reports", "events"
   add_foreign_key "sales_reports", "festivals"
   add_foreign_key "sales_reports", "payment_methods"
   add_foreign_key "sales_reports", "ticket_categories"

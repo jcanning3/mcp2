@@ -5,16 +5,20 @@
 
   <div class="form-inputs">
     <%= f.association :festival %>
-    <%= f.input :date %>
+
+    <%= f.association :event, label_method: :label, collection: Event.where.not(label: [nil, ""]).order(:start) %>
+    
     <%= f.association :vendor %>
-    <%= f.association :payment_method %>
-    <%= f.input :concert %>
     <%= f.association :ticket_category %>
     <%= f.input :description %>
     <%= f.input :count %>
     <%= f.input :unit_price %>
     <%= f.input :final %>
     <%= f.input :quickbooks %>
+
+    <%= f.association :payment_method, label: 'old payment method' %>
+    <%= f.input :concert, label: 'old concert' %>
+    <%= f.input :date, label: 'old date' %>
   </div>
 
   <div class="form-actions">

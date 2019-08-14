@@ -43,7 +43,7 @@
 
 <% if user_signed_in? %>
     <h4>Concert History</h4>
-    <table class='table table-hover'>
+    <table class='table table-hover table-striped'>
       <tbody>
 	<% @bits = Performer.where(musician_id: @musician.id) %>
 	<% @bits.each do |performer| %>

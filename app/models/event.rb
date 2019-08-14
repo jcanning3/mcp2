@@ -9,6 +9,7 @@ class Event < ApplicationRecord
   has_many   :musicians, through: :team_musicians
   has_many   :instructions, dependent: :destroy
   has_many   :tasks, through: :type
+  has_many   :sales_reports
 
   accepts_nested_attributes_for :sheets, allow_destroy: true,
     reject_if: ->(attrs) { attrs['note'].blank? }
