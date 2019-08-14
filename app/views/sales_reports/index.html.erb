@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<!-- 
 
 <h4>Sales Reports</h4>
 
@@ -40,6 +41,8 @@
 
 <br> <br> <br>
 
+-->
+
 <h4>Sales Summary</h4>
 
 <% concertList = Array.new %>
@@ -67,7 +70,9 @@
     <% total = 0 %>
     <% first = true %>
     <% oldDate = "" %>
-    <% @sales_reports.where('event_id > 0').order(:event_id, :vendor_id).each do |sales_report| %>
+
+    <% @sales_reports.where('event_id > 0').includes(:event).order('events.start', :vendor_id).each do |sales_report| %>
+
       <% if sales_report.ticket_category.name == "Festival Pass" %>
         <% passCount += sales_report.count %>
 	<% countMe = false %>
@@ -115,6 +120,8 @@
 	  <td colspan="6"> SubTotal </td>
 	  <td class="text-right"> <%= number_to_currency subTotal, precision: 0 %> </td>
 	</tr>
+	<% total = total + subTotal %>
+	<% subTotal = 0 %>
 
         <tr>
 	  <td colspan="7"> Total </td>
@@ -125,14 +132,9 @@
 </table>
 
 <br> <br> <br>
-<%= link_to 'New Sales Report', new_sales_report_path, class: 'btn btn-primary btn-lg' %>
+<%= link_to 'New Sales Report', new_sales_report_path, class: 'btn btn-primary btn-sm' %>
 
 <br> <br> <br>
-
-<br>
-
-
-
 
 <h4> Ticket Counts </h4>
 
@@ -163,7 +165,3 @@
 
   </tbody>
 </table>
-
-
-
-
