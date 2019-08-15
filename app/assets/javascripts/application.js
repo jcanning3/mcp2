@@ -22,7 +22,7 @@
 //= require scheduler
 
 var myStuff = {
-    defaultDate: "8/15/2019",
+    defaultDate: "2019-08-15",
     currentDate: null,
 }
 

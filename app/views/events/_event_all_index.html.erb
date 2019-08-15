@@ -20,7 +20,8 @@
         <% # if the dates match, do nothing %>
       <% else %>
         <% # if the dates DO NOT match, insert a row with the date %>
-        <tr bgcolor="#f0f0f5">
+        <tr bgcolor="#f0f0f5"> </tr>
+        <tr bgcolor="lavender">
           <td colspan="3">
             <h6><strong> <%= event.try(:start).try(:strftime, "%A %B %e") %></strong></h6>
           </td>

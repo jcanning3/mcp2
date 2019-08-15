@@ -1,8 +1,9 @@
 <div class="nested-fields">
-  <%= f.label :note %>
-  <%= f.text_field :note %>
+  <%= f.input :note %>
 
   <%= f.check_box :_destroy %>
 
   <%= link_to_remove_association "remove note", f, class: 'btn btn-danger btn-sm' %>
 </div>
+
+<br> <br>

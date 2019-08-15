@@ -10,7 +10,23 @@
   </div>
 
   <div>
-    <p><strong>Links to Musicians:</strong></p>
+    <h4>Notes</h4>
+
+    <div id="sheets">
+      <%= f.fields_for :sheets do |sheet| %>
+        <%= render 'sheet_fields', f: sheet %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association 'Add Note', f, :sheets, class: 'btn btn-success btn-sm' %>
+      </div>
+    </div>
+  </div>
+
+<br> <br>
+
+  <div>
+    <h4>Links to Musicians</h4>
 
     <div id="musicians">
       <%= f.fields_for :team_musicians do |tm| %>
@@ -25,9 +41,11 @@
     </div>
 
     <br>
+<br> <br>
 
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn btn-success btn-sm' %>
+    <div class="form-actions">
+      <%= f.button :submit, class: 'btn btn-success btn-sm' %>
+    </div>
   </div>
-</div>
 <% end %>
+

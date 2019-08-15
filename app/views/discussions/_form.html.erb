@@ -14,7 +14,7 @@
  
     <div id="sheets">
       <%= f.fields_for :sheets do |sheet| %>
-        <%= render 'sheet_fields', f: sheet %>
+        <%= render '/sheets/sheet_fields', f: sheet %>
       <% end %>
 
       <div class="links">

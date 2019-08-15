@@ -91,7 +91,8 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:name, :description, :start, :end, :type_id, :team_id,
         :festival_id, :location_id, :notes, :color, :heads, :staff, :label,
-        sheets_attributes: [:id, :_destroy, :note], event_teams_attributes: [:id, :event_id, :team_id, :_destroy],
+        sheets_attributes: [:id, :_destroy, :note],
+	event_teams_attributes: [:id, :event_id, :team_id, :_destroy],
 	instructions_attributes: [:id, :_destroy, :name, :event_id, :task_id])
     end
 end

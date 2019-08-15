@@ -13,8 +13,23 @@
 
 <br> <br> <br>
 
-<h6>First Event Notes</h6>
+<h6>Notes from this Team's First Event</h6>
 <%= @team.events.first.notes if @team.events.first %>
+
+<br> <br> <br>
+
+<h4>Team Notes</h4>
+
+  <table class='table table-hover'>
+  <% @bits = @team.sheets %>
+  <% @bits.each do |s| %>
+    <tr>
+      <td> </td>
+      <td colspan="2" ><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
+      <td colspan="3" ><%= s.note %></td>
+    </tr>
+  <% end %>
+  </table>
 
 <br> <br> <br>
 

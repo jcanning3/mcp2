@@ -16,7 +16,7 @@ class DiscussionsController < ApplicationController
   # GET /discussions/new
   def new
     @discussion = Discussion.new
-    @discussion.date = "2018-08-16"
+    @discussion.date = Time.now.strftime("%d/%m/%Y")
   end
 
   # GET /discussions/1/edit

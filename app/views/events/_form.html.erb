@@ -17,7 +17,7 @@
   </div>
 
   <div>
-    <p><strong>Instructions:</strong></p>
+    <h4>Instructions</h4>
     <div id="instructions">
       <% setup_instructions(@event) %>
       <%= f.fields_for :instructions do |i| %>
@@ -29,7 +29,7 @@
   <br> <br> <br>
 
   <div>
-    <p><strong>Teams:</strong></p>
+    <h4>Teams</h4>
     <div id="teams">
       <%= f.fields_for :event_teams do |et| %>
         <%= render 'event_team_fields', f: et %>
@@ -43,13 +43,17 @@
     </div>
   </div>
 
+  <br> <br> <br>
+
   <div>
-    <p><strong>New Notes:</strong></p>
+    <h4>Event Notes</h4>
 
     <div id="sheets">
       <%= f.fields_for :sheets do |sheet| %>
         <%= render 'sheet_fields', f: sheet %>
       <% end %>
+
+  <br> <br>
 
       <div class="links">
         <%= link_to_add_association 'Add Note', f, :sheets, class: 'btn btn-success btn-sm' %>
@@ -57,7 +61,7 @@
     </div>
   </div>
 
-<br>
+  <br> <br>
 
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-success btn-sm' %>
