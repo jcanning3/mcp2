@@ -7,9 +7,12 @@
     <%= f.input :name %>
     <%= f.input :first %>
     <%= f.input :last %>
+    <%= f.association :address, label_method: :nickname, collection: Address.order(:nickname) %>
     <%= f.association :instrument, collection: Instrument.order(:order) %>
     <%= f.input :notes %>
   </div>
+
+  <br> <br>
 
   <div>
     <h4>Notes</h4>
@@ -20,7 +23,7 @@
       <% end %>
 
       <div class="links">
-        <%= link_to_add_association 'add note', f, :sheets, class: 'btn btn-success btn-sm' %>
+        <%= link_to_add_association 'Add Note', f, :sheets, class: 'btn btn-success btn-sm' %>
       </div>
     </div>
   </div>

@@ -96,7 +96,3 @@ class EventsController < ApplicationController
 	instructions_attributes: [:id, :_destroy, :name, :event_id, :task_id])
     end
 end
-
-
-
-

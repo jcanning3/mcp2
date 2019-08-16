@@ -11,7 +11,8 @@
 
     <% @musicians.each do |musician| %>
       <tr>
-	<td> <%= link_to musician.name, musician, class: 'btn btn-info btn-sm' %></td>
+	<td nowrap><%= link_to musician.name, musician, class: 'btn btn-info btn-sm' %>
+	           <%= musician.address.phoneButton  if musician.address %></td>
         <td><%= musician.instrument.name if musician.instrument %> </td>
         <!-- td><%= link_to 'Show', musician, class: 'btn btn-warning btn-sm' %></td> -->
 	<% if current_user.email == "john@pcc.com" %>

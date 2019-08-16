@@ -1,0 +1,17 @@
+<div class="nested-fields">
+  <%= f.input :name %>
+  <%= f.input :nickname %>
+  <%= f.input :address1 %>
+  <%= f.input :address2 %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  <%= f.input :phone %>
+
+  <%= f.check_box :_destroy %>
+
+  <%= link_to_remove_association "remove address", f, class: 'btn btn-danger btn-sm' %>
+</div>
+
+<br> <br>
+

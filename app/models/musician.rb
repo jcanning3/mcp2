@@ -10,7 +10,12 @@ class Musician < ApplicationRecord
   has_many :teams, through: :team_musicians
   has_many :events, through: :teams
   belongs_to :instrument
+  belongs_to :address
 
   accepts_nested_attributes_for :sheets, allow_destroy: true,
     reject_if: ->(attrs) { attrs['note'].blank? }
+
+  accepts_nested_attributes_for :addresses, allow_destroy: true,
+    reject_if: ->(attrs) { attrs['name'].blank? }
+
 end

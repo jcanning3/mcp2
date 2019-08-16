@@ -1,7 +1,7 @@
 class Address < ApplicationRecord
+  has_many :musicians
   has_many :accomodations
   has_many :locations
-  has_many :musicians, through: :accomodations
 
   attr_reader :mapURL, :mapButton, :phoneURL, :phoneButton
 
