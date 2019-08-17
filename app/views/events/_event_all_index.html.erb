@@ -44,13 +44,26 @@
 	<td><%= link_to 'Edit', edit_event_path(event), class: 'btn btn-warning btn-sm' %></td>
       </tr>
 
+      <% bodies = [] %>
       <% event.teams.each do |t| %>
 	<tr bgcolor="<%=event.type.color%>">
 	  <td> </td>
-	  <td colspan="3" > <%= t.nickname %> </td>
-	  <td colspan="3"> </td>
+	  <td align="right" colspan="1"> <%= t.musicians.count if event.type.name == "DINNER"%> </td>
+	  <td colspan="3"> <%= t.nickname %> </td>
+	  <td colspan="1"> </td>
+	  <td><%= link_to 'Edit', edit_team_path(t), class: 'btn btn-warning btn-sm' %></td>
+	</tr>
+	<% bodies = bodies + t.musicians %>
+      <% end %>
+      <% if event.type.name == "DINNER" %>
+	<tr bgcolor="<%=event.type.color%>">
+	  <td> </td>
+	  <td align="right" colspan="1"> <%= bodies.uniq.count  %> </td>
+	  <td colspan="3"> Unique Mouths </td>
+	  <td colspan="2"> </td>
 	</tr>
       <% end %>
+
 
       <% @bits = event.sheets %>
       <% @bits.each do |s| %>
@@ -60,6 +73,20 @@
 	  <td colspan="3" ><%= s.note %></td>
 	</tr>
       <% end %>
+
+      <% event.teams.each do |t| %>
+        <% @bits = t.sheets %>
+        <% @bits.each do |s| %>
+	  <tr>
+	    <td> </td>
+	    <td colspan="2" ><%= s.created_at.strftime("%m/%d/%y %I:%M%p") %></td>
+	    <td colspan="3" ><%= s.note %></td>
+	    <td><%= link_to 'Edit', edit_team_path(t), class: 'btn btn-warning btn-sm' %></td>
+	  </tr>
+        <% end %>
+      <% end %>
+
+
 
       <% if @showInstructions and event.smart_tasks and event.smart_tasks.count > 0 %>
         <% event.smart_tasks.order(:order).each do |t| %>
