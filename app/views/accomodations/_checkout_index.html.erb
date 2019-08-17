@@ -1,0 +1,49 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <% if user_signed_in? %> <th>Musician</th> <% end %>
+      <th>Host</th>
+      <th>Arrival</th>
+      <th>Departure</th>
+      <th>Notes</th>
+      <% if user_signed_in? %> <th colspan="2"></th> <% end %>
+    </tr>
+  </thead>
+
+  <% cdate = "" %>
+  <% inProcess = false %>
+  <% disp = "none" %>
+  <% @accomodations.order(departure: :asc).each do |accomodation| %>
+    <% edate = accomodation.try(:departure).try(:strftime, "%Y%m%d") %>
+    <% if cdate == edate %>
+	<% # if the dates match, do nothing %>
+    <% else %>
+      <% if inProcess == true %>
+        <% # if we are already in a tbody, then close it out. %>
+        </tbody>
+        <% disp = "none" %>
+      <% end %>
+      <% cdate = edate %>
+      <% inProcess = true %>
+      <tbody id="<%="B" + cdate%>" style="display:<%=disp%>">
+    <% end %>
+
+      <tr>
+        <% if user_signed_in? %> <td><%= accomodation.musician.name %></td> <% end %>
+        <td><%= accomodation.address.nickname %></td>
+        <td><%= accomodation.try(:arrival).try(:strftime, "%a %b %e") %></td>
+        <td><%= accomodation.try(:departure).try(:strftime, "%a %b %e") %></td>
+        <td><%= accomodation.co %></td>
+        <% if user_signed_in? %>
+	  <td><%= link_to 'Show', accomodation, class: 'btn btn-warning btn-sm' %></td>
+          <td><%= link_to 'Edit', edit_accomodation_path(accomodation), 
+	    class: 'btn btn-warning btn-sm' %></td>
+          <td><%= link_to 'Destroy', accomodation, method: :delete,
+	    data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+	<% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br> <br> <br>

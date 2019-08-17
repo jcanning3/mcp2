@@ -22,7 +22,7 @@
 //= require scheduler
 
 var myStuff = {
-    defaultDate: "2019-08-16",
+    defaultDate: "2019-08-17",
     currentDate: null,
 }
 
@@ -85,6 +85,8 @@ $(function() {
 	viewRender: function(view, element) {
  	    var moment = $('#calendar33').fullCalendar('getDate');
 	    if ( myStuff.currentDate ) {
+	        hideEvents("A" + myStuff.currentDate);
+	        hideEvents("B" + myStuff.currentDate);
 	        hideEvents("D" + myStuff.currentDate);
 	        hideEvents("E" + myStuff.currentDate);
 	        hideEvents("F" + myStuff.currentDate);
@@ -92,6 +94,8 @@ $(function() {
 	    myStuff.currentDate = moment.format("YYYYMMDD")
 	    document.cookie = "cdate=" + myStuff.currentDate + ";path=/";
 	    console.log("Updated cdate to: " + myStuff.currentDate);
+	    showEvents("A" + myStuff.currentDate);
+	    showEvents("B" + myStuff.currentDate);
 	    showEvents("D" + myStuff.currentDate);
 	    showEvents("E" + myStuff.currentDate);
 	    showEvents("F" + myStuff.currentDate);

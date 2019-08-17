@@ -17,6 +17,7 @@
     <% cdate = "" %>
     <% inProcess = false %>
     <% disp = "table-row-group" %>
+    <% disp = "none" %>
     <% @flights.order('departure').each do |flight| %>
       <% edate = flight.try(:departure).try(:strftime, "%Y%m%d") %>
       <% if cdate == edate %>

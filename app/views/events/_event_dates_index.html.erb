@@ -2,7 +2,6 @@
   <thead>
     <tr>
       <th>Event</th>
-      <th>Festival</th>
       <th>Start</th>
       <th>End</th>
       <th>Type</th>
@@ -31,7 +30,6 @@
       <% end %> 
 
       <tr bgcolor="<%=event.type.color%>">
-	<td><%= event.festival.name if event.festival %></td>
 	<td><%= event.name %></td>
 	<td><%= event.try(:start).try(:strftime, "%a %b %e %I:%M%p") %></td>
 	<td><%= event.try(:end).try(:strftime, '%I:%M%p') %></td>

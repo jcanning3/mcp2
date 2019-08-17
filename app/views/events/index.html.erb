@@ -8,29 +8,32 @@
 
     <br> <br> <br>
 
-<h4>Discussions</h4>
-
-    <% @allOn = false %>
-    <%= render 'discussion_index' %>
 
 <h4>Events</h4>
 
     <%= render 'event_dates_index' %>
 
-<h4>Accommodations</h4>
-
+<h4>Housing Check-ins</h4>
     <% @accomodations = Accomodation.where(festival_id: [nil, 2, 3]).order(:arrival) %>
-    <%= render '/accomodations/accomodation_index' %>
+    <%= render '/accomodations/checkin_index' %>
+
+<h4>Housing Check-outs</h4>
+    <% @accomodations = Accomodation.where(festival_id: [nil, 2, 3]).order(:departure) %>
+    <%= render '/accomodations/checkout_index' %>
+
 
 <h4>Transportation</h4>
-
     <% @buttons = false %>
     <% @flights = Flight.where(festival_id: [nil, 2, 3]).order(:departure) %>
     <%= render '/flights/flight_index' %>
 
+<h4>Discussions</h4>
 
-<h4>Spreadsheet</h1>
+    <% @allOn = false %>
+    <%= render 'discussion_index' %>
 
+<!--
+  <h4>Spreadsheet</h1>
     <%= link_to 'Download as .xlsx', events_path(format: :xlsx) %>
     <br> <br> <br>
-
+-->
