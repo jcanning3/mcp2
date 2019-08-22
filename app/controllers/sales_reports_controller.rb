@@ -5,7 +5,7 @@ class SalesReportsController < ApplicationController
   # GET /sales_reports
   # GET /sales_reports.json
   def index
-    @sales_reports = SalesReport.where(festival_id: [nil, 2, 3])
+    @sales_reports = SalesReport.where(festival_id: [nil, 2, 3 ])
   end
 
   # GET /sales_reports/1

@@ -35,16 +35,26 @@
 	<% countMe = false %>
       <% else %>
 	<% countMe = true %>
-	<% if concertList[-1] != sales_report.event.label %>
-	  <% concertList.push(sales_report.event.label) if sales_report.event %>
-	  <% concertCount[sales_report.event.label] = 0 %>
+	<% if sales_report.event %>
+	  <% lab = sales_report.event.label %>
+	<% else %>
+	  <% lab = sales_report.description %>
+	<% end %>
+	<% if concertList[-1] != lab %>
+	  <% concertList.push(lab) %>
+	  <% concertCount[lab] = 0 %>
 	<% end %>
       <% end %>
-      <% if countMe and sales_report.event.label %>
-        <% concertCount[sales_report.event.label] = concertCount[sales_report.event.label] + sales_report.count %>
+      <% if countMe and lab %>
+        <% concertCount[lab] = concertCount[lab] + sales_report.count %>
       <% end %>
 
-      <% dt = sales_report.event.start.try(:strftime, "%a %m/%d") %>
+      <% if ( sales_report.event ) %>
+        <% dt = sales_report.event.start.try(:strftime, "%a %m/%d") %>
+      <% else %>
+        <% dt = sales_report.date.try(:strftime, "%a %m/%d") %>
+      <% end %>
+    
       <% if first == false and oldDate != dt %>
         <tr>
 	  <td> </td>
@@ -59,9 +69,16 @@
 
       <tr>
         <td><%= dt %></td>
-        <td><%= sales_report.vendor.name %></td> <td><%= sales_report.event.start.try(:strftime, "%a %m/%d") %></td>
+        <td><%= sales_report.vendor.name %></td> 
+
+	<% if (sales_report.event) %>
+	  <td><%= sales_report.event.start.try(:strftime, "%a %m/%d") %></td>
+	<% else %>
+	  <td><%= sales_report.date.try(:strftime, "%a %m/%d") %></td>
+	<% end %>
+
         <td><%= sales_report.ticket_category.name %></td>
-        <td><%= sales_report.event.label %></td>
+        <td><%= sales_report.event.label if sales_report.event %></td>
         <td class="text-right"><%= sales_report.count %></td>
         <td class="text-right"><%= number_to_currency sales_report.unit_price, precision: 0 %></td>
 	<% amt = sales_report.count * sales_report.unit_price %>
