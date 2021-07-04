@@ -6,7 +6,8 @@ ruby '2.5.1'
 
 gem 'rails', '~> 5.2.4'
 gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5.0'
+gem 'sassc'
+gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'coffee-rails', '~> 4.2'
