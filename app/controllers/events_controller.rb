@@ -6,12 +6,12 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     # @events = Event.all
-    @events = Event.where(festival_id: [nil, 2, 3])
+    @events = Event.where(festival_id: [nil, 5, 3])
     @accomodations = Accomodation.all
     @discussions = Discussion.all
     @flights = Flight.all
     #@teams = Team.all
-    @teams = Team.where(festival_id: [nil, 2, 3])
+    @teams = Team.where(festival_id: [nil, 5, 3])
     @instructions = Instruction.all
     @tasks = Task.all
 
@@ -33,7 +33,7 @@ class EventsController < ApplicationController
     @event = Event.new
     @event.start = time.strftime("%Y-%m-%d %H:00")
     @event.end = time.strftime("%Y-%m-%d %H:00")
-    @event.festival_id = 2
+    @event.festival_id = 5
   end
 
   # GET /events/1/edit

@@ -5,7 +5,7 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.json
   def index
-    @teams = Team.where(festival_id: [nil, 2, 3])
+    @teams = Team.where(festival_id: [nil, 5, 3])
     @events = Event.all
     @musicians = Musician.all
   end
@@ -18,7 +18,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   def new
     @team = Team.new
-    @team.festival_id = 2
+    @team.festival_id = 5
   end
 
   # GET /teams/1/edit

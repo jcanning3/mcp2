@@ -5,7 +5,7 @@ class FlightsController < ApplicationController
   # GET /flights
   # GET /flights.json
   def index
-    @flights = Flight.all.where(festival_id: [nil, 2, 3])
+    @flights = Flight.all.where(festival_id: [nil, 5, 3])
   end
 
   # GET /flights/1
@@ -16,7 +16,7 @@ class FlightsController < ApplicationController
   # GET /flights/new
   def new
     @flight = Flight.new
-    @flight.festival_id = 2
+    @flight.festival_id = 5
   end
 
   # GET /flights/1/edit

@@ -5,7 +5,7 @@ class SalesReportsController < ApplicationController
   # GET /sales_reports
   # GET /sales_reports.json
   def index
-    @sales_reports = SalesReport.where(festival_id: [nil, 2, 3 ])
+    @sales_reports = SalesReport.where(festival_id: [nil, 5, 3 ])
   end
 
   # GET /sales_reports/1
@@ -16,7 +16,7 @@ class SalesReportsController < ApplicationController
   # GET /sales_reports/new
   def new
     @sales_report = SalesReport.new
-    @sales_report.festival_id = 2
+    @sales_report.festival_id = 5
   end
 
   # GET /sales_reports/1/edit
