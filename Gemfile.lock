@@ -143,6 +143,8 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.11.7-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
     popper_js (2.9.2)
@@ -193,7 +195,7 @@ GEM
     rexml (3.2.5)
     ruby-graphviz (1.2.5)
       rexml
-    rubyzip (2.3.0)
+    rubyzip (2.3.1)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -256,6 +258,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   axlsx_rails
